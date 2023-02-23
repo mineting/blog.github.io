@@ -145,65 +145,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/23/HelloWorld/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/23/HelloWorld/" class="post-title-link" itemprop="url">点这个</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2023-02-23 20:00:00 / Modified: 22:15:48" itemprop="dateCreated datePublished" datetime="2023-02-23T20:00:00+08:00">2023-02-23</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>小仙女是笨蛋</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/23/JVM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1348,6 +1289,65 @@
 <p>具体过程：</p>
 <p>判定一个对象objA是否可回收，至少要经历两次标记过程:，<br>1.如果对象objA到GC Roots没有引用链，则进行第T次标记。<br>2.进行筛选，判断此对象是否有必要执行finalize()方法<br>①如果对象objA没有重 写finalize()方法，或者finalize ()方法已经被虚拟机调用过，<br>则虚拟机视为“没有必要执行”，obj A被判定为不可触及的。<br>②如果对象objA重写了 finalize()方法，且还未执行过，那么objA会被插入到F- Queue<br>队列中，由一个虚拟机自动创建的、低优先级的F inalizer线程触发其finalize ()方<br>法执行。<br>③finalize() 方法是对象逃脱死亡的最后机会，稍后Gc会对F-Queue队列中的对象进行<br>第二次标记。如果objA在finalize()方法中与引用链上的任何一个对象建立了联系，<br>那么在第二次标记时，objA会被移出“即将回收”集合。之后，对象会再次出现没有引<br>用存在的情况。在这个情况下，finalize方法不会被再次调用，对象会直接变成不可触<br>及的状态，也就是说，一个对象的finalize方法只会被调用一次。</p>
 <h3 id="MAT-与-jprofiler-的-GC-ROSTS-溯源"><a href="#MAT-与-jprofiler-的-GC-ROSTS-溯源" class="headerlink" title="MAT 与 jprofiler 的 GC ROSTS 溯源"></a>MAT 与 jprofiler 的 GC ROSTS 溯源</h3><h3 id="清除阶段：标记-清除算法"><a href="#清除阶段：标记-清除算法" class="headerlink" title="清除阶段：标记-清除算法"></a>清除阶段：标记-清除算法</h3><h3 id="清除阶段：复制算法"><a href="#清除阶段：复制算法" class="headerlink" title="清除阶段：复制算法"></a>清除阶段：复制算法</h3><h3 id="清除阶段：标记-压缩算法"><a href="#清除阶段：标记-压缩算法" class="headerlink" title="清除阶段：标记-压缩算法"></a>清除阶段：标记-压缩算法</h3><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><h3 id="分代收集算法"><a href="#分代收集算法" class="headerlink" title="分代收集算法"></a>分代收集算法</h3><h3 id="增量收集算法、分区算法"><a href="#增量收集算法、分区算法" class="headerlink" title="增量收集算法、分区算法"></a>增量收集算法、分区算法</h3><h2 id="垃圾回收概念"><a href="#垃圾回收概念" class="headerlink" title="垃圾回收概念"></a>垃圾回收概念</h2><h2 id="垃圾回收器"><a href="#垃圾回收器" class="headerlink" title="垃圾回收器"></a>垃圾回收器</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/23/Lovely/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/02/23/Lovely/" class="post-title-link" itemprop="url">点这个</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-02-23 20:00:00 / Modified: 22:15:48" itemprop="dateCreated datePublished" datetime="2023-02-23T20:00:00+08:00">2023-02-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>小仙女是笨蛋</p>
+
       
     </div>
 
