@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="MybatisPlus【文档】https:&#x2F;&#x2F;baomidou.com&#x2F; 【建议阅读官方文档学习 MybatisPlus】 一、快速入门1.1 简介MyBatis-Plus (opens new window)（简称 MP）是一个 MyBatis (opens new window)的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。 1.1.1 特性 无侵入：只做">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MybatisPlus">
+<meta property="og:url" content="http://example.com/2023/02/28/MybatisPlus/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="MybatisPlus【文档】https:&#x2F;&#x2F;baomidou.com&#x2F; 【建议阅读官方文档学习 MybatisPlus】 一、快速入门1.1 简介MyBatis-Plus (opens new window)（简称 MP）是一个 MyBatis (opens new window)的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。 1.1.1 特性 无侵入：只做">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/02/28/MybatisPlus/images/MybatisPlus%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84.png">
+<meta property="article:published_time" content="2023-02-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-02-26T15:22:19.291Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/02/28/MybatisPlus/images/MybatisPlus%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84.png">
+
+<link rel="canonical" href="http://example.com/2023/02/28/MybatisPlus/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>MybatisPlus | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/MybatisPlus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          MybatisPlus
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-02-28 00:00:00" itemprop="dateCreated datePublished" datetime="2023-02-28T00:00:00+08:00">2023-02-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-02-26 23:22:19" itemprop="dateModified" datetime="2023-02-26T23:22:19+08:00">2023-02-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="MybatisPlus"><a href="#MybatisPlus" class="headerlink" title="MybatisPlus"></a>MybatisPlus</h1><p><strong>【文档】</strong><a target="_blank" rel="noopener" href="https://baomidou.com/">https://baomidou.com/</a></p>
+<p><strong>【建议阅读官方文档学习 MybatisPlus】</strong></p>
+<h1 id="一、快速入门"><a href="#一、快速入门" class="headerlink" title="一、快速入门"></a>一、快速入门</h1><h2 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h2><p><a target="_blank" rel="noopener" href="https://github.com/baomidou/mybatis-plus">MyBatis-Plus (opens new window)</a>（简称 MP）是一个 <a target="_blank" rel="noopener" href="https://www.mybatis.org/mybatis-3/">MyBatis (opens new window)</a>的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。</p>
+<h3 id="1-1-1-特性"><a href="#1-1-1-特性" class="headerlink" title="1.1.1 特性"></a>1.1.1 特性</h3><ul>
+<li><strong>无侵入</strong>：只做增强不做改变，引入它不会对现有工程产生影响，如丝般顺滑</li>
+<li><strong>损耗小</strong>：启动即会自动注入基本 CURD，性能基本无损耗，直接面向对象操作</li>
+<li><strong>强大的 CRUD 操作</strong>：内置通用 Mapper、通用 Service，仅仅通过少量配置即可实现单表大部分 CRUD 操作，更有强大的条件构造器，满足各类使用需求</li>
+<li><strong>支持 Lambda 形式调用</strong>：通过 Lambda 表达式，方便的编写各类查询条件，无需再担心字段写错</li>
+<li><strong>支持主键自动生成</strong>：支持多达 4 种主键策略（内含分布式唯一 ID 生成器 - Sequence），可自由配置，完美解决主键问题</li>
+<li><strong>支持 ActiveRecord 模式</strong>：支持 ActiveRecord 形式调用，实体类只需继承 Model 类即可进行强大的 CRUD 操作</li>
+<li><strong>支持自定义全局通用操作</strong>：支持全局通用方法注入（ Write once, use anywhere ）</li>
+<li><strong>内置代码生成器</strong>：采用代码或者 Maven 插件可快速生成 Mapper 、 Model 、 Service 、 Controller 层代码，支持模板引擎，更有超多自定义配置等您来使用</li>
+<li><strong>内置分页插件</strong>：基于 MyBatis 物理分页，开发者无需关心具体操作，配置好插件之后，写分页等同于普通 List 查询</li>
+<li><strong>分页插件支持多种数据库</strong>：支持 MySQL、MariaDB、Oracle、DB2、H2、HSQL、SQLite、Postgre、SQLServer 等多种数据库</li>
+<li><strong>内置性能分析插件</strong>：可输出 SQL 语句以及其执行时间，建议开发测试时启用该功能，能快速揪出慢查询</li>
+<li><strong>内置全局拦截插件</strong>：提供全表 delete 、 update 操作智能分析阻断，也可自定义拦截规则，预防误操作</li>
+</ul>
+<h3 id="1-1-2-框架结构"><a href="#1-1-2-框架结构" class="headerlink" title="1.1.2 框架结构"></a>1.1.2 框架结构</h3><img src="images/MybatisPlus框架结构.png" alt="MybatisPlus框架结构" style="zoom:60%;" />
+
+<h2 id="1-2-快速开始"><a href="#1-2-快速开始" class="headerlink" title="1.2 快速开始"></a>1.2 快速开始</h2><h3 id="1-2-1-数据库脚本"><a href="#1-2-1-数据库脚本" class="headerlink" title="1.2.1 数据库脚本"></a>1.2.1 数据库脚本</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> <span class="keyword">user</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">user</span></span><br><span class="line">(</span><br><span class="line">    id <span class="type">BIGINT</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;主键ID&#x27;</span>,</span><br><span class="line">    name <span class="type">VARCHAR</span>(<span class="number">30</span>) <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;姓名&#x27;</span>,</span><br><span class="line">    age <span class="type">INT</span>(<span class="number">11</span>) <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;年龄&#x27;</span>,</span><br><span class="line">    email <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;邮箱&#x27;</span>,</span><br><span class="line">    <span class="keyword">PRIMARY</span> KEY (id)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> <span class="keyword">user</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">user</span> (id, name, age, email) <span class="keyword">VALUES</span></span><br><span class="line">(<span class="number">1</span>, <span class="string">&#x27;Jone&#x27;</span>, <span class="number">18</span>, <span class="string">&#x27;test1@baomidou.com&#x27;</span>),</span><br><span class="line">(<span class="number">2</span>, <span class="string">&#x27;Jack&#x27;</span>, <span class="number">20</span>, <span class="string">&#x27;test2@baomidou.com&#x27;</span>),</span><br><span class="line">(<span class="number">3</span>, <span class="string">&#x27;Tom&#x27;</span>, <span class="number">28</span>, <span class="string">&#x27;test3@baomidou.com&#x27;</span>),</span><br><span class="line">(<span class="number">4</span>, <span class="string">&#x27;Sandy&#x27;</span>, <span class="number">21</span>, <span class="string">&#x27;test4@baomidou.com&#x27;</span>),</span><br><span class="line">(<span class="number">5</span>, <span class="string">&#x27;Billie&#x27;</span>, <span class="number">24</span>, <span class="string">&#x27;test5@baomidou.com&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>user</code>表结构如下：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>age</th>
+<th>email</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Jone</td>
+<td>18</td>
+<td><a href="mailto:&#x74;&#101;&#115;&#116;&#49;&#x40;&#98;&#97;&#111;&#109;&#105;&#100;&#x6f;&#117;&#x2e;&#99;&#x6f;&#x6d;">&#x74;&#101;&#115;&#116;&#49;&#x40;&#98;&#97;&#111;&#109;&#105;&#100;&#x6f;&#117;&#x2e;&#99;&#x6f;&#x6d;</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jack</td>
+<td>20</td>
+<td><a href="mailto:&#116;&#101;&#x73;&#116;&#50;&#x40;&#x62;&#x61;&#x6f;&#x6d;&#105;&#100;&#x6f;&#117;&#x2e;&#x63;&#x6f;&#x6d;">&#116;&#101;&#x73;&#116;&#50;&#x40;&#x62;&#x61;&#x6f;&#x6d;&#105;&#100;&#x6f;&#117;&#x2e;&#x63;&#x6f;&#x6d;</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Tom</td>
+<td>28</td>
+<td><a href="mailto:&#116;&#x65;&#x73;&#116;&#x33;&#64;&#98;&#97;&#x6f;&#x6d;&#105;&#x64;&#111;&#x75;&#46;&#99;&#111;&#x6d;">&#116;&#x65;&#x73;&#116;&#x33;&#64;&#98;&#97;&#x6f;&#x6d;&#105;&#x64;&#111;&#x75;&#46;&#99;&#111;&#x6d;</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sandy</td>
+<td>21</td>
+<td><a href="mailto:&#116;&#101;&#115;&#x74;&#x34;&#64;&#98;&#97;&#x6f;&#109;&#105;&#x64;&#x6f;&#117;&#x2e;&#x63;&#x6f;&#x6d;">&#116;&#101;&#115;&#x74;&#x34;&#64;&#98;&#97;&#x6f;&#109;&#105;&#x64;&#x6f;&#117;&#x2e;&#x63;&#x6f;&#x6d;</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Billie</td>
+<td>24</td>
+<td><a href="mailto:&#116;&#x65;&#x73;&#x74;&#53;&#64;&#98;&#97;&#x6f;&#109;&#105;&#100;&#111;&#x75;&#46;&#x63;&#111;&#x6d;">&#116;&#x65;&#x73;&#x74;&#53;&#64;&#98;&#97;&#x6f;&#109;&#105;&#100;&#111;&#x75;&#46;&#x63;&#111;&#x6d;</a></td>
+</tr>
+</tbody></table>
+<h3 id="1-2-2-初始化工程"><a href="#1-2-2-初始化工程" class="headerlink" title="1.2.2 初始化工程"></a>1.2.2 初始化工程</h3><p>​		使用 <a target="_blank" rel="noopener" href="https://start.spring.io/">Spring Initializer (opens new window) </a> 创建工程：MybatisPlus-Sample</p>
+<h3 id="1-2-3-添加依赖"><a href="#1-2-3-添加依赖" class="headerlink" title="1.2.3 添加依赖"></a>1.2.3 添加依赖</h3><p>版本查询：<a target="_blank" rel="noopener" href="https://mvnrepository.com/">https://mvnrepository.com/</a></p>
+<p>parent 依赖示例：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.7.8<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--MybatisPlus依赖--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.0.20<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.junit.vintage<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit-vintage-engine<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-2-4-配置"><a href="#1-2-4-配置" class="headerlink" title="1.2.4 配置"></a>1.2.4 配置</h3><p>mysql8+ 数据库连接配置：【添加时区：GMT+8】</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#mysql8+数据库连接</span></span><br><span class="line"><span class="attr">spring.datasource.driver-class-name</span>=<span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line"><span class="attr">spring.datasource.url</span>=<span class="string">jdbc:mysql://localhost:3306/mybatis_plus?serverTimezone=GMT%2B8&amp;characterEncoding=utf-8</span></span><br><span class="line"><span class="attr">spring.datasource.username</span>=<span class="string">root</span></span><br><span class="line"><span class="attr">spring.datasource.password</span>=<span class="string">root</span></span><br></pre></td></tr></table></figure>
+
+<p>mysql5 数据库连接配置：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#mysql5数据库连接</span></span><br><span class="line"><span class="attr">spring.datasource.driver-class-name</span>=<span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line"><span class="attr">spring.datasource.url</span>=<span class="string">jdbc:mysql://localhost:3306/mybatis_plus?characterEncoding=utf-8&amp;useSSL=true</span></span><br><span class="line"><span class="attr">spring.datasource.username</span>=<span class="string">root</span></span><br><span class="line"><span class="attr">spring.datasource.password</span>=<span class="string">root</span></span><br></pre></td></tr></table></figure>
+
+<p>MybatisPlusSampleApplication 配置：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@MapperScan(&quot;com.example.mybatisplus.mapper&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MybatisPlusSampleApplication</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(MybatisPlusSampleApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-2-5-编码"><a href="#1-2-5-编码" class="headerlink" title="1.2.5 编码"></a>1.2.5 编码</h3><p>创建实体  <code>User</code>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mybatisplus.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-6-测试"><a href="#1-2-6-测试" class="headerlink" title="1.2.6 测试"></a>1.2.6 测试</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.mybatisplus;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.example.mybatisplus.entity.User;</span><br><span class="line"><span class="keyword">import</span> com.example.mybatisplus.mapper.UserMapper;</span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.Test;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.context.SpringBootTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">QuickStartSampleTest</span> &#123;</span><br><span class="line">    <span class="comment">// 使用@Autowired报红，解决方案：使用@Resource注解，或者UserMapper添加@Repository、@Mapper等</span></span><br><span class="line">    <span class="comment">// @Autowired</span></span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> UserMapper userMapper;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testSelectListNull</span><span class="params">()</span> &#123;</span><br><span class="line">        List&lt;User&gt; userList = userMapper.selectList(<span class="literal">null</span>);</span><br><span class="line">        userList.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>控制台输出结果：</p>
+<blockquote>
+<p>User(id&#x3D;1, name&#x3D;Jone, age&#x3D;18, email&#x3D;<a href="mailto:&#x74;&#101;&#x73;&#x74;&#x31;&#x40;&#x62;&#x61;&#111;&#x6d;&#x69;&#100;&#x6f;&#117;&#46;&#99;&#111;&#x6d;">&#x74;&#101;&#x73;&#x74;&#x31;&#x40;&#x62;&#x61;&#111;&#x6d;&#x69;&#100;&#x6f;&#117;&#46;&#99;&#111;&#x6d;</a>)<br>User(id&#x3D;2, name&#x3D;Jack, age&#x3D;20, email&#x3D;<a href="mailto:&#116;&#101;&#115;&#x74;&#x32;&#64;&#x62;&#97;&#x6f;&#x6d;&#105;&#100;&#111;&#117;&#x2e;&#99;&#x6f;&#x6d;">&#116;&#101;&#115;&#x74;&#x32;&#64;&#x62;&#97;&#x6f;&#x6d;&#105;&#100;&#111;&#117;&#x2e;&#99;&#x6f;&#x6d;</a>)<br>User(id&#x3D;3, name&#x3D;Tom, age&#x3D;28, email&#x3D;<a href="mailto:&#x74;&#x65;&#115;&#116;&#51;&#x40;&#98;&#x61;&#111;&#x6d;&#x69;&#x64;&#x6f;&#x75;&#46;&#99;&#111;&#x6d;">&#x74;&#x65;&#115;&#116;&#51;&#x40;&#98;&#x61;&#111;&#x6d;&#x69;&#x64;&#x6f;&#x75;&#46;&#99;&#111;&#x6d;</a>)<br>User(id&#x3D;4, name&#x3D;Sandy, age&#x3D;21, email&#x3D;<a href="mailto:&#116;&#101;&#115;&#x74;&#x34;&#64;&#98;&#97;&#x6f;&#109;&#105;&#x64;&#111;&#x75;&#46;&#99;&#x6f;&#109;">&#116;&#101;&#115;&#x74;&#x34;&#64;&#98;&#97;&#x6f;&#109;&#105;&#x64;&#111;&#x75;&#46;&#99;&#x6f;&#109;</a>)<br>User(id&#x3D;5, name&#x3D;Billie, age&#x3D;24, email&#x3D;<a href="mailto:&#x74;&#x65;&#x73;&#x74;&#x35;&#64;&#98;&#97;&#111;&#109;&#x69;&#x64;&#x6f;&#x75;&#46;&#99;&#x6f;&#x6d;">&#x74;&#x65;&#x73;&#x74;&#x35;&#64;&#98;&#97;&#111;&#109;&#x69;&#x64;&#x6f;&#x75;&#46;&#99;&#x6f;&#x6d;</a>)</p>
+</blockquote>
+<h2 id="1-3-配置"><a href="#1-3-配置" class="headerlink" title="1.3 配置"></a>1.3 配置</h2><h3 id="1-3-1-SpringBoot工程"><a href="#1-3-1-SpringBoot工程" class="headerlink" title="1.3.1 SpringBoot工程"></a>1.3.1 SpringBoot工程</h3><p>添加 @MapperScan 注解：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@MapperScan(&quot;com.baomidou.mybatisplus.samples.quickstart.mapper&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Application</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(Application.class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-2-Spring-工程"><a href="#1-3-2-Spring-工程" class="headerlink" title="1.3.2 Spring 工程"></a>1.3.2 Spring 工程</h3><p><strong>配置 MapperScan</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">&quot;org.mybatis.spring.mapper.MapperScannerConfigurer&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;basePackage&quot;</span> <span class="attr">value</span>=<span class="string">&quot;com.baomidou.mybatisplus.samples.quickstart.mapper&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>调整 SqlSessionFactory 为 MyBatis-Plus 的 SqlSessionFactory</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;sqlSessionFactory&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;dataSource&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;dataSource&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>通常来说，一般的简单工程，通过以上配置即可正常使用 MyBatis-Plus，具体可参考以下项目：<a target="_blank" rel="noopener" href="https://github.com/baomidou/mybatis-plus-samples/tree/master/mybatis-plus-sample-quickstart">Spring Boot 快速启动示例 (opens new window)</a>、<a target="_blank" rel="noopener" href="https://github.com/baomidou/mybatis-plus-samples/tree/master/mybatis-plus-sample-quickstart-springmvc">Spring MVC 快速启动示例 (opens new window)</a>。</p>
+<h2 id="1-4-注解"><a href="#1-4-注解" class="headerlink" title="1.4 注解"></a>1.4 注解</h2><h3 id="1-4-1-TableName"><a href="#1-4-1-TableName" class="headerlink" title="1.4.1 @TableName"></a>1.4.1 <a target="_blank" rel="noopener" href="https://github.com/baomidou/mybatis-plus/blob/3.0/mybatis-plus-annotation/src/main/java/com/baomidou/mybatisplus/annotation/TableName.java">@TableName</a></h3><ul>
+<li>描述：表名注解，标识实体类对应的表<strong>【应用于数据库表名和实体名称不一致的情况】</strong></li>
+<li>使用位置：实体类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@TableName(&quot;sys_user&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">类型</th>
+<th align="left">必须指定</th>
+<th align="left">默认值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">value</td>
+<td align="left">String</td>
+<td align="left">否</td>
+<td align="left">“”</td>
+<td align="left">表名</td>
+</tr>
+<tr>
+<td align="left">schema</td>
+<td align="left">String</td>
+<td align="left">否</td>
+<td align="left">“”</td>
+<td align="left">schema</td>
+</tr>
+<tr>
+<td align="left">keepGlobalPrefix</td>
+<td align="left">boolean</td>
+<td align="left">否</td>
+<td align="left">false</td>
+<td align="left">是否保持使用全局的 tablePrefix 的值（当全局 tablePrefix 生效时）</td>
+</tr>
+<tr>
+<td align="left">resultMap</td>
+<td align="left">String</td>
+<td align="left">否</td>
+<td align="left">“”</td>
+<td align="left">xml 中 resultMap 的 id（用于满足特定类型的实体类对象绑定）</td>
+</tr>
+<tr>
+<td align="left">autoResultMap</td>
+<td align="left">boolean</td>
+<td align="left">否</td>
+<td align="left">false</td>
+<td align="left">是否自动构建 resultMap 并使用（如果设置 resultMap 则不会进行 resultMap 的自动构建与注入）</td>
+</tr>
+<tr>
+<td align="left">excludeProperty</td>
+<td align="left">String[]</td>
+<td align="left">否</td>
+<td align="left">{}</td>
+<td align="left">需要排除的属性名 @since 3.3.1</td>
+</tr>
+</tbody></table>
+<p><strong>关于 <code>autoResultMap</code> 的说明：</strong></p>
+<p>MP 会自动构建一个 <code>resultMap</code> 并注入到 MyBatis 里（一般用不上），请注意以下内容：</p>
+<p>因为 MP 底层是 MyBatis，所以 MP 只是帮您注入了常用 CRUD 到 MyBatis 里，注入之前是动态的（根据您的 Entity 字段以及注解变化而变化），但是注入之后是静态的（等于 XML 配置中的内容）。</p>
+<p>而对于 <code>typeHandler</code> 属性，MyBatis 只支持写在 2 个地方:</p>
+<ol>
+<li>定义在 resultMap 里，作用于查询结果的封装</li>
+<li>定义在 <code>insert</code> 和 <code>update</code> 语句的 <code>#&#123;property&#125;</code> 中的 <code>property</code> 后面（例：<code>#&#123;property,typehandler=xxx.xxx.xxx&#125;</code>），并且只作用于当前 <code>设置值</code></li>
+</ol>
+<p>除了以上两种直接指定 <code>typeHandler</code> 的形式，MyBatis 有一个全局扫描自定义 <code>typeHandler</code> 包的配置，原理是根据您的 <code>property</code> 类型去找其对应的 <code>typeHandler</code> 并使用。</p>
+<h3 id="1-4-2-TableId"><a href="#1-4-2-TableId" class="headerlink" title="1.4.2 @TableId"></a>1.4.2 <a target="_blank" rel="noopener" href="https://github.com/baomidou/mybatis-plus/blob/3.0/mybatis-plus-annotation/src/main/java/com/baomidou/mybatisplus/annotation/TableId.java">@TableId</a></h3><ul>
+<li>描述：主键注解 <strong>【应用于表字段和实体类属性不一致的情况】</strong></li>
+<li>使用位置：实体类主键字段</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@TableName(&quot;sys_user&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@TableId(&quot;id&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">类型</th>
+<th align="left">必须指定</th>
+<th align="left">默认值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">value</td>
+<td align="left">String</td>
+<td align="left">否</td>
+<td align="left">“”</td>
+<td align="left">主键字段名</td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="left">Enum</td>
+<td align="left">否</td>
+<td align="left">IdType.NONE</td>
+<td align="left">指定主键类型</td>
+</tr>
+</tbody></table>
+<h4 id="IdType"><a href="#IdType" class="headerlink" title=" IdType"></a><a target="_blank" rel="noopener" href="https://github.com/baomidou/mybatis-plus/blob/3.0/mybatis-plus-annotation/src/main/java/com/baomidou/mybatisplus/annotation/IdType.java"> IdType</a></h4><table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">AUTO</td>
+<td align="left">数据库 ID 自增</td>
+</tr>
+<tr>
+<td align="left">NONE</td>
+<td align="left">无状态，该类型为未设置主键类型（注解里等于跟随全局，全局里约等于 INPUT）</td>
+</tr>
+<tr>
+<td align="left">INPUT</td>
+<td align="left">insert 前自行 set 主键值</td>
+</tr>
+<tr>
+<td align="left">ASSIGN_ID</td>
+<td align="left">分配 ID(主键类型为 Number(Long 和 Integer)或 String)(since 3.3.0)，使用接口<code>IdentifierGenerator</code>的方法<code>nextId</code>(默认实现类为<code>DefaultIdentifierGenerator</code>雪花算法)</td>
+</tr>
+<tr>
+<td align="left">ASSIGN_UUID</td>
+<td align="left">分配 UUID，主键类型为 String(since 3.3.0)，使用接口<code>IdentifierGenerator</code>的方法<code>nextUUID</code>(默认 default 方法)</td>
+</tr>
+<tr>
+<td align="left"><del>ID_WORKER</del></td>
+<td align="left">分布式全局唯一 ID 长整型类型(please use <code>ASSIGN_ID</code>)</td>
+</tr>
+<tr>
+<td align="left"><del>UUID</del></td>
+<td align="left">32 位 UUID 字符串(please use <code>ASSIGN_UUID</code>)</td>
+</tr>
+<tr>
+<td align="left"><del>ID_WORKER_STR</del></td>
+<td align="left">分布式全局唯一 ID 字符串类型(please use <code>ASSIGN_ID</code>)</td>
+</tr>
+</tbody></table>
+<h4 id="雪花算法"><a href="#雪花算法" class="headerlink" title="雪花算法"></a>雪花算法</h4><h3 id="1-4-3-TableField"><a href="#1-4-3-TableField" class="headerlink" title="1.4.3  @TableField"></a>1.4.3 <a target="_blank" rel="noopener" href="https://github.com/baomidou/mybatis-plus/blob/3.0/mybatis-plus-annotation/src/main/java/com/baomidou/mybatisplus/annotation/TableField.java"> @TableField</a></h3><ul>
+<li>描述：字段注解（非主键）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@TableName(&quot;sys_user&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="meta">@TableId</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="meta">@TableField(&quot;nickname&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">类型</th>
+<th align="left">必须指定</th>
+<th align="left">默认值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">value</td>
+<td align="left">String</td>
+<td align="left">否</td>
+<td align="left">“”</td>
+<td align="left">数据库字段名</td>
+</tr>
+<tr>
+<td align="left">exist</td>
+<td align="left">boolean</td>
+<td align="left">否</td>
+<td align="left">true</td>
+<td align="left">是否为数据库表字段</td>
+</tr>
+<tr>
+<td align="left">condition</td>
+<td align="left">String</td>
+<td align="left">否</td>
+<td align="left">“”</td>
+<td align="left">字段 <code>where</code> 实体查询比较条件，有值设置则按设置的值为准，没有则为默认全局的 &#96;%s&#x3D;#</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/02/28/OperatingSystem/" rel="prev" title="操作系统">
+      <i class="fa fa-chevron-left"></i> 操作系统
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/02/28/Netty/" rel="next" title="Netty">
+      Netty <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MybatisPlus"><span class="nav-number">2.</span> <span class="nav-text">MybatisPlus</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="nav-number">3.</span> <span class="nav-text">一、快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E7%AE%80%E4%BB%8B"><span class="nav-number">3.1.</span> <span class="nav-text">1.1 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-%E7%89%B9%E6%80%A7"><span class="nav-number">3.1.1.</span> <span class="nav-text">1.1.1 特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84"><span class="nav-number">3.1.2.</span> <span class="nav-text">1.1.2 框架结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="nav-number">3.2.</span> <span class="nav-text">1.2 快速开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%84%9A%E6%9C%AC"><span class="nav-number">3.2.1.</span> <span class="nav-text">1.2.1 数据库脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B7%A5%E7%A8%8B"><span class="nav-number">3.2.2.</span> <span class="nav-text">1.2.2 初始化工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-3-%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96"><span class="nav-number">3.2.3.</span> <span class="nav-text">1.2.3 添加依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-4-%E9%85%8D%E7%BD%AE"><span class="nav-number">3.2.4.</span> <span class="nav-text">1.2.4 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-5-%E7%BC%96%E7%A0%81"><span class="nav-number">3.2.5.</span> <span class="nav-text">1.2.5 编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-6-%E6%B5%8B%E8%AF%95"><span class="nav-number">3.2.6.</span> <span class="nav-text">1.2.6 测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E9%85%8D%E7%BD%AE"><span class="nav-number">3.3.</span> <span class="nav-text">1.3 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-1-SpringBoot%E5%B7%A5%E7%A8%8B"><span class="nav-number">3.3.1.</span> <span class="nav-text">1.3.1 SpringBoot工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-2-Spring-%E5%B7%A5%E7%A8%8B"><span class="nav-number">3.3.2.</span> <span class="nav-text">1.3.2 Spring 工程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E6%B3%A8%E8%A7%A3"><span class="nav-number">3.4.</span> <span class="nav-text">1.4 注解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-TableName"><span class="nav-number">3.4.1.</span> <span class="nav-text">1.4.1 @TableName</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-TableId"><span class="nav-number">3.4.2.</span> <span class="nav-text">1.4.2 @TableId</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IdType"><span class="nav-number">3.4.2.1.</span> <span class="nav-text"> IdType</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9B%AA%E8%8A%B1%E7%AE%97%E6%B3%95"><span class="nav-number">3.4.2.2.</span> <span class="nav-text">雪花算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-3-TableField"><span class="nav-number">3.4.3.</span> <span class="nav-text">1.4.3  @TableField</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
