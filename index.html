@@ -21,11 +21,11 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="MineTing">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="MineTing">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Fei">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/">
@@ -41,7 +41,7 @@
   };
 </script>
 
-  <title>Hexo</title>
+  <title>MineTing</title>
   
 
 
@@ -92,7 +92,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">MineTing</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -177,12 +177,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Fei">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="MineTing">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -237,255 +237,16 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/DataStructuresAndAlgorithms/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/28/DataStructuresAndAlgorithms/" class="post-title-link" itemprop="url">DataStructuresAndAlgorithms</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-02-28 00:00:00" itemprop="dateCreated datePublished" datetime="2023-02-28T00:00:00+08:00">2023-02-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-02-26 23:25:49" itemprop="dateModified" datetime="2023-02-26T23:25:49+08:00">2023-02-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id><a href="#" class="headerlink" title></a></h1><h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><h2 id="跳表"><a href="#跳表" class="headerlink" title="跳表"></a>跳表</h2><h2 id="图"><a href="#图" class="headerlink" title="图"></a>图</h2><h2 id="Tire树"><a href="#Tire树" class="headerlink" title="Tire树"></a>Tire树</h2><h1 id="常见算法"><a href="#常见算法" class="headerlink" title="常见算法"></a>常见算法</h1><h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>力扣704：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-search">https://leetcode.cn/problems/binary-search</a></p>
-<p>题目描述：给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
-<p>示例一：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 9</span><br><span class="line">输出: 4</span><br><span class="line">解释: 9 出现在 nums 中并且下标为 4</span><br></pre></td></tr></table></figure>
-
-<p>示例二：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 2</span><br><span class="line">输出: -1</span><br><span class="line">解释: 2 不存在 nums 中因此返回 -1</span><br></pre></td></tr></table></figure>
-
-
-
-<p>思路：</p>
-<p>代码示例【Java】</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">search</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (target &lt; arr[<span class="number">0</span>] || target &gt; arr[arr.length - <span class="number">1</span>]) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>, right = arr.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + (right - left) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (arr[mid] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &lt; target) &#123;</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &gt; target) &#123;</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><h3 id="深度搜索"><a href="#深度搜索" class="headerlink" title="深度搜索"></a>深度搜索</h3><h3 id="广度搜索"><a href="#广度搜索" class="headerlink" title="广度搜索"></a>广度搜索</h3><h2 id="哈希"><a href="#哈希" class="headerlink" title="哈希"></a>哈希</h2><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>​		动态规划（Dynamic Programming）</p>
-<h4 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h4><p>​		问题含有重复的子问题，每一个状态都由上一个状态推导得到。</p>
-<h4 id="解题步骤"><a href="#解题步骤" class="headerlink" title="解题步骤"></a>解题步骤</h4><ul>
-<li>第一步：确定数组含义，无论是一维还是二维</li>
-<li>第二步：确定状态方程</li>
-<li>第三步：确定初始值</li>
-</ul>
-<h4 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h4><p>斐波那契数列作为动态规划的经典入门示例，如下：</p>
-<p>力扣：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/fibonacci-number/">https://leetcode.cn/problems/fibonacci-number/</a></p>
-<p>斐波那契数 （通常用 F(n) 表示）形成的序列称为 斐波那契数列 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：</p>
-<p>F(0) &#x3D; 0，F(1) &#x3D; 1<br>F(n) &#x3D; F(n - 1) + F(n - 2)，其中 n &gt; 1<br>给定 n ，请计算 F(n) 。</p>
-<p>示例 1：</p>
-<p>输入：n &#x3D; 2<br>输出：1<br>解释：F(2) &#x3D; F(1) + F(0) &#x3D; 1 + 0 &#x3D; 1<br>示例 2：</p>
-<p>输入：n &#x3D; 3<br>输出：2<br>解释：F(3) &#x3D; F(2) + F(1) &#x3D; 1 + 1 &#x3D; 2</p>
-<p>【方案一：递归】</p>
-<p>递归的思路是最清晰的。</p>
-<p>代码实现：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 递归实现 F(n) = F(n-1) + F(n-2)</span></span><br><span class="line"><span class="comment"> * 缺点：</span></span><br><span class="line"><span class="comment"> *  1. 导致栈溢出</span></span><br><span class="line"><span class="comment"> *  2. 重复计算</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">fibonacci01</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (n &lt; <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fibonacci01(n - <span class="number">1</span>) + fibonacci01(n - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>递归的缺点：（1）栈溢出	（2）重复计算</p>
-<p>子问题出现了重复计算，采用动态规划改进。</p>
-<p>【方案二：动态规划】</p>
-<p>步骤：</p>
-<ul>
-<li>第一步：确定数组含义，dp[i] 表示当前的斐波那契数值</li>
-<li>第二步：确定状态方程，F(n) &#x3D; F(n-1) + F(n-2)</li>
-<li>第三步：确定初始值，F(0) &#x3D; 0，F(1) &#x3D; 1</li>
-</ul>
-<p>代码实现：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 动态规划</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">fibonacci02</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] dp = <span class="keyword">new</span> <span class="title class_">int</span>[n + <span class="number">1</span>];</span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        dp[i] = dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>【方案三：滚动数组思想】</p>
-<p>由于F(n)只与F(n-1) 和 F(n-2)有关，且是一维数组，采用滚动数组思想</p>
-<p>代码实现：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 进一步简化：</span></span><br><span class="line"><span class="comment"> * 由于F(n)只与F(n-1) 和 F(n-2)有关，且是一维数组，采用滚动数组思想</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">fibonacci03</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> <span class="number">0</span>, q = <span class="number">0</span>, r = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        p = q;</span><br><span class="line">        q = r;</span><br><span class="line">        r = p + q;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="入门示例"><a href="#入门示例" class="headerlink" title="入门示例"></a>入门示例</h3><h4 id="爬楼梯"><a href="#爬楼梯" class="headerlink" title="爬楼梯"></a>爬楼梯</h4><p>力扣：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/climbing-stairs/">https://leetcode.cn/problems/climbing-stairs/</a></p>
-<p>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。</p>
-<p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
-<p>示例 1：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 2</span><br><span class="line">输出：2</span><br><span class="line">解释：有两种方法可以爬到楼顶。</span><br><span class="line">1. 1 阶 + 1 阶</span><br><span class="line">2. 2 阶</span><br></pre></td></tr></table></figure>
-
-
-<p>示例 2：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 3</span><br><span class="line">输出：3</span><br><span class="line">解释：有三种方法可以爬到楼顶。</span><br><span class="line">1. 1 阶 + 1 阶 + 1 阶</span><br><span class="line">2. 1 阶 + 2 阶</span><br><span class="line">3. 2 阶 + 1 阶</span><br></pre></td></tr></table></figure>
-
-<p>解题步骤：</p>
-<p>理解题意：每一个状态都是由上一个状态推导得出，考虑动态规划。</p>
-<ul>
-<li><p>第一步：确定数组含义，dp[i] 表示爬到当前楼梯所需要走的方法总数</p>
-</li>
-<li><p>第二步：确定状态方程，由于每次可以爬 1 或 2 个台阶，因此爬到当前的方法数等于从下一个楼梯爬上来的方法数加</p>
-<p>​				上从下两个楼梯爬上来的方法数；便有状态方程：dp[i] &#x3D; dp[i-1] + dp[i-2]，公式等同于斐波那契数列，但思</p>
-<p>​				想不同。</p>
-</li>
-<li><p>第三步：确定初始值，首先初始值是确定的，不能从第二阶开始算，因为爬到第二阶有两种方式，因此初始值需要确</p>
-<p>​				定第 0 阶和第 1 阶；dp[0] &#x3D; 1, dp[1] &#x3D; 1。</p>
-</li>
-</ul>
-<p>代码实现：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">climbStairs</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] dp = <span class="keyword">new</span> <span class="title class_">int</span>[n + <span class="number">1</span>];</span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        dp[i] = dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="背包问题"><a href="#背包问题" class="headerlink" title="背包问题"></a>背包问题</h3><h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><h4 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h4><p><img src="/images/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98.png" alt="背包问题"></p>
-<h4 id="0-1背包"><a href="#0-1背包" class="headerlink" title="0-1背包"></a>0-1背包</h4><p>​		有 N 件物品和一个容量为 V 的背包。第 i 件物品的重量是 w[i]，价值是 v[i]。求解将哪些物品装入背包可使这些物品的重量总和不超过背包容量，且价值总和最大。每种物品仅有一件，可以选择放或不放。</p>
-<h4 id="解题步骤-1"><a href="#解题步骤-1" class="headerlink" title="解题步骤"></a>解题步骤</h4><p>（1）放入第 i 件物品时的价值依赖于放入第 i-1 件物品时的价值，属于子问题，因此考虑动态规划；</p>
-<p>（2）由于每次放入物品时，都要考虑重量，因此使用二维数组 dp[i] [j] 表示第 i 个物品，在容量为 j 时的价值；</p>
-<p>（3）每次放入物品时需要考虑放得下还是放不下的问题，针对两种情况判断最优解。</p>
-<p>使用表格演示过程：</p>
-<ul>
-<li><p>第一步：确定数组含义；使用 dp[i] [j] 表示在容量为 j 时，放入第 i 个物品的总价值。</p>
-</li>
-<li><p>第二步：确定状态方程；此处需要考虑放得下还是放不下的问题。</p>
-<p>​				放不下：背包的最大价值便是已放入物品的最大价值，dp[i] [j] &#x3D; dp[i-1] [j]</p>
-<p>​				放得下：最大价值为当前的物品价值，加上总容量减去当前物品的重量后的最大价值，也就是</p>
-<p>​								dp[i] [j] &#x3D; v[i] + dp[i - 1] [j - w[i]]</p>
-<p>​				最大价值取两者的最大值，因此状态方程为：dp[i] [j] &#x3D; Max{dp[i-1] [j], v[i] + dp[i - 1] [j - w[i]]}</p>
-</li>
-<li><p>第三步：确定初始值；涉及到 i -1 的问题，因此 i &#x3D; 0时需要初始化</p>
-<p>​</p>
-</li>
-</ul>
-<p>			</p>
-<h3 id="打家劫舍"><a href="#打家劫舍" class="headerlink" title="打家劫舍"></a>打家劫舍</h3><h3 id="股票问题"><a href="#股票问题" class="headerlink" title="股票问题"></a>股票问题</h3><h3 id="子序列问题"><a href="#子序列问题" class="headerlink" title="子序列问题"></a>子序列问题</h3><h2 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h2><h2 id="回溯算法"><a href="#回溯算法" class="headerlink" title="回溯算法"></a>回溯算法</h2><h2 id="分治算法"><a href="#分治算法" class="headerlink" title="分治算法"></a>分治算法</h2><h2 id="枚举算法"><a href="#枚举算法" class="headerlink" title="枚举算法"></a>枚举算法</h2><h2 id="字符串匹配"><a href="#字符串匹配" class="headerlink" title="字符串匹配"></a>字符串匹配</h2><h2 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h2><h2 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a>单调栈</h2><p>解决问题：通常抽象出一维数组，寻找右边或者左边比当前元素大或者小的元素，可以使用双层 for 循环暴力解决，时间复杂度是O(n^2)，另一种简洁的解法是使用栈，该栈中的元素是单调递减或者递增的。</p>
-<p>问题示例【每日温度】：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/daily-temperatures/">https://leetcode.cn/problems/daily-temperatures/</a></p>
-<p>给定一个整数数组 temperatures ，表示每天的温度，返回一个数组 answer ，其中 answer[i] 是指对于第 i 天，下一个更高温度出现在几天后。如果气温在这之后都不会升高，请在该位置用 0 来代替。</p>
-<p>示例 1:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: temperatures = [<span class="number">73</span>,<span class="number">74</span>,<span class="number">75</span>,<span class="number">71</span>,<span class="number">69</span>,<span class="number">72</span>,<span class="number">76</span>,<span class="number">73</span>]</span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-
-<p>示例 2:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: temperatures = [<span class="number">30</span>,<span class="number">40</span>,<span class="number">50</span>,<span class="number">60</span>]</span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-
-<p>示例 3:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: temperatures = [<span class="number">30</span>,<span class="number">60</span>,<span class="number">90</span>]</span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-
-<p>方式一：暴力解法</p>
-<p>方式二：单调栈</p>
-<p>可以维护一个存储下标的单调栈，从栈底到栈顶的下标对应的温度列表中的温度依次递减。如果一个下标在单调栈里，则表示尚未找到下一次温度更高的下标。</p>
-<p>正向遍历温度列表。对于温度列表中的每个元素 temperatures[i]，如果栈为空，则直接将 i 进栈，如果栈不为空，则比较栈顶元素 prevIndex 对应的温度 temperatures[prevIndex] 和当前温度 temperatures[i]，如果 temperatures[i] &gt; temperatures[prevIndex]，则将 prevIndex 移除，并将 prevIndex 对应的等待天数赋为 i - prevIndex，重复上述操作直到栈为空或者栈顶元素对应的温度小于等于当前温度，然后将 i 进栈。</p>
-<p>为什么可以在弹栈的时候更新 ans[prevIndex] 呢？因为在这种情况下，即将进栈的 i 对应的 temperatures[i] 一定是 temperatures[prevIndex] 右边第一个比它大的元素，试想如果 prevIndex 和 i 有比它大的元素，假设下标为 j，那么 prevIndex 一定会在下标 j 的那一轮被弹掉。</p>
-<p>由于单调栈满足从栈底到栈顶元素对应的温度递减，因此每次有元素进栈时，会将温度更低的元素全部移除，并更新出栈元素对应的等待天数，这样可以确保等待天数一定是最小的。</p>
-<p>以下用一个具体的例子帮助读者理解单调栈。对于温度列表 </p>
-<h3 id="下一个更大的元素（一）"><a href="#下一个更大的元素（一）" class="headerlink" title="下一个更大的元素（一）"></a>下一个更大的元素（一）</h3><p>问题示例：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-i/">https://leetcode.cn/problems/next-greater-element-i/</a></p>
-<p>nums1 中数字 x 的 下一个更大元素 是指 x 在 nums2 中对应位置 右侧 的 第一个 比 x 大的元素。</p>
-<p>给你两个 没有重复元素 的数组 nums1 和 nums2 ，下标从 0 开始计数，其中nums1 是 nums2 的子集。</p>
-<p>对于每个 0 &lt;&#x3D; i &lt; nums1.length ，找出满足 nums1[i] &#x3D;&#x3D; nums2[j] 的下标 j ，并且在 nums2 确定 nums2[j] 的 下一个更大元素 。如果不存在下一个更大元素，那么本次查询的答案是 -1 。</p>
-<p>返回一个长度为 nums1.length 的数组 ans 作为答案，满足 ans[i] 是如上所述的 下一个更大元素 。</p>
-<p>示例 1：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：nums1 = [<span class="number">4</span>,<span class="number">1</span>,<span class="number">2</span>], nums2 = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>].</span><br><span class="line">输出：[-<span class="number">1</span>,<span class="number">3</span>,-<span class="number">1</span>]</span><br><span class="line">解释：nums1 中每个值的下一个更大元素如下所述：</span><br><span class="line"></span><br><span class="line">- <span class="number">4</span> ，用加粗斜体标识，nums2 = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>]。不存在下一个更大元素，所以答案是 -<span class="number">1</span> 。</span><br><span class="line">- <span class="number">1</span> ，用加粗斜体标识，nums2 = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>]。下一个更大元素是 <span class="number">3</span> 。</span><br><span class="line">- <span class="number">2</span> ，用加粗斜体标识，nums2 = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>]。不存在下一个更大元素，所以答案是 -<span class="number">1</span> 。</span><br></pre></td></tr></table></figure>
-
-<p>示例 2：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：nums1 = [<span class="number">2</span>,<span class="number">4</span>], nums2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].</span><br><span class="line">输出：[<span class="number">3</span>,-<span class="number">1</span>]</span><br><span class="line">解释：nums1 中每个值的下一个更大元素如下所述：</span><br><span class="line"></span><br><span class="line">- <span class="number">2</span> ，用加粗斜体标识，nums2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]。下一个更大元素是 <span class="number">3</span> 。</span><br><span class="line">- <span class="number">4</span> ，用加粗斜体标识，nums2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]。不存在下一个更大元素，所以答案是 -<span class="number">1</span> 。</span><br></pre></td></tr></table></figure>
-
-<p>提示：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> &lt;= nums1.length &lt;= nums2.length &lt;= <span class="number">1000</span></span><br><span class="line"><span class="number">0</span> &lt;= nums1[i], nums2[i] &lt;= <span class="number">104</span></span><br><span class="line">nums1和nums2中所有整数 互不相同</span><br><span class="line">nums1 中的所有整数同样出现在 nums2 中</span><br></pre></td></tr></table></figure>
-
-<p>方式一：单调栈 + 哈希表</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="下一个更大的元素（二）"><a href="#下一个更大的元素（二）" class="headerlink" title="下一个更大的元素（二）"></a>下一个更大的元素（二）</h3><p>问题示例：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-ii/">https://leetcode.cn/problems/next-greater-element-ii/</a></p>
-<p>给定一个循环数组 nums（ nums[nums.length - 1] 的下一个元素是 nums[0] ），返回 nums 中每个元素的 下一个更大元素 。</p>
-<p>数字 x 的 下一个更大的元素 是按数组遍历顺序，这个数字之后的第一个比它更大的数，这意味着你应该循环地搜索它的下一个更大的数。如果不存在，则输出 -1 。</p>
-<p>示例 1:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>]</span><br><span class="line">输出: [<span class="number">2</span>,-<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释: 第一个 <span class="number">1</span> 的下一个更大的数是 <span class="number">2</span>；</span><br><span class="line">数字 <span class="number">2</span> 找不到下一个更大的数； </span><br><span class="line">第二个 <span class="number">1</span> 的下一个最大的数需要循环搜索，结果也是 <span class="number">2</span>。</span><br></pre></td></tr></table></figure>
-
-
-<p>示例 2:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">3</span>]</span><br><span class="line">输出: [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,-<span class="number">1</span>,<span class="number">4</span>]</span><br></pre></td></tr></table></figure>
-
-
-<p>提示:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> &lt;= nums.length &lt;= <span class="number">10</span>^<span class="number">4</span></span><br><span class="line">-<span class="number">10</span>^<span class="number">9</span> &lt;= nums[i] &lt;= <span class="number">10</span>^<span class="number">9</span></span><br></pre></td></tr></table></figure>
-
-<p>代码示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-<h2 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/DesignPattern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Fei">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="MineTing">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -892,16 +653,255 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/Docker/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/DataStructuresAndAlgorithms/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Fei">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="MineTing">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/02/28/DataStructuresAndAlgorithms/" class="post-title-link" itemprop="url">DataStructuresAndAlgorithms</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-02-28 00:00:00" itemprop="dateCreated datePublished" datetime="2023-02-28T00:00:00+08:00">2023-02-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-02-26 23:25:49" itemprop="dateModified" datetime="2023-02-26T23:25:49+08:00">2023-02-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id><a href="#" class="headerlink" title></a></h1><h1 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h1><h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><h2 id="跳表"><a href="#跳表" class="headerlink" title="跳表"></a>跳表</h2><h2 id="图"><a href="#图" class="headerlink" title="图"></a>图</h2><h2 id="Tire树"><a href="#Tire树" class="headerlink" title="Tire树"></a>Tire树</h2><h1 id="常见算法"><a href="#常见算法" class="headerlink" title="常见算法"></a>常见算法</h1><h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>力扣704：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-search">https://leetcode.cn/problems/binary-search</a></p>
+<p>题目描述：给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
+<p>示例一：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 9</span><br><span class="line">输出: 4</span><br><span class="line">解释: 9 出现在 nums 中并且下标为 4</span><br></pre></td></tr></table></figure>
+
+<p>示例二：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 2</span><br><span class="line">输出: -1</span><br><span class="line">解释: 2 不存在 nums 中因此返回 -1</span><br></pre></td></tr></table></figure>
+
+
+
+<p>思路：</p>
+<p>代码示例【Java】</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">search</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (target &lt; arr[<span class="number">0</span>] || target &gt; arr[arr.length - <span class="number">1</span>]) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>, right = arr.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + (right - left) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (arr[mid] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &lt; target) &#123;</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &gt; target) &#123;</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><h3 id="深度搜索"><a href="#深度搜索" class="headerlink" title="深度搜索"></a>深度搜索</h3><h3 id="广度搜索"><a href="#广度搜索" class="headerlink" title="广度搜索"></a>广度搜索</h3><h2 id="哈希"><a href="#哈希" class="headerlink" title="哈希"></a>哈希</h2><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>​		动态规划（Dynamic Programming）</p>
+<h4 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h4><p>​		问题含有重复的子问题，每一个状态都由上一个状态推导得到。</p>
+<h4 id="解题步骤"><a href="#解题步骤" class="headerlink" title="解题步骤"></a>解题步骤</h4><ul>
+<li>第一步：确定数组含义，无论是一维还是二维</li>
+<li>第二步：确定状态方程</li>
+<li>第三步：确定初始值</li>
+</ul>
+<h4 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h4><p>斐波那契数列作为动态规划的经典入门示例，如下：</p>
+<p>力扣：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/fibonacci-number/">https://leetcode.cn/problems/fibonacci-number/</a></p>
+<p>斐波那契数 （通常用 F(n) 表示）形成的序列称为 斐波那契数列 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：</p>
+<p>F(0) &#x3D; 0，F(1) &#x3D; 1<br>F(n) &#x3D; F(n - 1) + F(n - 2)，其中 n &gt; 1<br>给定 n ，请计算 F(n) 。</p>
+<p>示例 1：</p>
+<p>输入：n &#x3D; 2<br>输出：1<br>解释：F(2) &#x3D; F(1) + F(0) &#x3D; 1 + 0 &#x3D; 1<br>示例 2：</p>
+<p>输入：n &#x3D; 3<br>输出：2<br>解释：F(3) &#x3D; F(2) + F(1) &#x3D; 1 + 1 &#x3D; 2</p>
+<p>【方案一：递归】</p>
+<p>递归的思路是最清晰的。</p>
+<p>代码实现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 递归实现 F(n) = F(n-1) + F(n-2)</span></span><br><span class="line"><span class="comment"> * 缺点：</span></span><br><span class="line"><span class="comment"> *  1. 导致栈溢出</span></span><br><span class="line"><span class="comment"> *  2. 重复计算</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">fibonacci01</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (n &lt; <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fibonacci01(n - <span class="number">1</span>) + fibonacci01(n - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>递归的缺点：（1）栈溢出	（2）重复计算</p>
+<p>子问题出现了重复计算，采用动态规划改进。</p>
+<p>【方案二：动态规划】</p>
+<p>步骤：</p>
+<ul>
+<li>第一步：确定数组含义，dp[i] 表示当前的斐波那契数值</li>
+<li>第二步：确定状态方程，F(n) &#x3D; F(n-1) + F(n-2)</li>
+<li>第三步：确定初始值，F(0) &#x3D; 0，F(1) &#x3D; 1</li>
+</ul>
+<p>代码实现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 动态规划</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">fibonacci02</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] dp = <span class="keyword">new</span> <span class="title class_">int</span>[n + <span class="number">1</span>];</span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        dp[i] = dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>【方案三：滚动数组思想】</p>
+<p>由于F(n)只与F(n-1) 和 F(n-2)有关，且是一维数组，采用滚动数组思想</p>
+<p>代码实现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 进一步简化：</span></span><br><span class="line"><span class="comment"> * 由于F(n)只与F(n-1) 和 F(n-2)有关，且是一维数组，采用滚动数组思想</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">fibonacci03</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> <span class="number">0</span>, q = <span class="number">0</span>, r = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        p = q;</span><br><span class="line">        q = r;</span><br><span class="line">        r = p + q;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="入门示例"><a href="#入门示例" class="headerlink" title="入门示例"></a>入门示例</h3><h4 id="爬楼梯"><a href="#爬楼梯" class="headerlink" title="爬楼梯"></a>爬楼梯</h4><p>力扣：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/climbing-stairs/">https://leetcode.cn/problems/climbing-stairs/</a></p>
+<p>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。</p>
+<p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
+<p>示例 1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 2</span><br><span class="line">输出：2</span><br><span class="line">解释：有两种方法可以爬到楼顶。</span><br><span class="line">1. 1 阶 + 1 阶</span><br><span class="line">2. 2 阶</span><br></pre></td></tr></table></figure>
+
+
+<p>示例 2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 3</span><br><span class="line">输出：3</span><br><span class="line">解释：有三种方法可以爬到楼顶。</span><br><span class="line">1. 1 阶 + 1 阶 + 1 阶</span><br><span class="line">2. 1 阶 + 2 阶</span><br><span class="line">3. 2 阶 + 1 阶</span><br></pre></td></tr></table></figure>
+
+<p>解题步骤：</p>
+<p>理解题意：每一个状态都是由上一个状态推导得出，考虑动态规划。</p>
+<ul>
+<li><p>第一步：确定数组含义，dp[i] 表示爬到当前楼梯所需要走的方法总数</p>
+</li>
+<li><p>第二步：确定状态方程，由于每次可以爬 1 或 2 个台阶，因此爬到当前的方法数等于从下一个楼梯爬上来的方法数加</p>
+<p>​				上从下两个楼梯爬上来的方法数；便有状态方程：dp[i] &#x3D; dp[i-1] + dp[i-2]，公式等同于斐波那契数列，但思</p>
+<p>​				想不同。</p>
+</li>
+<li><p>第三步：确定初始值，首先初始值是确定的，不能从第二阶开始算，因为爬到第二阶有两种方式，因此初始值需要确</p>
+<p>​				定第 0 阶和第 1 阶；dp[0] &#x3D; 1, dp[1] &#x3D; 1。</p>
+</li>
+</ul>
+<p>代码实现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">climbStairs</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] dp = <span class="keyword">new</span> <span class="title class_">int</span>[n + <span class="number">1</span>];</span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        dp[i] = dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="背包问题"><a href="#背包问题" class="headerlink" title="背包问题"></a>背包问题</h3><h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><h4 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h4><p><img src="/images/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98.png" alt="背包问题"></p>
+<h4 id="0-1背包"><a href="#0-1背包" class="headerlink" title="0-1背包"></a>0-1背包</h4><p>​		有 N 件物品和一个容量为 V 的背包。第 i 件物品的重量是 w[i]，价值是 v[i]。求解将哪些物品装入背包可使这些物品的重量总和不超过背包容量，且价值总和最大。每种物品仅有一件，可以选择放或不放。</p>
+<h4 id="解题步骤-1"><a href="#解题步骤-1" class="headerlink" title="解题步骤"></a>解题步骤</h4><p>（1）放入第 i 件物品时的价值依赖于放入第 i-1 件物品时的价值，属于子问题，因此考虑动态规划；</p>
+<p>（2）由于每次放入物品时，都要考虑重量，因此使用二维数组 dp[i] [j] 表示第 i 个物品，在容量为 j 时的价值；</p>
+<p>（3）每次放入物品时需要考虑放得下还是放不下的问题，针对两种情况判断最优解。</p>
+<p>使用表格演示过程：</p>
+<ul>
+<li><p>第一步：确定数组含义；使用 dp[i] [j] 表示在容量为 j 时，放入第 i 个物品的总价值。</p>
+</li>
+<li><p>第二步：确定状态方程；此处需要考虑放得下还是放不下的问题。</p>
+<p>​				放不下：背包的最大价值便是已放入物品的最大价值，dp[i] [j] &#x3D; dp[i-1] [j]</p>
+<p>​				放得下：最大价值为当前的物品价值，加上总容量减去当前物品的重量后的最大价值，也就是</p>
+<p>​								dp[i] [j] &#x3D; v[i] + dp[i - 1] [j - w[i]]</p>
+<p>​				最大价值取两者的最大值，因此状态方程为：dp[i] [j] &#x3D; Max{dp[i-1] [j], v[i] + dp[i - 1] [j - w[i]]}</p>
+</li>
+<li><p>第三步：确定初始值；涉及到 i -1 的问题，因此 i &#x3D; 0时需要初始化</p>
+<p>​</p>
+</li>
+</ul>
+<p>			</p>
+<h3 id="打家劫舍"><a href="#打家劫舍" class="headerlink" title="打家劫舍"></a>打家劫舍</h3><h3 id="股票问题"><a href="#股票问题" class="headerlink" title="股票问题"></a>股票问题</h3><h3 id="子序列问题"><a href="#子序列问题" class="headerlink" title="子序列问题"></a>子序列问题</h3><h2 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h2><h2 id="回溯算法"><a href="#回溯算法" class="headerlink" title="回溯算法"></a>回溯算法</h2><h2 id="分治算法"><a href="#分治算法" class="headerlink" title="分治算法"></a>分治算法</h2><h2 id="枚举算法"><a href="#枚举算法" class="headerlink" title="枚举算法"></a>枚举算法</h2><h2 id="字符串匹配"><a href="#字符串匹配" class="headerlink" title="字符串匹配"></a>字符串匹配</h2><h2 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h2><h2 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a>单调栈</h2><p>解决问题：通常抽象出一维数组，寻找右边或者左边比当前元素大或者小的元素，可以使用双层 for 循环暴力解决，时间复杂度是O(n^2)，另一种简洁的解法是使用栈，该栈中的元素是单调递减或者递增的。</p>
+<p>问题示例【每日温度】：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/daily-temperatures/">https://leetcode.cn/problems/daily-temperatures/</a></p>
+<p>给定一个整数数组 temperatures ，表示每天的温度，返回一个数组 answer ，其中 answer[i] 是指对于第 i 天，下一个更高温度出现在几天后。如果气温在这之后都不会升高，请在该位置用 0 来代替。</p>
+<p>示例 1:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: temperatures = [<span class="number">73</span>,<span class="number">74</span>,<span class="number">75</span>,<span class="number">71</span>,<span class="number">69</span>,<span class="number">72</span>,<span class="number">76</span>,<span class="number">73</span>]</span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+<p>示例 2:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: temperatures = [<span class="number">30</span>,<span class="number">40</span>,<span class="number">50</span>,<span class="number">60</span>]</span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+<p>示例 3:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: temperatures = [<span class="number">30</span>,<span class="number">60</span>,<span class="number">90</span>]</span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+<p>方式一：暴力解法</p>
+<p>方式二：单调栈</p>
+<p>可以维护一个存储下标的单调栈，从栈底到栈顶的下标对应的温度列表中的温度依次递减。如果一个下标在单调栈里，则表示尚未找到下一次温度更高的下标。</p>
+<p>正向遍历温度列表。对于温度列表中的每个元素 temperatures[i]，如果栈为空，则直接将 i 进栈，如果栈不为空，则比较栈顶元素 prevIndex 对应的温度 temperatures[prevIndex] 和当前温度 temperatures[i]，如果 temperatures[i] &gt; temperatures[prevIndex]，则将 prevIndex 移除，并将 prevIndex 对应的等待天数赋为 i - prevIndex，重复上述操作直到栈为空或者栈顶元素对应的温度小于等于当前温度，然后将 i 进栈。</p>
+<p>为什么可以在弹栈的时候更新 ans[prevIndex] 呢？因为在这种情况下，即将进栈的 i 对应的 temperatures[i] 一定是 temperatures[prevIndex] 右边第一个比它大的元素，试想如果 prevIndex 和 i 有比它大的元素，假设下标为 j，那么 prevIndex 一定会在下标 j 的那一轮被弹掉。</p>
+<p>由于单调栈满足从栈底到栈顶元素对应的温度递减，因此每次有元素进栈时，会将温度更低的元素全部移除，并更新出栈元素对应的等待天数，这样可以确保等待天数一定是最小的。</p>
+<p>以下用一个具体的例子帮助读者理解单调栈。对于温度列表 </p>
+<h3 id="下一个更大的元素（一）"><a href="#下一个更大的元素（一）" class="headerlink" title="下一个更大的元素（一）"></a>下一个更大的元素（一）</h3><p>问题示例：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-i/">https://leetcode.cn/problems/next-greater-element-i/</a></p>
+<p>nums1 中数字 x 的 下一个更大元素 是指 x 在 nums2 中对应位置 右侧 的 第一个 比 x 大的元素。</p>
+<p>给你两个 没有重复元素 的数组 nums1 和 nums2 ，下标从 0 开始计数，其中nums1 是 nums2 的子集。</p>
+<p>对于每个 0 &lt;&#x3D; i &lt; nums1.length ，找出满足 nums1[i] &#x3D;&#x3D; nums2[j] 的下标 j ，并且在 nums2 确定 nums2[j] 的 下一个更大元素 。如果不存在下一个更大元素，那么本次查询的答案是 -1 。</p>
+<p>返回一个长度为 nums1.length 的数组 ans 作为答案，满足 ans[i] 是如上所述的 下一个更大元素 。</p>
+<p>示例 1：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：nums1 = [<span class="number">4</span>,<span class="number">1</span>,<span class="number">2</span>], nums2 = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>].</span><br><span class="line">输出：[-<span class="number">1</span>,<span class="number">3</span>,-<span class="number">1</span>]</span><br><span class="line">解释：nums1 中每个值的下一个更大元素如下所述：</span><br><span class="line"></span><br><span class="line">- <span class="number">4</span> ，用加粗斜体标识，nums2 = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>]。不存在下一个更大元素，所以答案是 -<span class="number">1</span> 。</span><br><span class="line">- <span class="number">1</span> ，用加粗斜体标识，nums2 = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>]。下一个更大元素是 <span class="number">3</span> 。</span><br><span class="line">- <span class="number">2</span> ，用加粗斜体标识，nums2 = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>]。不存在下一个更大元素，所以答案是 -<span class="number">1</span> 。</span><br></pre></td></tr></table></figure>
+
+<p>示例 2：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：nums1 = [<span class="number">2</span>,<span class="number">4</span>], nums2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].</span><br><span class="line">输出：[<span class="number">3</span>,-<span class="number">1</span>]</span><br><span class="line">解释：nums1 中每个值的下一个更大元素如下所述：</span><br><span class="line"></span><br><span class="line">- <span class="number">2</span> ，用加粗斜体标识，nums2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]。下一个更大元素是 <span class="number">3</span> 。</span><br><span class="line">- <span class="number">4</span> ，用加粗斜体标识，nums2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]。不存在下一个更大元素，所以答案是 -<span class="number">1</span> 。</span><br></pre></td></tr></table></figure>
+
+<p>提示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> &lt;= nums1.length &lt;= nums2.length &lt;= <span class="number">1000</span></span><br><span class="line"><span class="number">0</span> &lt;= nums1[i], nums2[i] &lt;= <span class="number">104</span></span><br><span class="line">nums1和nums2中所有整数 互不相同</span><br><span class="line">nums1 中的所有整数同样出现在 nums2 中</span><br></pre></td></tr></table></figure>
+
+<p>方式一：单调栈 + 哈希表</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="下一个更大的元素（二）"><a href="#下一个更大的元素（二）" class="headerlink" title="下一个更大的元素（二）"></a>下一个更大的元素（二）</h3><p>问题示例：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-ii/">https://leetcode.cn/problems/next-greater-element-ii/</a></p>
+<p>给定一个循环数组 nums（ nums[nums.length - 1] 的下一个元素是 nums[0] ），返回 nums 中每个元素的 下一个更大元素 。</p>
+<p>数字 x 的 下一个更大的元素 是按数组遍历顺序，这个数字之后的第一个比它更大的数，这意味着你应该循环地搜索它的下一个更大的数。如果不存在，则输出 -1 。</p>
+<p>示例 1:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>]</span><br><span class="line">输出: [<span class="number">2</span>,-<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释: 第一个 <span class="number">1</span> 的下一个更大的数是 <span class="number">2</span>；</span><br><span class="line">数字 <span class="number">2</span> 找不到下一个更大的数； </span><br><span class="line">第二个 <span class="number">1</span> 的下一个最大的数需要循环搜索，结果也是 <span class="number">2</span>。</span><br></pre></td></tr></table></figure>
+
+
+<p>示例 2:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">3</span>]</span><br><span class="line">输出: [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,-<span class="number">1</span>,<span class="number">4</span>]</span><br></pre></td></tr></table></figure>
+
+
+<p>提示:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> &lt;= nums.length &lt;= <span class="number">10</span>^<span class="number">4</span></span><br><span class="line">-<span class="number">10</span>^<span class="number">9</span> &lt;= nums[i] &lt;= <span class="number">10</span>^<span class="number">9</span></span><br></pre></td></tr></table></figure>
+
+<p>代码示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h2 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/Docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Fei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MineTing">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -977,12 +977,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Fei">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="MineTing">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1086,12 +1086,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Fei">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="MineTing">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1691,16 +1691,152 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/JavaBasic/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/Kafka/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Fei">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="MineTing">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/02/28/Kafka/" class="post-title-link" itemprop="url">Kafka</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-02-28 00:00:00" itemprop="dateCreated datePublished" datetime="2023-02-28T00:00:00+08:00">2023-02-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-02-26 23:24:09" itemprop="dateModified" datetime="2023-02-26T23:24:09+08:00">2023-02-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id><a href="#" class="headerlink" title></a></h1><h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><h1 id="第一章-Kafka-入门使用"><a href="#第一章-Kafka-入门使用" class="headerlink" title="第一章 Kafka 入门使用"></a>第一章 Kafka 入门使用</h1><p>第一章</p>
+<p>我具有强烈的局限性，太过于局限自我。</p>
+<p>井底之蛙</p>
+<p>反思：一直以来，觉得自己具有强烈的认知的局限性，无论你做什么不做什么，都不要伤害朋友，谋生路上的朋友最多称为合作伙伴。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/JavaScript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Fei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MineTing">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/02/28/JavaScript/" class="post-title-link" itemprop="url">JavaScript</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-02-28 00:00:00" itemprop="dateCreated datePublished" datetime="2023-02-28T00:00:00+08:00">2023-02-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-02-26 23:24:27" itemprop="dateModified" datetime="2023-02-26T23:24:27+08:00">2023-02-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id><a href="#" class="headerlink" title></a></h1><h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h1 id="JavaScript简介（略）"><a href="#JavaScript简介（略）" class="headerlink" title="JavaScript简介（略）"></a>JavaScript简介（略）</h1><h1 id="JavaScript-数据类型"><a href="#JavaScript-数据类型" class="headerlink" title="JavaScript 数据类型"></a>JavaScript 数据类型</h1><p>​		一般认为六种数据类型：5种基本数据类型和Object类型，其中Object类型包括对象、数组、函数等。</p>
+<p>基本数据类型：String、Number、Null、Boolean、Undefined</p>
+<p>引用类型：Object（Array、Object、Function）</p>
+<p>可以使用typeof操作符检查变量的数据类型。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/JavaBasic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Fei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MineTing">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -2424,152 +2560,16 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/Kafka/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/28/Kafka/" class="post-title-link" itemprop="url">Kafka</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-02-28 00:00:00" itemprop="dateCreated datePublished" datetime="2023-02-28T00:00:00+08:00">2023-02-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-02-26 23:24:09" itemprop="dateModified" datetime="2023-02-26T23:24:09+08:00">2023-02-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id><a href="#" class="headerlink" title></a></h1><h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><h1 id="第一章-Kafka-入门使用"><a href="#第一章-Kafka-入门使用" class="headerlink" title="第一章 Kafka 入门使用"></a>第一章 Kafka 入门使用</h1><p>第一章</p>
-<p>我具有强烈的局限性，太过于局限自我。</p>
-<p>井底之蛙</p>
-<p>反思：一直以来，觉得自己具有强烈的认知的局限性，无论你做什么不做什么，都不要伤害朋友，谋生路上的朋友最多称为合作伙伴。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/JavaScript/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/28/JavaScript/" class="post-title-link" itemprop="url">JavaScript</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-02-28 00:00:00" itemprop="dateCreated datePublished" datetime="2023-02-28T00:00:00+08:00">2023-02-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-02-26 23:24:27" itemprop="dateModified" datetime="2023-02-26T23:24:27+08:00">2023-02-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id><a href="#" class="headerlink" title></a></h1><h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h1 id="JavaScript简介（略）"><a href="#JavaScript简介（略）" class="headerlink" title="JavaScript简介（略）"></a>JavaScript简介（略）</h1><h1 id="JavaScript-数据类型"><a href="#JavaScript-数据类型" class="headerlink" title="JavaScript 数据类型"></a>JavaScript 数据类型</h1><p>​		一般认为六种数据类型：5种基本数据类型和Object类型，其中Object类型包括对象、数组、函数等。</p>
-<p>基本数据类型：String、Number、Null、Boolean、Undefined</p>
-<p>引用类型：Object（Array、Object、Function）</p>
-<p>可以使用typeof操作符检查变量的数据类型。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/28/Linux/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Fei">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="MineTing">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -3487,7 +3487,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">Fei</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -3527,7 +3527,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Fei</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
