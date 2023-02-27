@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="RedisNSQL 概述技术发展技术的分类  解决功能性的问题：Java、Jsp、RDBMS、Tomcat、HTML、Linux、JDBC、SVN  解决扩展性的问题：Struts、Spring、SpringMVC、Hibernate、Mybatis  解决性能的问题：NoSQL、Java线程、Hadoop、Nginx、MQ、ElasticSearchs   Web1.0 时代​		Web1.0的">
@@ -27,47 +27,47 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="RedisNSQL 概述技术发展技术的分类  解决功能性的问题：Java、Jsp、RDBMS、Tomcat、HTML、Linux、JDBC、SVN  解决扩展性的问题：Struts、Spring、SpringMVC、Hibernate、Mybatis  解决性能的问题：NoSQL、Java线程、Hadoop、Nginx、MQ、ElasticSearchs   Web1.0 时代​		Web1.0的">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221009000626519.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221009000730414.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221009001250886.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221009001329709.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20220513090502331.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20220513101000926.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20220513095346071.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20220513101420250.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20220513101547127.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20220513110841045.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20220513110851298.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20220513115243769.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221009163649599.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221009171946723.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20220513194048072.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221007171853393.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221007172000166.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221009174213877.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008145146719.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008151537055.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008151945129.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008153853024.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008154119947.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008155125490.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008155241481.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008155404670.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008155953090.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008170523011.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008171004905.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008192527530.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008192932653.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008200000951.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008220617532.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008224023193.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008234251310.png">
-<meta property="og:image" content="c:\Java\Document\Redis\Redis.assets\image-20221008233535092.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221009000626519.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221009000730414.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221009001250886.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221009001329709.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20220513090502331.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20220513101000926.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20220513095346071.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20220513101420250.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20220513101547127.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20220513110841045.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20220513110851298.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20220513115243769.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221009163649599.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221009171946723.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20220513194048072.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221007171853393.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221007172000166.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221009174213877.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008145146719.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008151537055.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008151945129.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008153853024.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008154119947.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008155125490.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008155241481.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008155404670.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008155953090.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008170523011.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008171004905.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008192527530.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008192932653.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008200000951.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008220617532.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008224023193.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008234251310.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221008233535092.png">
 <meta property="article:published_time" content="2023-02-27T16:00:00.000Z">
 <meta property="article:modified_time" content="2023-02-26T15:21:12.522Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:\Java\Document\Redis\Redis.assets\image-20221009000626519.png">
+<meta name="twitter:image" content="http://example.com/2023/02/28/Redis/Java/Document/Redis/Redis.assets/image-20221009000626519.png">
 
 <link rel="canonical" href="http://example.com/2023/02/28/Redis/">
 
@@ -140,6 +140,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -159,11 +160,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -231,7 +259,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h1 id="NSQL-概述"><a href="#NSQL-概述" class="headerlink" title="NSQL 概述"></a>NSQL 概述</h1><h2 id="技术发展"><a href="#技术发展" class="headerlink" title="技术发展"></a>技术发展</h2><p>技术的分类</p>
+        <h1 id><a href="#" class="headerlink" title></a></h1><h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h1 id="NSQL-概述"><a href="#NSQL-概述" class="headerlink" title="NSQL 概述"></a>NSQL 概述</h1><h2 id="技术发展"><a href="#技术发展" class="headerlink" title="技术发展"></a>技术发展</h2><p>技术的分类</p>
 <ol>
 <li><p>解决功能性的问题：Java、Jsp、RDBMS、Tomcat、HTML、Linux、JDBC、SVN</p>
 </li>
@@ -242,9 +270,9 @@
 </ol>
 <h3 id="Web1-0-时代"><a href="#Web1-0-时代" class="headerlink" title="Web1.0 时代"></a>Web1.0 时代</h3><p>​		Web1.0的时代，数据访问量很有限，用一夫当关的高性能的单点服务器可以解决大部分问题。</p>
 <h3 id="Web2-0-时代"><a href="#Web2-0-时代" class="headerlink" title="Web2.0 时代"></a><strong>Web2.0</strong> 时代</h3><p>​		随着 Web2.0 的时代的到来，用户访问量大幅度提升，同时产生了大量的用户数据。加上后来的智能移动设备的普及，所有的互联网平台都面临了巨大的性能挑战。</p>
-<h3 id="解决CPU及内存压力"><a href="#解决CPU及内存压力" class="headerlink" title="解决CPU及内存压力"></a><strong>解决CPU及内存压力</strong></h3><img src="C:\Java\Document\Redis\Redis.assets\image-20221009000626519.png" alt="image-20221009000626519" style="zoom:80%;" />
+<h3 id="解决CPU及内存压力"><a href="#解决CPU及内存压力" class="headerlink" title="解决CPU及内存压力"></a><strong>解决CPU及内存压力</strong></h3><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221009000626519.png" alt="image-20221009000626519" style="zoom:80%;">
 
-<h3 id="解决IO压力"><a href="#解决IO压力" class="headerlink" title="解决IO压力"></a><strong>解决IO压力</strong></h3><img src="C:\Java\Document\Redis\Redis.assets\image-20221009000730414.png" alt="image-20221009000730414" style="zoom:80%;" />
+<h3 id="解决IO压力"><a href="#解决IO压力" class="headerlink" title="解决IO压力"></a><strong>解决IO压力</strong></h3><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221009000730414.png" alt="image-20221009000730414" style="zoom:80%;">
 
 <h2 id="NoSQL数据库"><a href="#NoSQL数据库" class="headerlink" title="NoSQL数据库"></a>NoSQL数据库</h2><p>NoSQL（NoSQL &#x3D; <strong>Not Only SQL</strong> ），意即“不仅仅是SQL”，泛指<strong>非关系型的数据库</strong>。 </p>
 <p>NoSQL 不依赖业务逻辑方式存储，而以简单的key-value模式存储。因此大大的增加了数据库的扩展能力。</p>
@@ -280,9 +308,9 @@
 <li>支持二进制数据及大型对象</li>
 <li>可以根据数据的特点<strong>替代RDBMS</strong> ，成为独立的数据库。或者配合RDBMS，存储特定的数据。</li>
 </ol>
-<h2 id="行式存储数据库（大数据时代）"><a href="#行式存储数据库（大数据时代）" class="headerlink" title="行式存储数据库（大数据时代）"></a><strong>行式存储数据库（大数据时代）</strong></h2><h3 id="行式数据库"><a href="#行式数据库" class="headerlink" title="行式数据库"></a><strong>行式数据库</strong></h3><img src="C:\Java\Document\Redis\Redis.assets\image-20221009001250886.png" alt="image-20221009001250886" style="zoom:80%;" />
+<h2 id="行式存储数据库（大数据时代）"><a href="#行式存储数据库（大数据时代）" class="headerlink" title="行式存储数据库（大数据时代）"></a><strong>行式存储数据库（大数据时代）</strong></h2><h3 id="行式数据库"><a href="#行式数据库" class="headerlink" title="行式数据库"></a><strong>行式数据库</strong></h3><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221009001250886.png" alt="image-20221009001250886" style="zoom:80%;">
 
-<h3 id="列式数据库"><a href="#列式数据库" class="headerlink" title="列式数据库"></a><strong>列式数据库</strong></h3><img src="C:\Java\Document\Redis\Redis.assets\image-20221009001329709.png" alt="image-20221009001329709" style="zoom:80%;" />
+<h3 id="列式数据库"><a href="#列式数据库" class="headerlink" title="列式数据库"></a><strong>列式数据库</strong></h3><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221009001329709.png" alt="image-20221009001329709" style="zoom:80%;">
 
 <h3 id="Hbase"><a href="#Hbase" class="headerlink" title="Hbase"></a><strong>Hbase</strong></h3><p>HBase 是 <strong>Hadoop</strong> 项目中的数据库。它用于需要对大量的数据进行随机、实时的读写操作的场景中。</p>
 <p>HBase 的目标就是处理数据量<strong>非常庞大</strong>的表，可以用<strong>普通的计算机</strong>处理超过<strong>10</strong>亿行数据<strong>，还可处理有数百万</strong>列元素的数据表。</p>
@@ -307,7 +335,7 @@
 <p> 发布订阅系统：pub&#x2F;sub模式</p>
 </li>
 </ol>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><img src="C:\Java\Document\Redis\Redis.assets\image-20220513090502331.png" alt="image-20220513090502331"></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20220513090502331.png" alt="image-20220513090502331"></p>
 <p>安装版本：redis-6.2.1.tar.gz</p>
 <h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
 <li><p>安装 gcc编译器</p>
@@ -367,7 +395,7 @@
 <h2 id="Redis相关知识"><a href="#Redis相关知识" class="headerlink" title="Redis相关知识"></a>Redis相关知识</h2><p>​		端口6379：Alessia  Merz</p>
 <ol>
 <li>默认16个数据库，类似数组下标从0开始，初始默认使用0号库</li>
-<li>使用命令 select  <dbid>来切换数据库。如: select 8 </li>
+<li>使用命令 select  <dbid>来切换数据库。如: select 8 </dbid></li>
 <li>统一密码管理，所有库同样密码。</li>
 <li>dbsize 查看当前数据库的 key 的数量</li>
 <li>flushdb 清空当前库</li>
@@ -403,7 +431,7 @@
 <p>String 类型是二进制安全的。意味着 Redis 的 String 可以包含任何数据。比如 jpg 图片或者序列化的对象。</p>
 <p>String 类型是 Redis 最基本的数据类型，一个 Redis 中字符串 value 最多可以是512M</p>
 <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ol>
-<li>set  <key><value>添加键值对</li>
+<li>set  <key><value>添加键值对</value></key></li>
 </ol>
 <ul>
 <li><p>*NX：当数据库中key不存在时，可以将key-value添加数据库</p>
@@ -416,42 +444,42 @@
   <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">set</span> k1 v1</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> setnx k1 v11</span><br><span class="line">(<span class="type">integer</span>) <span class="number">0</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> setex k2 <span class="number">10</span> v2</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> ttl k2</span><br><span class="line">(<span class="type">integer</span>) <span class="number">7</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> ttl k2</span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 <ol start="2">
-<li><p>get  <key>查询对应键值</p>
+<li><p>get  <key>查询对应键值</key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">get</span> k1</span><br><span class="line">&quot;v1&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">get</span> k2</span><br><span class="line">(nil)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>append <key><value>将给定的<value> 追加到原值的末尾</p>
+<li><p>append <key><value>将给定的<value> 追加到原值的末尾</value></value></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> append k1 v1v1</span><br><span class="line">(<span class="type">integer</span>) <span class="number">6</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">get</span> k1</span><br><span class="line">&quot;v1v1v1&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>strlen <key>获得值的长度</p>
+<li><p>strlen <key>获得值的长度</key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> strlen k1</span><br><span class="line">(<span class="type">integer</span>) <span class="number">6</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>setnx <key><value>只有在 key 不存在时  设置 key 的值</p>
+<li><p>setnx <key><value>只有在 key 不存在时  设置 key 的值</value></key></p>
 </li>
-<li><p>incr <key>  将 key 中储存的数字值增1，只能对数字值操作，如果为空，新增值为 1</p>
+<li><p>incr <key>  将 key 中储存的数字值增1，只能对数字值操作，如果为空，新增值为 1</key></p>
 </li>
-<li><p>decr <key> 将 key 中储存的数字值减1，只能对数字值操作，如果为空，新增值为 -1</p>
+<li><p>decr <key> 将 key 中储存的数字值减1，只能对数字值操作，如果为空，新增值为 -1</key></p>
 </li>
-<li><p>incrby &#x2F; decrby <key>&lt;步长&gt; 将 key 中储存的数字值增减。自定义步长。</p>
+<li><p>incrby &#x2F; decrby <key>&lt;步长&gt; 将 key 中储存的数字值增减。自定义步长。</key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">get</span> k1</span><br><span class="line">v1</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> incr k1</span><br><span class="line">(error) ERR <span class="keyword">value</span> <span class="keyword">is</span> <span class="keyword">not</span> an <span class="type">integer</span> <span class="keyword">or</span> <span class="keyword">out</span> <span class="keyword">of</span> <span class="keyword">range</span></span><br><span class="line"></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">set</span> k2 <span class="number">2</span></span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> incr k2</span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> incr k2</span><br><span class="line">(<span class="type">integer</span>) <span class="number">4</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">get</span> k2</span><br><span class="line">&quot;4&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> decr k2</span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> incrby k2 <span class="number">3</span></span><br><span class="line">(<span class="type">integer</span>) <span class="number">6</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> incrby k2 <span class="number">3</span></span><br><span class="line">(<span class="type">integer</span>) <span class="number">9</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> decrby k2 <span class="number">1</span></span><br><span class="line">(<span class="type">integer</span>) <span class="number">8</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">get</span> k2</span><br><span class="line">&quot;8&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>mset <key1><value1><key2><value2>  同时设置一个或多个 key-value对 </p>
+<li><p>mset <key1><value1><key2><value2>  同时设置一个或多个 key-value对 </value2></key2></value1></key1></p>
 </li>
-<li><p>mget <key1><key2><key3>  同时获取一个或多个 value </p>
+<li><p>mget <key1><key2><key3>  同时获取一个或多个 value </key3></key2></key1></p>
 </li>
-<li><p>msetnx <key1><value1><key2><value2>  同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在。</p>
+<li><p>msetnx <key1><value1><key2><value2>  同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在。</value2></key2></value1></key1></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> mset k1 v1 k2 v2</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> mget k1 k2</span><br><span class="line"><span class="number">1</span>) &quot;v1&quot;</span><br><span class="line"><span class="number">2</span>) &quot;v2&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> msetnx k3 v3 k4 v4</span><br><span class="line">(<span class="type">integer</span>) <span class="number">1</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> msetnx k3 k33 k5 v5</span><br><span class="line">(<span class="type">integer</span>) <span class="number">0</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">get</span> k5</span><br><span class="line">(nil)</span><br></pre></td></tr></table></figure></li>
 </ol>
 <p><strong>原子性，有一个失败则都失败</strong></p>
 <ol start="12">
-<li><p>getrange <key>&lt;起始位置&gt;&lt;结束位置&gt;  获得值的范围，类似 substring，<strong>前包，后包</strong></p>
+<li><p>getrange <key>&lt;起始位置&gt;&lt;结束位置&gt;  获得值的范围，类似 substring，<strong>前包，后包</strong></key></p>
 </li>
-<li><p>setrange <key>&lt;起始位置&gt;<value> 用 <value> 覆写<key>所储存的字符串值，从&lt;起始位置&gt;开始（索引从0开始）。</p>
+<li><p>setrange <key>&lt;起始位置&gt;<value> 用 <value> 覆写<key>所储存的字符串值，从&lt;起始位置&gt;开始（索引从0开始）。</key></value></value></key></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">set</span> k1 abcdefg</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> getrange k1 <span class="number">2</span> <span class="number">4</span></span><br><span class="line">&quot;cde&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> setrange k1 <span class="number">1</span> xxx</span><br><span class="line">(<span class="type">integer</span>) <span class="number">7</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">get</span> k1</span><br><span class="line">&quot;axxxefg&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>setex <key>&lt;过期时间&gt;<value> 设置键值的同时，设置过期时间，单位秒。</p>
+<li><p>setex <key>&lt;过期时间&gt;<value> 设置键值的同时，设置过期时间，单位秒。</value></key></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> setex k2 <span class="number">10</span> v2</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> ttl k2</span><br><span class="line">(<span class="type">integer</span>) <span class="number">7</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>getset <key><value> 以新换旧，设置了新值同时获得旧值。</p>
+<li><p>getset <key><value> 以新换旧，设置了新值同时获得旧值。</value></key></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">set</span> k3 v3</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> getset k3 v33</span><br><span class="line">&quot;v3&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">get</span> k3</span><br><span class="line">&quot;v33&quot;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <p>原子性：</p>
@@ -464,42 +492,42 @@
 <p><strong>案例：</strong></p>
 <p>java中的 i++ 是否是原子操作？<strong>不是</strong></p>
 <p>i&#x3D;0;两个线程分别对 i 进行 ++100次，值是多少？【2-200】</p>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20220513101000926.png" alt="image-20220513101000926"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20220513101000926.png" alt="image-20220513101000926"></p>
 <p>说明：</p>
 <p>i++ 的操作分为三步：取值，++，再赋值</p>
 <p>a 线程加到 99 但未赋值，被 b 线程打断并进行加 1 操作，此时 a线程执行赋值操作 i&#x3D;1，b 线程打断并加到 99，i++ 后 i &#x3D; 100，a 线程打断，再次 i++ ，最终值为 2，两个线程都执行了100次，所以最终的范围是 [2, 200]</p>
 <h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>​		String 的数据结构为简单动态字符串（Simple Dynamic String，缩写SDS）。是可以修改的字符串，内部结构实现上类似于Java的ArrayList，<strong>采用预分配冗余空间的方式来减少内存的频繁分配。</strong></p>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20220513095346071.png" alt="image-20220513095346071"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20220513095346071.png" alt="image-20220513095346071"></p>
 <p>​		如图中所示，内部为当前字符串实际分配的空间capacity一般要高于实际字符串长度len。当字符串长度小于1M时，扩容都是加倍现有的空间，如果超过1M，扩容时一次只会多扩1M的空间。需要注意的是字符串最大长度为512M。</p>
 <h2 id="Redis列表（List）"><a href="#Redis列表（List）" class="headerlink" title="Redis列表（List）"></a>Redis列表（List）</h2><h3 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h3><p>单键多值</p>
 <p>​		Redis 列表是简单的字符串列表，按照插入顺序排序。你可以添加一个元素到列表的头部（左边）或者尾部（右边）。它的底层实际是个双向链表，对两端的操作性能很高，通过索引下标的操作中间的节点性能会较差。</p>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20220513101420250.png" alt="image-20220513101420250"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20220513101420250.png" alt="image-20220513101420250"></p>
 <h3 id="常用命令-1"><a href="#常用命令-1" class="headerlink" title="常用命令"></a>常用命令</h3><ol>
-<li><p>lpush&#x2F;rpush <key><value1><value2><value3> …. 从左边&#x2F;右边插入一个或多个值。</p>
+<li><p>lpush&#x2F;rpush <key><value1><value2><value3> …. 从左边&#x2F;右边插入一个或多个值。</value3></value2></value1></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lpush code java go c<span class="operator">+</span><span class="operator">+</span></span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lrange code <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">1</span>) &quot;c++&quot;</span><br><span class="line"><span class="number">2</span>) &quot;go&quot;</span><br><span class="line"><span class="number">3</span>) &quot;java&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> rpush code python scala</span><br><span class="line">(<span class="type">integer</span>) <span class="number">5</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lrange code <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">1</span>) &quot;c++&quot;</span><br><span class="line"><span class="number">2</span>) &quot;go&quot;</span><br><span class="line"><span class="number">3</span>) &quot;java&quot;</span><br><span class="line"><span class="number">4</span>) &quot;python&quot;</span><br><span class="line"><span class="number">5</span>) &quot;scala&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>lrange <key><start><stop> 按照索引下标获得元素(从左到右)，（0-1表示获取所有）</p>
+<li><p>lrange <key><start><stop></stop> 按照索引下标获得元素(从左到右)，（0-1表示获取所有）</start></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lrange code <span class="number">0</span> <span class="number">2</span></span><br><span class="line"><span class="number">1</span>) &quot;c++&quot;</span><br><span class="line"><span class="number">2</span>) &quot;go&quot;</span><br><span class="line"><span class="number">3</span>) &quot;java&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>lpop&#x2F;rpop <key> <count>从左边&#x2F;右边弹出一个或多个值。</p>
+<li><p>lpop&#x2F;rpop <key> <count>从左边&#x2F;右边弹出一个或多个值。</count></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lpop code</span><br><span class="line">&quot;c++&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> rpop code <span class="number">2</span></span><br><span class="line"><span class="number">1</span>) &quot;scala&quot;</span><br><span class="line"><span class="number">2</span>) &quot;python&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lrange code <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">1</span>) &quot;go&quot;</span><br><span class="line"><span class="number">2</span>) &quot;java&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>rpoplpush <key1><key2>从<key1>列表右边弹出一个值，插到<key2>列表左边。</p>
+<li><p>rpoplpush <key1><key2>从<key1>列表右边弹出一个值，插到<key2>列表左边。</key2></key1></key2></key1></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> rpush list01 A B C</span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> rpush list02 D E F</span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> rpoplpush list01 list02</span><br><span class="line">&quot;C&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lrange list01 <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">1</span>) &quot;A&quot;</span><br><span class="line"><span class="number">2</span>) &quot;B&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lrange list02 <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">1</span>) &quot;C&quot;</span><br><span class="line"><span class="number">2</span>) &quot;D&quot;</span><br><span class="line"><span class="number">3</span>) &quot;E&quot;</span><br><span class="line"><span class="number">4</span>) &quot;F&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>lindex <key><index>按照索引下标获得元素(从左到右)</p>
+<li><p>lindex <key><index>按照索引下标获得元素(从左到右)</index></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lrange list02 <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">1</span>) &quot;C&quot;</span><br><span class="line"><span class="number">2</span>) &quot;D&quot;</span><br><span class="line"><span class="number">3</span>) &quot;E&quot;</span><br><span class="line"><span class="number">4</span>) &quot;F&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lindex list02 <span class="number">2</span></span><br><span class="line">&quot;E&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>llen <key>获得列表长度 </p>
+<li><p>llen <key>获得列表长度 </key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> llen list02</span><br><span class="line">(<span class="type">integer</span>) <span class="number">4</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>linsert <key> before <value><newvalue>在<value>的后面插入<newvalue>插入值</p>
+<li><p>linsert <key> before <value><newvalue>在<value>的后面插入<newvalue>插入值</newvalue></value></newvalue></value></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> rpush list A B C D</span><br><span class="line">(<span class="type">integer</span>) <span class="number">4</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> linsert list before C X</span><br><span class="line">(<span class="type">integer</span>) <span class="number">5</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lrange list <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">1</span>) &quot;A&quot;</span><br><span class="line"><span class="number">2</span>) &quot;B&quot;</span><br><span class="line"><span class="number">3</span>) &quot;X&quot;</span><br><span class="line"><span class="number">4</span>) &quot;C&quot;</span><br><span class="line"><span class="number">5</span>) &quot;D&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>lrem <key><n><value>从左边删除 n 个 value (从左到右)</p>
+<li><p>lrem <key><n><value>从左边删除 n 个 value (从左到右)</value></n></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> rpush list A B B B C D</span><br><span class="line">(<span class="type">integer</span>) <span class="number">6</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lrem list <span class="number">2</span> B</span><br><span class="line">(<span class="type">integer</span>) <span class="number">2</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lrange list <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">1</span>) &quot;A&quot;</span><br><span class="line"><span class="number">2</span>) &quot;B&quot;</span><br><span class="line"><span class="number">3</span>) &quot;C&quot;</span><br><span class="line"><span class="number">4</span>) &quot;D&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>lset<key><index><value>将列表key下标为index的值替换成value</p>
+<li><p>lset<key><index><value>将列表key下标为index的值替换成value</value></index></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lset list <span class="number">2</span> CC</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> lrange list <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">1</span>) &quot;A&quot;</span><br><span class="line"><span class="number">2</span>) &quot;B&quot;</span><br><span class="line"><span class="number">3</span>) &quot;CC&quot;</span><br><span class="line"><span class="number">4</span>) &quot;D&quot;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="数据结构-1"><a href="#数据结构-1" class="headerlink" title="数据结构"></a>数据结构</h3><p>List的数据结构为快速链表 quickList。</p>
@@ -507,36 +535,36 @@
 <p>它将所有的元素紧挨着一起存储，分配的是一块连续的内存。</p>
 <p>当数据量比较多的时候才会改成 quicklist。</p>
 <p>因为普通的链表需要的附加指针空间太大，会比较浪费空间。比如这个列表里存的只是 int 类型的数据，结构上还需要两个额外的指针 prev 和 next。</p>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20220513101547127.png" alt="image-20220513101547127"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20220513101547127.png" alt="image-20220513101547127"></p>
 <p>Redis 将链表和 ziplist 结合起来组成了 quicklist。也就是将多个 ziplist 使用双向指针串起来使用。这样既满足了快速的插入删除性能，又不会出现太大的空间冗余。</p>
 <h2 id="Redis集合（Set）"><a href="#Redis集合（Set）" class="headerlink" title="Redis集合（Set）"></a>Redis集合（Set）</h2><h3 id="简介-2"><a href="#简介-2" class="headerlink" title="简介"></a>简介</h3><p>​		Redis Set 对外提供的功能与 List 类似是一个列表的功能，特殊之处在于 Set 是可以<strong>自动排重</strong>的，当你需要存储一个列表数据，又不希望出现重复数据时，Set 是一个很好的选择，并且 Set 提供了判断某个成员是否在一个 Set 集合内的重要接口，这个也是 List 所不能提供的。</p>
 <p>​		Redis 的 Set 是 String 类型的无序集合。它底层其实是一个 value 为null 的 hash 表，所以添加，删除，查找的<strong>复杂度都是</strong>O(1)。一个算法，随着数据的增加，执行时间的长短，如果是O(1)，数据增加，查找数据的时间不变。</p>
 <h3 id="常用命令-2"><a href="#常用命令-2" class="headerlink" title="常用命令"></a>常用命令</h3><ol>
-<li><p>sadd <key><value1><value2> 将一个或多个 member 元素加入到集合 key 中，已存在的 member 元素将被忽略</p>
+<li><p>sadd <key><value1><value2> 将一个或多个 member 元素加入到集合 key 中，已存在的 member 元素将被忽略</value2></value1></key></p>
 </li>
-<li><p>smembers <key>  取出该集合的所有值。</p>
+<li><p>smembers <key>  取出该集合的所有值。</key></p>
 </li>
-<li><p>sismember <key><value>  判断集合<key>是否为含有该<value>值，有1，没有0</p>
+<li><p>sismember <key><value>  判断集合<key>是否为含有该<value>值，有1，没有0</value></key></value></key></p>
 </li>
-<li><p>scard<key>  返回该集合的元素个数。</p>
+<li><p>scard<key>  返回该集合的元素个数。</key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> sadd set01 A A B C C</span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> smembers set01</span><br><span class="line"><span class="number">1</span>) &quot;B&quot;</span><br><span class="line"><span class="number">2</span>) &quot;C&quot;</span><br><span class="line"><span class="number">3</span>) &quot;A&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> sismember set01 C</span><br><span class="line">(<span class="type">integer</span>) <span class="number">1</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> scard set01</span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>srem <key><value1><value2>  删除集合中的某个元素。</p>
+<li><p>srem <key><value1><value2>  删除集合中的某个元素。</value2></value1></key></p>
 </li>
-<li><p>spop <key>  <strong>随机从该集合中弹出一个值。</strong></p>
+<li><p>spop <key>  <strong>随机从该集合中弹出一个值。</strong></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> smembers set01</span><br><span class="line"><span class="number">1</span>) &quot;F&quot;</span><br><span class="line"><span class="number">2</span>) &quot;B&quot;</span><br><span class="line"><span class="number">3</span>) &quot;E&quot;</span><br><span class="line"><span class="number">4</span>) &quot;A&quot;</span><br><span class="line"><span class="number">5</span>) &quot;C&quot;</span><br><span class="line"><span class="number">6</span>) &quot;D&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> srem set01 D</span><br><span class="line">(<span class="type">integer</span>) <span class="number">1</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> smembers set01</span><br><span class="line"><span class="number">1</span>) &quot;F&quot;</span><br><span class="line"><span class="number">2</span>) &quot;B&quot;</span><br><span class="line"><span class="number">3</span>) &quot;E&quot;</span><br><span class="line"><span class="number">4</span>) &quot;A&quot;</span><br><span class="line"><span class="number">5</span>) &quot;C&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> spop set01 <span class="number">2</span></span><br><span class="line"><span class="number">1</span>) &quot;A&quot;</span><br><span class="line"><span class="number">2</span>) &quot;C&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> smembers set01</span><br><span class="line"><span class="number">1</span>) &quot;F&quot;</span><br><span class="line"><span class="number">2</span>) &quot;B&quot;</span><br><span class="line"><span class="number">3</span>) &quot;E&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>srandmember <key><n> 随机从该集合中取出n个值。不会从集合中删除 。</p>
+<li><p>srandmember <key><n> 随机从该集合中取出n个值。不会从集合中删除 。</n></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> sadd set01  A B C D E F</span><br><span class="line">(<span class="type">integer</span>) <span class="number">6</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> srandmember set01 <span class="number">2</span></span><br><span class="line"><span class="number">1</span>) &quot;E&quot;</span><br><span class="line"><span class="number">2</span>) &quot;C&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>smove <source><destination>  value  把集合中一个值从一个集合移动到另一个集合。</p>
+<li><p>smove <source><destination>  value  把集合中一个值从一个集合移动到另一个集合。</destination></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> sadd set01 A B C</span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> smove set01 set02 A</span><br><span class="line">(<span class="type">integer</span>) <span class="number">1</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> smembers set02</span><br><span class="line"><span class="number">1</span>) &quot;A&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>sinter <key1><key2>  返回两个集合的交集元素。</p>
+<li><p>sinter <key1><key2>  返回两个集合的交集元素。</key2></key1></p>
 </li>
-<li><p>sunion <key1><key2>返回两个集合的并集元素。</p>
+<li><p>sunion <key1><key2>返回两个集合的并集元素。</key2></key1></p>
 </li>
-<li><p>sdiff <key1><key2>    返回两个集合的<strong>差集</strong>元素（key1中的，不包含key2中的）。</p>
+<li><p>sdiff <key1><key2>    返回两个集合的<strong>差集</strong>元素（key1中的，不包含key2中的）。</key2></key1></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> sadd set01 A C D</span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> sadd set02 B C E</span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> sinter set01 set02</span><br><span class="line"><span class="number">1</span>) &quot;C&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> sunion set01 set02</span><br><span class="line"><span class="number">1</span>) &quot;A&quot;</span><br><span class="line"><span class="number">2</span>) &quot;C&quot;</span><br><span class="line"><span class="number">3</span>) &quot;D&quot;</span><br><span class="line"><span class="number">4</span>) &quot;B&quot;</span><br><span class="line"><span class="number">5</span>) &quot;E&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> sdiff set01 set02</span><br><span class="line"><span class="number">1</span>) &quot;A&quot;</span><br><span class="line"><span class="number">2</span>) &quot;D&quot;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="数据结构-2"><a href="#数据结构-2" class="headerlink" title="数据结构"></a>数据结构</h3><p>Set 数据结构是 dict 字典，字典是用哈希表实现的。</p>
@@ -545,23 +573,23 @@
 <p>Redis hash 是一个 String 类型的 field 和 value 的映射表，<mark>hash特别适合用于存储对象。</mark></p>
 <p>类似 Java 里面的 Map&lt;String, Object&gt;</p>
 <h3 id="常用命令-3"><a href="#常用命令-3" class="headerlink" title="常用命令"></a>常用命令</h3><ol>
-<li><p>hset <key><field><value>    给<key>集合中的 <field>键赋值<value></p>
+<li><p>hset <key><field><value>    给<key>集合中的 <field>键赋值<value></value></field></key></value></field></key></p>
 </li>
-<li><p>hget <key1><field>                 从<key1>集合<field>取出 value </p>
+<li><p>hget <key1><field>                 从<key1>集合<field>取出 value </field></key1></field></key1></p>
 </li>
-<li><p>hmset <key1><field1><value1><field2><value2>                批量设置hash的值</p>
+<li><p>hmset <key1><field1><value1><field2><value2>                批量设置hash的值</value2></field2></value1></field1></key1></p>
 </li>
-<li><p>hexists<key1><field>             查看哈希表 key 中，给定域 field 是否存在。 </p>
+<li><p>hexists<key1><field>             查看哈希表 key 中，给定域 field 是否存在。 </field></key1></p>
 </li>
-<li><p>hkeys <key>                               列出该hash集合的所有field</p>
+<li><p>hkeys <key>                               列出该hash集合的所有field</key></p>
 </li>
-<li><p>hvals <key>                                列出该hash集合的所有value</p>
+<li><p>hvals <key>                                列出该hash集合的所有value</key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> hset hash01 id <span class="number">1</span></span><br><span class="line">(<span class="type">integer</span>) <span class="number">1</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> hget hash01 id</span><br><span class="line">&quot;1&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> hmset hash02 name tom age <span class="number">12</span> gender man</span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> hexists hash02 birth</span><br><span class="line">(<span class="type">integer</span>) <span class="number">0</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> hkeys hash02</span><br><span class="line"><span class="number">1</span>) &quot;name&quot;</span><br><span class="line"><span class="number">2</span>) &quot;age&quot;</span><br><span class="line"><span class="number">3</span>) &quot;gender&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> hvals hash02</span><br><span class="line"><span class="number">1</span>) &quot;tom&quot;</span><br><span class="line"><span class="number">2</span>) &quot;12&quot;</span><br><span class="line"><span class="number">3</span>) &quot;man&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>hincrby <key><field><increment>      为哈希表 key 中的域 field 的值加上增量 1  -1</p>
+<li><p>hincrby <key><field><increment>      为哈希表 key 中的域 field 的值加上增量 1  -1</increment></field></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> hget hash02 age</span><br><span class="line">&quot;12&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> hincrby hash02 age <span class="number">2</span></span><br><span class="line">(<span class="type">integer</span>) <span class="number">14</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> hget hash02 age</span><br><span class="line">&quot;14&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>hsetnx <key><field><value>                将哈希表 key 中的域 field 的值设置为 value ，当且仅当域 field 不存在。</p>
+<li><p>hsetnx <key><field><value>                将哈希表 key 中的域 field 的值设置为 value ，当且仅当域 field 不存在。</value></field></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> hkeys hash02</span><br><span class="line"><span class="number">1</span>) &quot;name&quot;</span><br><span class="line"><span class="number">2</span>) &quot;age&quot;</span><br><span class="line"><span class="number">3</span>) &quot;gender&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> hsetnx hash02 age <span class="number">10</span></span><br><span class="line">(<span class="type">integer</span>) <span class="number">0</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> hsetnx hash02 birth <span class="number">1997</span><span class="operator">/</span><span class="number">01</span><span class="operator">/</span><span class="number">20</span></span><br><span class="line">(<span class="type">integer</span>) <span class="number">1</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="数据结构-3"><a href="#数据结构-3" class="headerlink" title="数据结构"></a>数据结构</h3><p>​		Hash类型对应的数据结构是两种：ziplist（压缩列表），hashtable（哈希表）。当 field-value 长度较短且个数较少时，使用ziplist，否则使用hashtable。</p>
@@ -570,11 +598,11 @@
 <p>因为元素是有序的， 所以可以很快的根据评分（score）或者次序（position）来获取一个范围的元素。</p>
 <p>访问有序集合的中间元素也是非常快的，因此你能够使用有序集合作为一个没有重复成员的智能列表。</p>
 <h3 id="常用命令-4"><a href="#常用命令-4" class="headerlink" title="常用命令"></a>常用命令</h3><ol>
-<li><p>zadd <key><score1><value1><score2><value2></p>
+<li><p>zadd <key><score1><value1><score2><value2></value2></score2></value1></score1></key></p>
 <p> 将一个或多个 member 元素及其 score 值加入到有序集 key 当中。</p>
 </li>
-<li><p><strong>zrange <key><start><stop> [WITHSCORES]</strong>  </p>
-<p> 返回有序集 key 中，<mark>下标在<start><stop>之间的元素</mark>，带WITHSCORES，可以让分数一起和值返回到结果集。</p>
+<li><p><strong>zrange <key><start><stop></stop> [WITHSCORES]</start></key></strong>  </p>
+<p> 返回有序集 key 中，<mark>下标在<start><stop></stop>之间的元素</start></mark>，带WITHSCORES，可以让分数一起和值返回到结果集。</p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> zadd zset01 <span class="number">30</span> A <span class="number">40</span> B <span class="number">10</span> C</span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> zrange zset01 <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">1</span>) &quot;C&quot;</span><br><span class="line"><span class="number">2</span>) &quot;A&quot;</span><br><span class="line"><span class="number">3</span>) &quot;B&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> zrange zset01 <span class="number">0</span> <span class="number">-1</span> withscores</span><br><span class="line"><span class="number">1</span>) &quot;C&quot;</span><br><span class="line"><span class="number">2</span>) &quot;10&quot;</span><br><span class="line"><span class="number">3</span>) &quot;A&quot;</span><br><span class="line"><span class="number">4</span>) &quot;30&quot;</span><br><span class="line"><span class="number">5</span>) &quot;B&quot;</span><br><span class="line"><span class="number">6</span>) &quot;40&quot;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>zrangebyscore key minmax [withscores] [limit offset count]</p>
@@ -583,14 +611,14 @@
 <li><p>zrevrangebyscore key maxmin [withscores] [limit offset count]      同上，改为从大到小排列。 </p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> zrangebyscore zset01 <span class="number">20</span> <span class="number">40</span> withscores</span><br><span class="line"><span class="number">1</span>) &quot;A&quot;</span><br><span class="line"><span class="number">2</span>) &quot;30&quot;</span><br><span class="line"><span class="number">3</span>) &quot;B&quot;</span><br><span class="line"><span class="number">4</span>) &quot;40&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> zrevrangebyscore zset01 <span class="number">30</span> <span class="number">10</span>  withscores</span><br><span class="line"><span class="number">1</span>) &quot;A&quot;</span><br><span class="line"><span class="number">2</span>) &quot;30&quot;</span><br><span class="line"><span class="number">3</span>) &quot;C&quot;</span><br><span class="line"><span class="number">4</span>) &quot;10&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>zincrby <key><increment><value>   为元素的score加上增量</p>
+<li><p>zincrby <key><increment><value>   为元素的score加上增量</value></increment></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> zincrby zset01 <span class="number">10</span> B</span><br><span class="line">&quot;50&quot;</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> zrange zset01 <span class="number">0</span> <span class="number">-1</span> withscores</span><br><span class="line"><span class="number">1</span>) &quot;C&quot;</span><br><span class="line"><span class="number">2</span>) &quot;10&quot;</span><br><span class="line"><span class="number">3</span>) &quot;A&quot;</span><br><span class="line"><span class="number">4</span>) &quot;30&quot;</span><br><span class="line"><span class="number">5</span>) &quot;B&quot;</span><br><span class="line"><span class="number">6</span>) &quot;50&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>zcount <key><min><max>统计该集合，分数区间内的元素个数 </p>
+<li><p>zcount <key><min><max>统计该集合，分数区间内的元素个数 </max></min></key></p>
 </li>
-<li><p>zrank <key><value>返回该值在集合中的排名，从0开始。</p>
+<li><p>zrank <key><value>返回该值在集合中的排名，从0开始。</value></key></p>
 </li>
-<li><p>zrem <key><value>删除该集合下，指定值的元素</p>
+<li><p>zrem <key><value>删除该集合下，指定值的元素</value></key></p>
  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> zcount zset01 <span class="number">10</span> <span class="number">50</span></span><br><span class="line">(<span class="type">integer</span>) <span class="number">3</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> zrank zset01 A</span><br><span class="line">(<span class="type">integer</span>) <span class="number">1</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> zrem zset01 C</span><br><span class="line">(<span class="type">integer</span>) <span class="number">1</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> zrange zset01 <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">1</span>) &quot;A&quot;</span><br><span class="line"><span class="number">2</span>) &quot;B&quot;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="数据结构-4"><a href="#数据结构-4" class="headerlink" title="数据结构"></a>数据结构</h3><p>​		SortedSet（zset）是Redis提供的一个非常特别的数据结构，一方面它等价于Java的数据结构Map&lt;String, Double&gt;，可以给每一个元素value赋予一个权重score，另一方面它又类似于TreeSet，内部的元素会按照权重score进行排序，可以得到每个元素的名次，还可以通过score的范围来获取元素的列表。</p>
@@ -606,10 +634,10 @@
 </ol>
 <p>​		对比有序链表和跳跃表，从链表中查询出51。</p>
 <p>​	2.1 有序链表</p>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20220513110841045.png" alt="image-20220513110841045"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20220513110841045.png" alt="image-20220513110841045"></p>
 <p>​		要查找值为51的元素，需要从第一个元素开始依次查找、比较才能找到，共需要6次比较。</p>
 <p>​	2.2 跳跃表</p>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20220513110851298.png" alt="image-20220513110851298"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20220513110851298.png" alt="image-20220513110851298"></p>
 <ol>
 <li>从第2层开始，1节点比51节点小，向后比较。</li>
 <li>21节点比51节点小，继续向后比较，后面就是NULL了，所以从21节点向下到第1层</li>
@@ -649,7 +677,7 @@
 <h3 id="loglevel"><a href="#loglevel" class="headerlink" title="loglevel"></a>loglevel</h3><p>指定日志记录级别，Redis 总共支持四个级别：debug、verbose、notice、warning，默认为<strong>notice</strong></p>
 <p>四个级别根据使用阶段来选择，生产环境选择notice 或者warning</p>
 <h3 id="logfile"><a href="#logfile" class="headerlink" title="logfile"></a>logfile</h3><p>日志文件名称</p>
-<h3 id="database-16"><a href="#database-16" class="headerlink" title="database  16"></a>database  16</h3><p>设定库的数量 默认16，默认数据库为0，可以使用SELECT <dbid>命令在连接上指定数据库id</p>
+<h3 id="database-16"><a href="#database-16" class="headerlink" title="database  16"></a>database  16</h3><p>设定库的数量 默认16，默认数据库为0，可以使用SELECT <dbid>命令在连接上指定数据库id</dbid></p>
 <h2 id="SECURITY安全"><a href="#SECURITY安全" class="headerlink" title="SECURITY安全"></a>SECURITY安全</h2><h3 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h3><p>访问密码的查看、设置和取消</p>
 <p>在命令中设置密码，只是临时的。重启 redis 服务器，密码就还原了。</p>
 <p>永久设置，需要再配置文件中进行设置。</p>
@@ -688,7 +716,7 @@
 <p>Redis 客户端可以订阅任意数量的频道。</p>
 <h2 id="Redis的发布和订阅-1"><a href="#Redis的发布和订阅-1" class="headerlink" title="Redis的发布和订阅"></a>Redis的发布和订阅</h2><ol>
 <li><p>客户端可以订阅频道如下图，当给这个频道发布消息后，消息就会发送给订阅的客户端。</p>
-<p> <img src="C:\Java\Document\Redis\Redis.assets\image-20220513115243769.png" alt="image-20220513115243769"></p>
+<p> <img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20220513115243769.png" alt="image-20220513115243769"></p>
 </li>
 <li><p>示例</p>
 <ol>
@@ -708,7 +736,7 @@
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; subscribe channel01</span><br><span class="line">Reading messages... (press Ctrl-C to quit)</span><br><span class="line">1) &quot;subscribe&quot;</span><br><span class="line">2) &quot;channel01&quot;</span><br><span class="line">3) (integer) 1</span><br><span class="line">1) &quot;message&quot;</span><br><span class="line">2) &quot;channel01&quot;</span><br><span class="line">3) &quot;hello redis&quot;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h1 id="Redis新数据类型"><a href="#Redis新数据类型" class="headerlink" title="Redis新数据类型"></a>Redis新数据类型</h1><h2 id="Bitmaps"><a href="#Bitmaps" class="headerlink" title="Bitmaps"></a>Bitmaps</h2><h3 id="简介-5"><a href="#简介-5" class="headerlink" title="简介"></a>简介</h3><p>​		现代计算机用二进制（位） 作为信息的基础单位， 1个字节等于8位， 例如“abc”字符串是由3个字节组成， 但实际在计算机存储时将其用二进制表示， “abc”分别对应的ASCII码分别是97、 98、 99， 对应的二进制分别是01100001、 01100010和01100011，如下图：</p>
-<img src="C:\Java\Document\Redis\Redis.assets\image-20221009163649599.png" alt="image-20221009163649599" style="zoom:80%;" />
+<img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221009163649599.png" alt="image-20221009163649599" style="zoom:80%;">
 
 <p>合理地使用操作位能够有效地提高内存使用率和开发效率。</p>
 <p>Redis提供了Bitmaps这个“数据类型”可以实现对位的操作：</p>
@@ -716,14 +744,14 @@
 <p>（2）  Bitmaps单独提供了一套命令， 所以在Redis中使用Bitmaps和使用字符串的方法不太相同。 可以把Bitmaps想象成一个以位为单位的数组， 数组的每个单元只能存储0和1， 数组的下标在 Bitmaps 中叫做偏移量。</p>
 <h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><ol>
 <li><p>setbit</p>
-<p> ​	setbit<key><offset><value></p>
+<p> ​	setbit<key><offset><value></value></offset></key></p>
 <p> ​	设置Bitmaps中某个偏移量的值（0或1），*offset：偏移量从0开始</p>
 </li>
 </ol>
 <blockquote>
 <p>示例：</p>
 <p>​		每个独立用户是否访问过网站存放在Bitmaps中， 将访问的用户记做1， 没有访问的用户记做0， 用偏移量作为用户的id。设置键的第offset个位的值（从0算起） ， 假设现在有20个用户，userid&#x3D;1， 6， 11， 15， 19的用户对网站进行了访问， 那么当前Bitmaps初始化结果如图：</p>
-<img src="C:\Java\Document\Redis\Redis.assets\image-20221009171946723.png" alt="image-20221009171946723" style="zoom:80%;" />
+<img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221009171946723.png" alt="image-20221009171946723" style="zoom:80%;">
 
 <p>unique:users:20201106代表2020-11-06这天的独立访问用户的Bitmaps</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; setbit unique:user:20220202 1 1</span><br><span class="line">(integer) 0</span><br><span class="line">127.0.0.1:6379&gt; setbit unique:user:20220202 6 1</span><br><span class="line">(integer) 0</span><br><span class="line">127.0.0.1:6379&gt; setbit unique:user:20220202 11 1</span><br><span class="line">(integer) 0</span><br><span class="line">127.0.0.1:6379&gt; setbit unique:user:20220202 15 1</span><br><span class="line">(integer) 0</span><br><span class="line">127.0.0.1:6379&gt; setbit unique:user:20220202 19 1</span><br><span class="line">(integer) 0</span><br></pre></td></tr></table></figure>
@@ -733,13 +761,13 @@
 <p>在第一次初始化Bitmaps时， 假如偏移量非常大， 那么整个初始化过程执行会比较慢， 可能会造成Redis的阻塞。</p>
 </blockquote>
 <p>（2）getbit</p>
-<p>​		getbit<key><offset></p>
+<p>​		getbit<key><offset></offset></key></p>
 <p>​		获取Bitmaps中某个偏移量的值（获取键的第offset位的值（从0开始算））</p>
 <blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; getbit unique:user:20220202 1</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; getbit unique:user:20220202 3</span><br><span class="line">(integer) 0</span><br><span class="line">127.0.0.1:6379&gt; getbit unique:user:20220202 6</span><br><span class="line">(integer) 1</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>（3）bitcount</p>
-<p>​		bitcount<key>[start end] </p>
+<p>​		bitcount<key>[start end] </key></p>
 <p>​		统计字符串<strong>从 start 字节到 end 字节</strong>比特值为1的数量</p>
 <blockquote>
 <p>​		统计<strong>字符串</strong>被设置为1的bit数。一般情况下，给定的整个字符串都会被进行计数，通过指定额外的 start 或 end 参数，可以让计数只在特定的位上进行。start 和 end 参数的设置，都可以使用负数值：比如 -1 表示最后一个位，而 -2 表示倒数第二个位，start、end 是指bit组的字节的下标数，二者皆包含。</p>
@@ -754,7 +782,7 @@
 <p> 注意：redis的setbit设置或清除的是bit位置，而bitcount计算的是byte位置。</p>
 </blockquote>
 <p>（4）bitop</p>
-<p>​		bitop and(or&#x2F;not&#x2F;xor) <destkey> [key…]</p>
+<p>​		bitop and(or&#x2F;not&#x2F;xor) <destkey> [key…]</destkey></p>
 <p>​		bitop是一个复合操作， 它可以做多个Bitmaps的 <strong>and（交集） 、 or（并集） 、 not（非） 、 xor（异或）</strong> 操作并将结果保存在destkey中。</p>
 <blockquote>
 <p>2022-02-02 日访问网站的userid&#x3D;1, 2, 5, 9。</p>
@@ -872,7 +900,7 @@
 <p>什么是基数?</p>
 <p>比如数据集 {1, 3, 5, 7, 5, 7, 8}， 那么这个数据集的基数集为 {1, 3, 5 ,7, 8}, 基数(不重复元素)为5。 基数估计就是在误差可接受的范围内，快速计算基数。</p>
 <h3 id="命令-1"><a href="#命令-1" class="headerlink" title="命令"></a>命令</h3><p>（1）pfadd</p>
-<p>​		pfadd <key>&lt; element&gt; [element …]  </p>
+<p>​		pfadd <key>&lt; element&gt; [element …]  </key></p>
 <p>​		添加指定元素到 HyperLogLog 中</p>
 <blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; pfadd hll1 &quot;redis&quot;</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; pfadd hll1 &quot;mysql&quot;</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; pfadd hll1 &quot;redis&quot;</span><br><span class="line">(integer) 0</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
@@ -880,20 +908,20 @@
 <p>​		将所有元素添加到指定HyperLogLog数据结构中。如果执行命令后HLL估计的近似基数发生变化，则返回1，否则返回0。</p>
 </blockquote>
 <p>（2）pfcount</p>
-<p>​		pfcount<key> [key …] </p>
+<p>​		pfcount<key> [key …] </key></p>
 <p>​		计算HLL的近似基数，可以计算多个HLL，比如用HLL存储每天的UV，计算一周的UV可以使用7天的UV合并计算即可</p>
 <blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; pfadd hll1 &quot;redis&quot;</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; pfadd hll1 &quot;mysql&quot;</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; pfadd hll1 &quot;redis&quot;</span><br><span class="line">(integer) 0</span><br><span class="line">127.0.0.1:6379&gt; pfcount hll1</span><br><span class="line">(integer) 2</span><br><span class="line">127.0.0.1:6379&gt; pfadd hll2 &quot;kafka&quot;</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; pfadd hll2 &quot;nginx&quot;</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; pfcount hll1 hll2</span><br><span class="line">(integer) 4</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>（3）pfmerge</p>
-<p>​		pfmerge<destkey><sourcekey> [sourcekey …] </p>
+<p>​		pfmerge<destkey><sourcekey> [sourcekey …] </sourcekey></destkey></p>
 <p>​		将一个或多个HLL合并后的结果存储在另一个HLL中，比如每月活跃用户可以使用每天的活跃用户来合并计算可得</p>
 <blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; pfcount hll1 hll2</span><br><span class="line">(integer) 4</span><br><span class="line">127.0.0.1:6379&gt; pfmerge hll3 hll1 hll2</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; pfcount hll3</span><br><span class="line">(integer) 4</span><br></pre></td></tr></table></figure>
 </blockquote>
 <h2 id="Geospatial"><a href="#Geospatial" class="headerlink" title="Geospatial"></a><strong>Geospatial</strong></h2><h3 id="简介-7"><a href="#简介-7" class="headerlink" title="简介"></a>简介</h3><p>​		Redis 3.2 中增加了对GEO类型的支持。GEO，Geographic，地理信息的缩写。该类型，就是元素的二维坐标，在地图上就是经纬度。redis基于该类型，提供了经纬度设置，查询，范围查询，距离查询，经纬度Hash等常见操作。</p>
 <h3 id="命令-2"><a href="#命令-2" class="headerlink" title="命令"></a>命令</h3><p>（1）geoadd</p>
-<p>​		geoadd<key>&lt; longitude&gt;<latitude><member> [longitude latitude member…]  </p>
+<p>​		geoadd<key>&lt; longitude&gt;<latitude><member> [longitude latitude member…]  </member></latitude></key></p>
 <p>​		添加地理位置（经度，纬度，名称）</p>
 <blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; geoadd china:city 121.47 31.23 shanghai</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; geoadd china:city 106.50 29.53 chongqing 114.05 22.52 shenzhen 116.38 39.90 beijing</span><br><span class="line">(integer) 3</span><br><span class="line">127.0.0.1:6379&gt; geoadd china:city 121.47 31.23 shanghai</span><br><span class="line">(integer) 0</span><br></pre></td></tr></table></figure>
@@ -906,13 +934,13 @@
 </ul>
 </blockquote>
 <p>（2）geopos </p>
-<p>​		geopos <key><member> [member…]</p>
+<p>​		geopos <key><member> [member…]</member></key></p>
 <p>​		获得指定地区的坐标值</p>
 <blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; geopos china:city shanghai</span><br><span class="line">1) 1) &quot;121.47000163793563843&quot;</span><br><span class="line">   2) &quot;31.22999903975783553&quot;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>（3）geodist</p>
-<p>​		geodist<key><member1><member2> [m|km|ft|mi ] </p>
+<p>​		geodist<key><member1><member2> [m|km|ft|mi ] </member2></member1></key></p>
 <p>​		获取两个位置之间的直线距离</p>
 <blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; geodist china:city beijing shanghai</span><br><span class="line">&quot;1068153.5181&quot;</span><br><span class="line">127.0.0.1:6379&gt; geodist china:city beijing shanghai km</span><br><span class="line">&quot;1068.1535&quot;</span><br></pre></td></tr></table></figure>
@@ -931,7 +959,7 @@
 </ul>
 </blockquote>
 <p>（4）georadius</p>
-<p>​		georadius<key>&lt; longitude&gt;<latitude>radius m|km|ft|mi </p>
+<p>​		georadius<key>&lt; longitude&gt;<latitude>radius m|km|ft|mi </latitude></key></p>
 <p>​		以给定的经纬度为中心，找出某一半径内的元素</p>
 <blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; georadius china:city 110 30 1000 km</span><br><span class="line">1) &quot;chongqing&quot;</span><br><span class="line">2) &quot;shenzhen&quot;</span><br></pre></td></tr></table></figure>
@@ -989,7 +1017,7 @@
 
 <h1 id="Redis事务与锁"><a href="#Redis事务与锁" class="headerlink" title="Redis事务与锁"></a>Redis事务与锁</h1><h2 id="Redis事务定义"><a href="#Redis事务定义" class="headerlink" title="Redis事务定义"></a>Redis事务定义</h2><p>​		Redis 事务是一个单独的隔离操作：事务中的所有命令都会序列化、按顺序地执行。事务在执行的过程中，不会被其他客户端发送来的命令请求所打断。<mark>Redis事务的主要作用就是串联多个命令防止别的命令插队。</mark></p>
 <h2 id="Multi、Exec、discard"><a href="#Multi、Exec、discard" class="headerlink" title="Multi、Exec、discard"></a>Multi、Exec、discard</h2><p>​		从输入 Multi 命令开始，输入的命令都会依次进入命令队列中，但不会执行，直到输入 Exec 后，Redis 会将之前的命令队列中的命令依次执行。<mark>组队的过程中可以通过discard来放弃组队。</mark></p>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20220513194048072.png" alt="image-20220513194048072"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20220513194048072.png" alt="image-20220513194048072"></p>
 <p>事务示例：</p>
 <ol>
 <li><p>组队成功，提交成功</p>
@@ -1009,9 +1037,9 @@
 </ol>
 <h2 id="事务的错误处理"><a href="#事务的错误处理" class="headerlink" title="事务的错误处理"></a>事务的错误处理</h2><p>组队中某个命令出现了报告错误，执行时整个的所有队列都会被取消。</p>
 <p>如果执行阶段某个命令报错，则只有报错的命令不会被执行，而其他的命令都会执行，不会回滚。</p>
-<h2 id="事务冲突"><a href="#事务冲突" class="headerlink" title="事务冲突"></a>事务冲突</h2><h3 id="悲观锁"><a href="#悲观锁" class="headerlink" title="悲观锁"></a><strong>悲观锁</strong></h3><p><img src="C:\Java\Document\Redis\Redis.assets\image-20221007171853393.png" alt="image-20221007171853393"></p>
+<h2 id="事务冲突"><a href="#事务冲突" class="headerlink" title="事务冲突"></a>事务冲突</h2><h3 id="悲观锁"><a href="#悲观锁" class="headerlink" title="悲观锁"></a><strong>悲观锁</strong></h3><p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221007171853393.png" alt="image-20221007171853393"></p>
 <p>​		<strong>悲观锁(Pessimistic Lock)</strong>, 顾名思义，就是很悲观，每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会block直到它拿到锁。<strong>传统的关系型数据库里边就用到了很多这种锁机制</strong>，比如<strong>行锁</strong>，<strong>表锁</strong>等，<strong>读锁</strong>，<strong>写锁</strong>等，都是在做操作之前先上锁。</p>
-<h3 id="乐观锁"><a href="#乐观锁" class="headerlink" title="乐观锁"></a><strong>乐观锁</strong></h3><p><img src="C:\Java\Document\Redis\Redis.assets\image-20221007172000166.png" alt="image-20221007172000166"></p>
+<h3 id="乐观锁"><a href="#乐观锁" class="headerlink" title="乐观锁"></a><strong>乐观锁</strong></h3><p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221007172000166.png" alt="image-20221007172000166"></p>
 <p>​		<strong>乐观锁(Optimistic Lock)，顾名思义，就是很乐观，每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是在更新的时候会判断一下在此期间别人有没有去更新这个数据，可以使用版本号等机制。</strong>乐观锁适用于多读的应用类型，这样可以提高吞吐量。Redis 就是利用这种 check-and-set 机制实现事务的。</p>
 <h3 id="WATCH-key"><a href="#WATCH-key" class="headerlink" title="WATCH key"></a><strong>WATCH</strong> <strong>key</strong></h3><p>​		在执行 multi 之前，先执行 watch key1 [key2]，可以监视一个(或多个) key ，<strong>如果在事务执行之前这个(或这些) key被其他命令所改动，那么事务将被打断。</strong></p>
 <p>示例：开启两个客户端测试</p>
@@ -1092,7 +1120,7 @@
 
 
 
-<h3 id="超卖问题"><a href="#超卖问题" class="headerlink" title="超卖问题"></a>超卖问题</h3><img src="C:\Java\Document\Redis\Redis.assets\image-20221009174213877.png" alt="image-20221009174213877" style="zoom:80%;" />
+<h3 id="超卖问题"><a href="#超卖问题" class="headerlink" title="超卖问题"></a>超卖问题</h3><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221009174213877.png" alt="image-20221009174213877" style="zoom:80%;">
 
 <p><strong>利用乐观锁淘汰用户，解决超卖问题。</strong>【watch multi exec】</p>
 <p>修改代码：</p>
@@ -1129,8 +1157,8 @@
 <li>RDB（Redis DataBase）</li>
 <li>AOF（Append Of File）</li>
 </ul>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20221008145146719.png" alt="image-20221008145146719"></p>
-<h2 id="RDB-Redis-DataBase"><a href="#RDB-Redis-DataBase" class="headerlink" title="RDB (Redis DataBase)"></a>RDB (Redis DataBase)</h2><h3 id="官网介绍"><a href="#官网介绍" class="headerlink" title="官网介绍"></a>官网介绍</h3><p><img src="C:\Java\Document\Redis\Redis.assets\image-20221008151537055.png" alt="image-20221008151537055"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008145146719.png" alt="image-20221008145146719"></p>
+<h2 id="RDB-Redis-DataBase"><a href="#RDB-Redis-DataBase" class="headerlink" title="RDB (Redis DataBase)"></a>RDB (Redis DataBase)</h2><h3 id="官网介绍"><a href="#官网介绍" class="headerlink" title="官网介绍"></a>官网介绍</h3><p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008151537055.png" alt="image-20221008151537055"></p>
 <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>​		在指定的时间间隔内将内存中的数据集快照写入磁盘， 即 Snapshot 快照，它恢复时是将快照文件直接读到内存里。</p>
 <h3 id="备份文件的执行"><a href="#备份文件的执行" class="headerlink" title="备份文件的执行"></a>备份文件的执行</h3><p>​		Redis会单独创建（fork）一个子进程来进行持久化，会先将数据写入到 一个临时文件中，待持久化过程都结束了，再用这个临时文件替换上次持久化好的文件（防止中间出现宕机导致数据丢失）。 整个过程中，主进程是不进行任何 IO 操作的，这就确保了极高的性能。<strong>如果需要进行大规模数据的恢复，且对于数据恢复的完整性不是非常敏感，那RDB方式要比AOF方式更加的高效。RDB的缺点是最后一次持久化后的数据可能丢失。</strong></p>
 <h3 id="Fork"><a href="#Fork" class="headerlink" title="Fork"></a>Fork</h3><ol>
@@ -1141,7 +1169,7 @@
 <li><p><strong>一般情况父进程和子进程会共用同一段物理内存</strong>，只有进程空间的各段的内容要发生变化时，才会将父进程的内容复制一份给子进程。</p>
 </li>
 </ol>
-<h3 id="RDB-持久化流程"><a href="#RDB-持久化流程" class="headerlink" title="RDB 持久化流程"></a><strong>RDB</strong> 持久化流程</h3><p><img src="C:\Java\Document\Redis\Redis.assets\image-20221008151945129.png" alt="image-20221008151945129"></p>
+<h3 id="RDB-持久化流程"><a href="#RDB-持久化流程" class="headerlink" title="RDB 持久化流程"></a><strong>RDB</strong> 持久化流程</h3><p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008151945129.png" alt="image-20221008151945129"></p>
 <h3 id="rdb-文件配置"><a href="#rdb-文件配置" class="headerlink" title="rdb 文件配置"></a>rdb 文件配置</h3><p>​		在 redis.conf 中配置文件名称，默认为 dump.rdb。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">406 # Enables or disables full sanitation checks for ziplist and listpack etc when</span><br><span class="line">407 # loading an RDB or RESTORE payload. This reduces the chances of a assertion or</span><br><span class="line">408 # crash later on while processing commands.</span><br><span class="line">409 # Options:</span><br><span class="line">410 #   no         - Never perform full sanitation</span><br><span class="line">411 #   yes        - Always perform full sanitation</span><br><span class="line">412 #   clients    - Perform full sanitation only for user connections.</span><br><span class="line">413 #                Excludes: RDB files, RESTORE commands received from the master</span><br><span class="line">414 #                connection, and client connections which have the</span><br><span class="line">415 #                skip-sanitize-payload ACL flag.</span><br><span class="line">416 # The default should be &#x27;clients&#x27; but since it currently affects cluster</span><br><span class="line">417 # resharding via MIGRATE, it is temporarily set to &#x27;no&#x27; by default.</span><br><span class="line">418 #</span><br><span class="line">419 # sanitize-dump-payload no</span><br><span class="line">420</span><br><span class="line">421 # The filename where to dump the DB</span><br><span class="line">422 dbfilename dump.rdb</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">The working directory.</span></span><br><span class="line">438 #</span><br><span class="line">439 # The DB will be written inside this directory, with the filename specified</span><br><span class="line">440 # above using the &#x27;dbfilename&#x27; configuration directive.</span><br><span class="line">441 #</span><br><span class="line">442 # The Append Only File will also be created inside this directory.</span><br><span class="line">443 #</span><br><span class="line">444 # Note that you must specify a directory here, not a file name.</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">默认当前启动目录下的 dump.rdb</span></span><br><span class="line">445 dir ./</span><br></pre></td></tr></table></figure>
 
@@ -1196,13 +1224,13 @@
 </li>
 </ol>
 <h3 id="动态停止RDB"><a href="#动态停止RDB" class="headerlink" title="动态停止RDB"></a>动态停止RDB</h3><p>动态停止RDB：redis-cli config set save “” #save后给空值，表示禁用保存策略</p>
-<h3 id="RDB-总结"><a href="#RDB-总结" class="headerlink" title="RDB 总结"></a>RDB 总结</h3><p><img src="C:\Java\Document\Redis\Redis.assets\image-20221008153853024.png" alt="image-20221008153853024"></p>
+<h3 id="RDB-总结"><a href="#RDB-总结" class="headerlink" title="RDB 总结"></a>RDB 总结</h3><p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008153853024.png" alt="image-20221008153853024"></p>
 <h2 id="AOF（Append-Only-File）"><a href="#AOF（Append-Only-File）" class="headerlink" title="AOF（Append Only File）"></a>AOF（Append Only File）</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>​		以<strong>日志</strong>的形式来记录每个写操作（增量保存），将Redis执行过的所有写指令记录下来（<strong>读操作不记录</strong>）， <strong>只许追加文件但不可以改写文件</strong>，redis启动之初会读取该文件重新构建数据，换言之，redis 重启的话就根据日志文件的内容将写指令从前到后执行一次以完成数据的恢复工作。</p>
 <h3 id="AOF持久化流程"><a href="#AOF持久化流程" class="headerlink" title="AOF持久化流程"></a><strong>AOF</strong>持久化流程</h3><p>（1）客户端的请求写命令会被append追加到AOF缓冲区内</p>
 <p>（2）AOF缓冲区根据AOF持久化策略[always,everysec,no]将操作sync同步到磁盘的AOF文件中</p>
 <p>（3）AOF文件大小超过重写策略或手动重写时，会对AOF文件rewrite重写，压缩AOF文件容量</p>
 <p>（4）Redis服务重启时，会重新load加载AOF文件中的写操作达到数据恢复的目的</p>
-<img src="C:\Java\Document\Redis\Redis.assets\image-20221008154119947.png" alt="image-20221008154119947" style="zoom:67%;" />
+<img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008154119947.png" alt="image-20221008154119947" style="zoom:67%;">
 
 <h3 id="AOF-默认配置"><a href="#AOF-默认配置" class="headerlink" title="AOF 默认配置"></a>AOF 默认配置</h3><p>在 redis.conf 中配置文件名称，默认为 appendonly.aof，AOF文件的保存路径，同RDB的路径一致。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">1211 ############################## APPEND ONLY MODE ###############################</span><br><span class="line">1212</span><br><span class="line">1213 # By default Redis asynchronously dumps the dataset on disk. This mode is</span><br><span class="line">1214 # good enough in many applications, but an issue with the Redis process or</span><br><span class="line">1215 # a power outage may result into a few minutes of writes lost (depending on</span><br><span class="line">1216 # the configured save points).</span><br><span class="line">1217 #</span><br><span class="line">1218 # The Append Only File is an alternative persistence mode that provides</span><br><span class="line">1219 # much better durability. For instance using the default data fsync policy</span><br><span class="line">1220 # (see later in the config file) Redis can lose just one second of writes in a</span><br><span class="line">1221 # dramatic event like a server power outage, or a single write if something</span><br><span class="line">1222 # wrong with the Redis process itself happens, but the operating system is</span><br><span class="line">1223 # still running correctly.</span><br><span class="line">1224 #</span><br><span class="line">1225 # AOF and RDB persistence can be enabled at the same time without problems.</span><br><span class="line">1226 # If the AOF is enabled on startup Redis will load the AOF, that is the file</span><br><span class="line">1227 # with the better durability guarantees.</span><br><span class="line">1228 #</span><br><span class="line">1229 # Please check http://redis.io/topics/persistence for more information.</span><br><span class="line">1230</span><br><span class="line">1231 appendonly no</span><br><span class="line">1232</span><br><span class="line">1233 # The name of the append only file (default: &quot;appendonly.aof&quot;)</span><br><span class="line">1234</span><br><span class="line">1235 appendfilename &quot;appendonly.aof&quot;</span><br></pre></td></tr></table></figure>
@@ -1252,7 +1280,7 @@
 <p>（3）子进程遍历redis内存中数据到临时文件，客户端的写请求同时写入aof_buf缓冲区和aof_rewrite_buf重写缓冲区保证原AOF文件完整以及新AOF文件生成期间的新的数据修改动作不会丢失。</p>
 <p>（4）子进程写完新的AOF文件后，向主进程发信号，父进程更新统计信息。2).主进程把aof_rewrite_buf中的数据写入到新的AOF文件。</p>
 <p>（5）使用新的AOF文件覆盖旧的AOF文件，完成AOF重写。</p>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20221008155125490.png" alt="image-20221008155125490"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008155125490.png" alt="image-20221008155125490"></p>
 <h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><ol>
 <li><p>备份机制更稳健，丢失数据概率更低。</p>
 </li>
@@ -1265,14 +1293,14 @@
 <li>每次读写都同步的话，有一定的性能压力。</li>
 <li>存在个别Bug，造成恢复不能。</li>
 </ul>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20221008155241481.png" alt="image-20221008155241481"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008155241481.png" alt="image-20221008155241481"></p>
 <h2 id="应该使用那个策略"><a href="#应该使用那个策略" class="headerlink" title="应该使用那个策略"></a>应该使用那个策略</h2><h3 id="官方推荐"><a href="#官方推荐" class="headerlink" title="官方推荐"></a>官方推荐</h3><ul>
 <li>官方推荐两个都启用。</li>
 <li>如果对数据不敏感，可以选单独用RDB。</li>
 <li>不建议单独用 AOF，因为可能会出现Bug。</li>
 <li>如果只是做纯内存缓存，可以都不用。</li>
 </ul>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20221008155404670.png" alt="image-20221008155404670"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008155404670.png" alt="image-20221008155404670"></p>
 <ul>
 <li>RDB持久化方式能够在指定的时间间隔能对你的数据进行快照存储</li>
 <li>AOF持久化方式记录每次对服务器写的操作,当服务器重启的时候会重新执行这些命令来恢复原始的数据,AOF命令以redis协议追加保存每次写的操作到文件末尾. </li>
@@ -1298,7 +1326,7 @@
 <li><p>容灾快速恢复</p>
 </li>
 </ol>
-<img src="C:\Java\Document\Redis\Redis.assets\image-20221008155953090.png" alt="image-20221008155953090" style="zoom:50%;" />
+<img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008155953090.png" alt="image-20221008155953090" style="zoom:50%;">
 
 
 
@@ -1319,7 +1347,7 @@
 <h3 id="第三步：使用-info-replication-打印主从复制信息"><a href="#第三步：使用-info-replication-打印主从复制信息" class="headerlink" title="第三步：使用 info replication 打印主从复制信息"></a>第三步：使用 info replication 打印主从复制信息</h3><p>使用命令 redis-cli -p 6379 连接，此时三台Redis 没有相关性：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost redis]# redis-cli -p 6379</span><br><span class="line">127.0.0.1:6379&gt; info replication</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Replication</span></span><br><span class="line">role:master</span><br><span class="line">connected_slaves:0</span><br><span class="line">master_failover_state:no-failover</span><br><span class="line">master_replid:b000a8297805ddb0f87b16a334ac5192fc090a9b</span><br><span class="line">master_replid2:0000000000000000000000000000000000000000</span><br><span class="line">master_repl_offset:0</span><br><span class="line">second_repl_offset:-1</span><br><span class="line">repl_backlog_active:0</span><br><span class="line">repl_backlog_size:1048576</span><br><span class="line">repl_backlog_first_byte_offset:0</span><br><span class="line">repl_backlog_histlen:0</span><br></pre></td></tr></table></figure>
 
-<h3 id="第四步：配置主机和从机"><a href="#第四步：配置主机和从机" class="headerlink" title="第四步：配置主机和从机"></a>第四步：配置主机和从机</h3><p>使用 slaveof <ip><port> 命令，在从机上配置它的主机。</p>
+<h3 id="第四步：配置主机和从机"><a href="#第四步：配置主机和从机" class="headerlink" title="第四步：配置主机和从机"></a>第四步：配置主机和从机</h3><p>使用 slaveof <ip><port> 命令，在从机上配置它的主机。</port></ip></p>
 <p>redis6379：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost redis]# redis-cli -p 6379</span><br><span class="line">127.0.0.1:6379&gt; info replication</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Replication</span></span><br><span class="line">role:master</span><br><span class="line">connected_slaves:2</span><br><span class="line">slave0:ip=127.0.0.1,port=6380,state=online,offset=56,lag=0</span><br><span class="line">slave1:ip=127.0.0.1,port=6381,state=online,offset=56,lag=0</span><br><span class="line">master_failover_state:no-failover</span><br><span class="line">master_replid:8c04d0a2552ad18119aa3b0d037e957646a294ac</span><br><span class="line">master_replid2:0000000000000000000000000000000000000000</span><br><span class="line">master_repl_offset:56</span><br><span class="line">second_repl_offset:-1</span><br><span class="line">repl_backlog_active:1</span><br><span class="line">repl_backlog_size:1048576</span><br><span class="line">repl_backlog_first_byte_offset:1</span><br><span class="line">repl_backlog_histlen:56</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
 
@@ -1353,7 +1381,7 @@
 </ol>
 <p>示例：</p>
 <h2 id="问题：Slave也可以是-Master"><a href="#问题：Slave也可以是-Master" class="headerlink" title="问题：Slave也可以是 Master"></a>问题：Slave也可以是 Master</h2><p>上一个 Slave 可以是下一个 Slave 的 Master，Slave 同样可以接收其他 Slaves 的连接和同步请求，那么该 Slave 作为了链条中下一个的 Master, 可以有效减轻 Master 的写压力，去中心化降低风险。</p>
-<p>用 Slaveof <ip><port></p>
+<p>用 Slaveof <ip><port></port></ip></p>
 <p>中途变更转向：会清除之前的数据，重新建立拷贝最新的</p>
 <p>风险是一旦某个 Slave 宕机，后面的 Slave 都没法备份</p>
 <p>主机挂了，从机还是从机，无法写数据了</p>
@@ -1366,10 +1394,10 @@
 
 <h3 id="第三步：启动哨兵"><a href="#第三步：启动哨兵" class="headerlink" title="第三步：启动哨兵"></a>第三步：启动哨兵</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost redis]# vim redisConf/sentinel.conf</span><br><span class="line">sentinel monitor mymaster 127.0.0.1 6379 1</span><br><span class="line">[root@localhost redis]# ls /usr/local/bin/</span><br><span class="line">redis-benchmark  redis-check-aof  redis-check-rdb  redis-cli  redis-sentinel  redis-server</span><br><span class="line">[root@localhost redis]# redis-sentinel /opt/redis/redisConf/sentinel.conf</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20221008170523011.png" alt="image-20221008170523011"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008170523011.png" alt="image-20221008170523011"></p>
 <h3 id="第四步：当主机挂掉，从机选举中产生新的主机"><a href="#第四步：当主机挂掉，从机选举中产生新的主机" class="headerlink" title="第四步：当主机挂掉，从机选举中产生新的主机"></a>第四步：当主机挂掉，从机选举中产生新的主机</h3><p>选举原则：根据优先级别：slave-priority ，原主机重启后会变为从机。</p>
 <p>slave-priority 默认100，数值越小，优先级越高。</p>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20221008171004905.png" alt="image-20221008171004905"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008171004905.png" alt="image-20221008171004905"></p>
 <h3 id="复制延时"><a href="#复制延时" class="headerlink" title="复制延时"></a><strong>复制延时</strong></h3><p>由于所有的写操作都是先在Master上操作，然后同步更新到Slave上，所以从Master同步到Slave机器有一定的延迟，当系统很繁忙的时候，延迟问题会更加严重，Slave机器数量的增加也会使这个问题更加严重。</p>
 <h3 id="故障恢复"><a href="#故障恢复" class="headerlink" title="故障恢复"></a>故障恢复</h3><h4 id="选择条件"><a href="#选择条件" class="headerlink" title="选择条件"></a>选择条件</h4><p>选择优先级高的，偏移量大的，runid 最小的服务。</p>
 <ul>
@@ -1416,7 +1444,7 @@
 
 <p>连接集群，写入数据时，会将数据放入slot 为 12706中，并重定向到该主机。</p>
 <h3 id="查看集群信息"><a href="#查看集群信息" class="headerlink" title="查看集群信息"></a><strong>查看集群信息</strong></h3><p>通过 cluster nodes 命令查看集群信息：</p>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20221008192527530.png" alt="image-20221008192527530"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008192527530.png" alt="image-20221008192527530"></p>
 <h3 id="redis-cluster-节点分配"><a href="#redis-cluster-节点分配" class="headerlink" title="redis cluster 节点分配"></a><strong>redis cluster 节点分配</strong></h3><p>一个集群至少要有三个主节点。</p>
 <p>选项 <strong>–cluster-replicas 1</strong> 表示我们希望为集群中的每个主节点创建一个从节点。</p>
 <p>分配原则尽量保证每个主数据库运行在不同的IP地址，每个从库和主库不在一个IP地址上。</p>
@@ -1438,13 +1466,13 @@
 <p>redis-cli 客户端提供了 –c 参数实现自动重定向。</p>
 <p>如 redis-cli -c –p 6379 登入后，再录入、查询键值对可以自动重定向。</p>
 <p>不在一个 slot 下的键值，是不能使用 mget，mset 等多键操作，但可以通过 { } 来定义组的概念，从而使key中 { } 内相同内容的键值对放到一个 slot 中去。</p>
-<p>CLUSTER GETKEYSINSLOT <slot><count> 	返回 count 个 slot 槽中的键。</p>
+<p>CLUSTER GETKEYSINSLOT <slot><count> 	返回 count 个 slot 槽中的键。</count></slot></p>
 <p><strong>注意：各客户端只能看自己插槽范围内的值。</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; mset k1 v1 k2 v2 k3 v3</span><br><span class="line">(error) CROSSSLOT Keys in request don&#x27;t hash to the same slot</span><br><span class="line">127.0.0.1:6379&gt; mset k1&#123;cust&#125; v1 k2&#123;cust&#125; v2 k3&#123;cust&#125; v3</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; cluster keyslot k1</span><br><span class="line">(integer) 12706</span><br><span class="line">127.0.0.1:6379&gt; CLUSTER COUNTKEYSINSLOT 12706</span><br><span class="line">(integer) 0</span><br><span class="line"></span><br><span class="line">127.0.0.1:6379&gt; cluster keyslot cust</span><br><span class="line">(integer) 4847</span><br><span class="line">127.0.0.1:6379&gt; cluster countKeysinslot 4847</span><br><span class="line">(integer) 3</span><br><span class="line">127.0.0.1:6379&gt; CLUSTER GETKEYSINSLOT 4847 5</span><br><span class="line">1) &quot;k1&#123;cust&#125;&quot;</span><br><span class="line">2) &quot;k2&#123;cust&#125;&quot;</span><br><span class="line">3) &quot;k3&#123;cust&#125;&quot;</span><br><span class="line">127.0.0.1:6379&gt; get k1&#123;cust&#125;</span><br><span class="line">&quot;v1&quot;</span><br><span class="line">127.0.0.1:6379&gt; get k1</span><br><span class="line"><span class="meta prompt_">-&gt; </span><span class="language-bash">Redirected to slot [12706] located at 192.168.100.100:6381</span></span><br><span class="line">&quot;v1&quot;</span><br><span class="line">192.168.100.100:6381&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="故障恢复-1"><a href="#故障恢复-1" class="headerlink" title="故障恢复"></a>故障恢复</h2><p>如果主节点下线，从节点会升为主节点，主节点恢复后，主节点会变为从机。</p>
 <p>示例：关掉 6380</p>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20221008192932653.png" alt="image-20221008192932653"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008192932653.png" alt="image-20221008192932653"></p>
 <p>如果所有某一段插槽的主从节点都宕掉，redis服务是否还能继续?</p>
 <p>如果某一段插槽的主从都挂掉，而 cluster-require-full-coverage 为 yes ，那么整个集群都挂掉</p>
 <p>如果某一段插槽的主从都挂掉，而 cluster-require-full-coverage 为 no ，那么该插槽数据全都不能使用，也无法存储。</p>
@@ -1487,7 +1515,7 @@
 <li>当操作返回成功时，再进行load db的操作，并回设缓存，最后删除 mutex key；</li>
 <li>当操作返回失败，证明有线程在load db，当前线程睡眠一段时间再重试整个 get 缓存的方法。</li>
 </ul>
-<img src="C:\Java\Document\Redis\Redis.assets\image-20221008200000951.png" alt="image-20221008200000951" style="zoom:67%;" />
+<img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008200000951.png" alt="image-20221008200000951" style="zoom:67%;">
 
 <h2 id="缓存雪崩"><a href="#缓存雪崩" class="headerlink" title="缓存雪崩"></a>缓存雪崩</h2><h3 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h3><p>​		key 对应的数据存在，但在 redis 中过期，此时若有大量并发请求过来，这些请求发现缓存过期一般都会从后端DB加载数据并回设到缓存，这个时候大并发的请求可能会瞬间把后端DB压垮。</p>
 <p><strong>缓存雪崩与缓存击穿的区别在于这里针对很多key缓存，前者则是某一个key。</strong></p>
@@ -1557,13 +1585,13 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Boolean</span> <span class="variable">lock</span> <span class="operator">=</span> redisTemplate.opsForValue().setIfAbsent(<span class="string">&quot;lock&quot;</span>, <span class="string">&quot;001&quot;</span>,<span class="number">3</span>, TimeUnit.SECONDS);</span><br></pre></td></tr></table></figure>
 
 <h3 id="UUID防止误删"><a href="#UUID防止误删" class="headerlink" title="UUID防止误删"></a>UUID防止误删</h3><p>问题：每一个线程都应该有自己的一把锁</p>
-<img src="C:\Java\Document\Redis\Redis.assets\image-20221008220617532.png" alt="image-20221008220617532" style="zoom:50%;" />
+<img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008220617532.png" alt="image-20221008220617532" style="zoom:50%;">
 
 <p>代码修改：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.redis.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.redis.core.RedisTemplate;</span><br><span class="line"><span class="keyword">import</span> org.springframework.util.StringUtils;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.UUID;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.TimeUnit;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 测试Redis分布式锁：</span></span><br><span class="line"><span class="comment"> * 提前设置 num 值</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/test&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LockController</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> RedisTemplate redisTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/testLock&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testLock</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// 获取锁</span></span><br><span class="line">        <span class="comment">// Boolean lock = redisTemplate.opsForValue().setIfAbsent(&quot;lock&quot;, &quot;001&quot;,3, TimeUnit.SECONDS);</span></span><br><span class="line">        <span class="comment">// 使用 UUID 优化防止误删</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">uuid</span> <span class="operator">=</span> UUID.randomUUID().toString();</span><br><span class="line">        <span class="type">Boolean</span> <span class="variable">lock</span> <span class="operator">=</span> redisTemplate.opsForValue().setIfAbsent(<span class="string">&quot;lock&quot;</span>, uuid, <span class="number">3</span>, TimeUnit.SECONDS);</span><br><span class="line">        <span class="keyword">if</span> (lock) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;获得锁：&quot;</span> + lock);</span><br><span class="line">            <span class="type">Object</span> <span class="variable">value</span> <span class="operator">=</span> redisTemplate.opsForValue().get(<span class="string">&quot;num&quot;</span>);</span><br><span class="line">            <span class="comment">// 判空</span></span><br><span class="line">            <span class="keyword">if</span> (StringUtils.isEmpty(value)) &#123;</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 业务逻辑</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> Integer.parseInt(String.valueOf(value));</span><br><span class="line">            redisTemplate.opsForValue().set(<span class="string">&quot;num&quot;</span>, ++num);</span><br><span class="line">            <span class="comment">// 释放锁: 判断UUID是否相同</span></span><br><span class="line">            <span class="type">Object</span> <span class="variable">lockUuid</span> <span class="operator">=</span> redisTemplate.opsForValue().get(<span class="string">&quot;lock&quot;</span>);</span><br><span class="line">            <span class="keyword">if</span> (uuid.equals(String.valueOf(lockUuid))) &#123;</span><br><span class="line">                <span class="type">Boolean</span> <span class="variable">released</span> <span class="operator">=</span> redisTemplate.delete(<span class="string">&quot;lock&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;释放锁：&quot;</span> + released);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 获取锁失败，每隔0.1秒再试</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">100</span>);</span><br><span class="line">                testLock();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="Lua-脚本优化：原子性问题"><a href="#Lua-脚本优化：原子性问题" class="headerlink" title="Lua 脚本优化：原子性问题"></a>Lua 脚本优化：原子性问题</h3><p>​		在判断UUID是否相同后，该锁对象过期时间结束，自动释放锁，此时其他线程拿到锁，之后当前线程再次通过手动释放锁，判断相等的过程已经结束，释放的是其他线程的锁，该过程应该是原子性的，使用Lua脚本确保原子性。</p>
-<img src="C:\Java\Document\Redis\Redis.assets\image-20221008224023193.png" alt="image-20221008224023193" style="zoom:50%;" />
+<img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008224023193.png" alt="image-20221008224023193" style="zoom:50%;">
 
 <p>代码修改：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;testLockLua&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testLockLua</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// 声明一个uuid ,将做为一个value 放入我们的key所对应的值中</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">uuid</span> <span class="operator">=</span> UUID.randomUUID().toString();</span><br><span class="line">    <span class="comment">// 定义一个锁：lua 脚本可以使用同一把锁，来实现删除！</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">skuId</span> <span class="operator">=</span> <span class="string">&quot;25&quot;</span>; <span class="comment">// 访问skuId 为25号的商品 100008348542</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">locKey</span> <span class="operator">=</span> <span class="string">&quot;lock:&quot;</span> + skuId; <span class="comment">// 锁住的是每个商品的数据</span></span><br><span class="line">    <span class="comment">// 获取锁</span></span><br><span class="line">    <span class="type">Boolean</span> <span class="variable">lock</span> <span class="operator">=</span> redisTemplate.opsForValue().setIfAbsent(locKey, uuid, <span class="number">3</span>, TimeUnit.SECONDS);</span><br><span class="line">    <span class="keyword">if</span> (lock) &#123;</span><br><span class="line">        <span class="comment">// 执行的业务逻辑开始</span></span><br><span class="line">        <span class="type">Object</span> <span class="variable">value</span> <span class="operator">=</span> redisTemplate.opsForValue().get(<span class="string">&quot;num&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (StringUtils.isEmpty(value)) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 不是空 如果说在这出现了异常！ 那么delete 就删除失败！ 也就是说锁永远存在！</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> Integer.parseInt(value + <span class="string">&quot;&quot;</span>);</span><br><span class="line">        <span class="comment">// 使num 每次+1 放入缓存</span></span><br><span class="line">        redisTemplate.opsForValue().set(<span class="string">&quot;num&quot;</span>, String.valueOf(++num));</span><br><span class="line">        <span class="comment">/*使用lua脚本来锁*/</span></span><br><span class="line">        <span class="comment">// 定义lua 脚本</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">script</span> <span class="operator">=</span> <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">        <span class="comment">// 使用redis执行lua执行</span></span><br><span class="line">        DefaultRedisScript&lt;Long&gt; redisScript = <span class="keyword">new</span> <span class="title class_">DefaultRedisScript</span>&lt;&gt;();</span><br><span class="line">        redisScript.setScriptText(script);</span><br><span class="line">        <span class="comment">// 设置一下返回值类型为 Long</span></span><br><span class="line">        <span class="comment">// 因为删除判断的时候，返回的0, 给其封装为数据类型。</span></span><br><span class="line">        <span class="comment">// 如果不封装那么默认返回String 类型，那么返回字符串与 0 会有发生错误。</span></span><br><span class="line">        redisScript.setResultType(Long.class);</span><br><span class="line">        <span class="comment">// 第一个要是script 脚本 ，第二个需要判断的key，第三个就是key所对应的值。</span></span><br><span class="line">        redisTemplate.execute(redisScript, Arrays.asList(locKey), uuid);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">            testLockLua();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1585,7 +1613,7 @@
 </ol>
 <p>（1）数据说明</p>
 <p>​	user	用户名	是否启用	没有密码	可操作的Key	可执行的命令</p>
-<p><img src="C:\Java\Document\Redis\Redis.assets\image-20221008234251310.png" alt="image-20221008234251310"></p>
+<p><img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008234251310.png" alt="image-20221008234251310"></p>
 <ol start="2">
 <li><p>使用 acl whoami 命令查看当前用户</p>
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; ACL WHOAMI</span><br><span class="line">&quot;default&quot;</span><br></pre></td></tr></table></figure>
@@ -1638,12 +1666,12 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>+@<category></strong></td>
+<td><strong>+@<category></category></strong></td>
 <td>添加该类别中用户要调用的所有指令，有效类别为@admin、@set、@sortedset…等，通过调用ACL CAT命令查看完整列表。特殊类别@all表示所有命令，包括当前存在于服务器中的命令，以及将来将通过模块加载的命令。</td>
 <td></td>
 </tr>
 <tr>
-<td>-@<actegory></td>
+<td>-@<actegory></actegory></td>
 <td>从用户可调用指令中移除类别</td>
 <td></td>
 </tr>
@@ -1659,7 +1687,7 @@
 </tr>
 <tr>
 <td>可操作键的添加或删除</td>
-<td><strong>~<pattern></strong></td>
+<td><strong>~<pattern></pattern></strong></td>
 <td>添加可作为用户可操作的键的模式。例如~*允许所有的键</td>
 </tr>
 </tbody></table>
@@ -1680,7 +1708,7 @@
 <h2 id="IO-多线程"><a href="#IO-多线程" class="headerlink" title="IO 多线程"></a><strong>IO</strong> 多线程</h2><h3 id="简介-9"><a href="#简介-9" class="headerlink" title="简介"></a><strong>简介</strong></h3><p>Redis6终于支持多线程了，告别单线程了吗？</p>
 <p>IO多线程其实指 <strong>客户端交互部分</strong>的<strong>网络IO</strong> 交互处理模块<strong>多线程</strong>，而非<strong>执行命令多线程</strong>。Redis6执行命令依然是单线程。</p>
 <h3 id="原理架构"><a href="#原理架构" class="headerlink" title="原理架构"></a><strong>原理架构</strong></h3><p>​		Redis 6 加入多线程，但跟 Memcached 这种从 IO处理到数据访问多线程的实现模式有些差异。<strong>Redis 的多线程部分只是用来处理网络数据的读写和协议解析，执行命令仍然是单</strong>线程。之所以这么设计是不想因为多线程而变得复杂，需要去控制 key、lua、事务，LPUSH&#x2F;LPOP 等等的并发问题。整体的设计大体如下：</p>
-<img src="C:\Java\Document\Redis\Redis.assets\image-20221008233535092.png" alt="image-20221008233535092" style="zoom:80%;" />
+<img src="/2023/02/28/Redis/Java\Document\Redis\Redis.assets\image-20221008233535092.png" alt="image-20221008233535092" style="zoom:80%;">
 
 <p>另外，多线程IO默认也是不开启的，需要再配置文件中配置</p>
 <ul>
@@ -1717,12 +1745,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/02/28/RabbitMQ/" rel="prev" title="RabbitMQ">
-      <i class="fa fa-chevron-left"></i> RabbitMQ
+    <a href="/2023/02/28/Vue/" rel="prev" title="Vue">
+      <i class="fa fa-chevron-left"></i> Vue
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/02/28/Nginx/" rel="next" title="Nginx">
-      Nginx <i class="fa fa-chevron-right"></i>
+    <a href="/2023/02/28/OperatingSystem/" rel="next" title="操作系统">
+      操作系统 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -1796,7 +1824,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1867,6 +1895,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

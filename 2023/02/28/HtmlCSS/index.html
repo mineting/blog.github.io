@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Html&#x2F;CSSHtml网页概述​		HTML：超文本标记语言（HyperText Markup Language） 网页结构： 一个网页由三部分组成，结构、表现、行为。 结构：使用HTML编写，页面的整体的结构，如标题、段落、图片、音视频等。 表现：使用CSS编写，页面的外在样式，字体、颜色、背景等。 行为：使用JavaScript编写，页面与用户之间的交互行为。 一般要求结构、表现、">
@@ -103,6 +103,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -122,11 +123,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -194,7 +222,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="Html-x2F-CSS"><a href="#Html-x2F-CSS" class="headerlink" title="Html&#x2F;CSS"></a>Html&#x2F;CSS</h1><h1 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h1><h2 id="网页概述"><a href="#网页概述" class="headerlink" title="网页概述"></a>网页概述</h2><p>​		HTML：<strong>超文本标记语言（HyperText Markup Language）</strong></p>
+        <h1 id><a href="#" class="headerlink" title></a></h1><h1 id="Html-x2F-CSS"><a href="#Html-x2F-CSS" class="headerlink" title="Html&#x2F;CSS"></a>Html&#x2F;CSS</h1><h1 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h1><h2 id="网页概述"><a href="#网页概述" class="headerlink" title="网页概述"></a>网页概述</h2><p>​		HTML：<strong>超文本标记语言（HyperText Markup Language）</strong></p>
 <p>网页结构：</p>
 <p>一个网页由三部分组成，结构、表现、行为。</p>
 <p>结构：使用HTML编写，页面的整体的结构，如标题、段落、图片、音视频等。</p>
@@ -223,7 +251,7 @@
 <td>段落标签</td>
 </tr>
 <tr>
-<td><strong><hr /></strong></td>
+<td><strong><hr></strong></td>
 <td>水平线标签</td>
 </tr>
 <tr>
@@ -239,7 +267,7 @@
 <td>span标签，一行上可以放多个span，主要用作文本处理</td>
 </tr>
 <tr>
-<td><strong><img></img></strong></td>
+<td><strong><img></strong></td>
 <td>引入图片</td>
 </tr>
 <tr>
@@ -251,7 +279,7 @@
 <td>预格式化文本，保留空格和换行，独占一行</td>
 </tr>
 <tr>
-<td><strong><center></strong></td>
+<td><strong><center></center></strong></td>
 <td>元素居中显示</td>
 </tr>
 </tbody></table>
@@ -340,8 +368,8 @@
 
 
 
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p><strong>作用：显示数据。包括<table>、<tr>、<td>、<th>、<caption>、<thead>、<tbody>、<tfoot>。</strong></p>
-<p>​		首先<caption>和<th>分别表示表格的标题和表头，<th><strong>一般表头单元格位于表格的第一行或第一列，并且文本加粗居中。</strong></p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p><strong>作用：显示数据。包括<table>、<tr>、<td>、<th>、<caption>、<thead>、<tbody>、<tfoot>。</tfoot></tbody></thead></caption></th></td></tr></table></strong></p>
+<p>​		首先<caption>和<th>分别表示表格的标题和表头，</th><th><strong>一般表头单元格位于表格的第一行或第一列，并且文本加粗居中。</strong></th></caption></p>
 <p>对于比较复杂的表格，又将表格分割成三个部分：题头、正文和脚注。分别用： thead，tbody，tfoot来标注，这样更好的分清表格结构。</p>
 <thead>： 用于定义表格的头部。用来放标题之类的东西。**<thead> 内部必须拥有<tr> 标签。**
 
@@ -628,7 +656,7 @@
 <p><strong>readonly：不能修改，readonly没有变化，可以被表单提交。</strong></p>
 <p><strong>disabled：不能修改，disabled显示灰色，不会经过表单的提交。</strong></p>
 <p><strong>属性为image时，类似于submit按钮。</strong></p>
-<p>Image：<input type="image" src="../img/girl_0.jpeg" width="80px" height="60px"/></p>
+<p>Image：<input type="image" src="../img/girl_0.jpeg" width="80px" height="60px"></p>
 <p>list 属性，和 datalist 标签搭配使用，只能选择预定义的值。</p>
 <p>value 和 placeholder 不要同时使用，以 value 为准。</p>
 <h3 id="datalist"><a href="#datalist" class="headerlink" title="datalist"></a>datalist</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">姓名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">list</span>=<span class="string">&quot;nameList&quot;</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">&quot;nameList&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span>&gt;</span>tom<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span>&gt;</span>jerry<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span>&gt;</span>jack<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span>&gt;</span>rose<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -739,7 +767,7 @@
 
 
 
-<h2 id="显示模式"><a href="#显示模式" class="headerlink" title="显示模式"></a>显示模式</h2><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h2 id="三大特性"><a href="#三大特性" class="headerlink" title="三大特性"></a>三大特性</h2><h3 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h3><h3 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h3><h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><h2 id="常见显示效果"><a href="#常见显示效果" class="headerlink" title="常见显示效果"></a>常见显示效果</h2><h1 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h1><h1 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h1>
+<h2 id="显示模式"><a href="#显示模式" class="headerlink" title="显示模式"></a>显示模式</h2><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h2 id="三大特性"><a href="#三大特性" class="headerlink" title="三大特性"></a>三大特性</h2><h3 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h3><h3 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h3><h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><h2 id="常见显示效果"><a href="#常见显示效果" class="headerlink" title="常见显示效果"></a>常见显示效果</h2><h1 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h1><h1 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h1></tfoot></tbody></tr></thead></thead>
     </div>
 
     
@@ -758,8 +786,8 @@
       <i class="fa fa-chevron-left"></i> JavaBasic
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/02/28/DesignPattern/" rel="next" title="DesignPattern">
-      DesignPattern <i class="fa fa-chevron-right"></i>
+    <a href="/2023/02/28/Effective%20Java/" rel="next" title="EffectiveJava">
+      EffectiveJava <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -833,7 +861,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -904,6 +932,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

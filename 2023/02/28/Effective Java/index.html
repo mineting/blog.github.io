@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Effective Java第一章 创建和销毁对象用静态工厂方法代替构造器遇到多个构造参数时考虑使用构建器用私有构造器或枚举类型强化Singleton属性通过私有构造器强化不可实例化的能力优先考虑依赖注入来引用资源避免创建不必要的对象尽可能的重用单个对象，而不是每次需要的时候创建一个相同功能的新对象，如果对象是不可变的（immutable），那么它就始终可以被重用。如果在循环语句或者频繁调用的方法">
@@ -103,6 +103,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -122,11 +123,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -194,7 +222,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="Effective-Java"><a href="#Effective-Java" class="headerlink" title="Effective Java"></a>Effective Java</h1><h1 id="第一章-创建和销毁对象"><a href="#第一章-创建和销毁对象" class="headerlink" title="第一章 创建和销毁对象"></a>第一章 创建和销毁对象</h1><h2 id="用静态工厂方法代替构造器"><a href="#用静态工厂方法代替构造器" class="headerlink" title="用静态工厂方法代替构造器"></a>用静态工厂方法代替构造器</h2><h2 id="遇到多个构造参数时考虑使用构建器"><a href="#遇到多个构造参数时考虑使用构建器" class="headerlink" title="遇到多个构造参数时考虑使用构建器"></a>遇到多个构造参数时考虑使用构建器</h2><h2 id="用私有构造器或枚举类型强化Singleton属性"><a href="#用私有构造器或枚举类型强化Singleton属性" class="headerlink" title="用私有构造器或枚举类型强化Singleton属性"></a>用私有构造器或枚举类型强化Singleton属性</h2><h2 id="通过私有构造器强化不可实例化的能力"><a href="#通过私有构造器强化不可实例化的能力" class="headerlink" title="通过私有构造器强化不可实例化的能力"></a>通过私有构造器强化不可实例化的能力</h2><h2 id="优先考虑依赖注入来引用资源"><a href="#优先考虑依赖注入来引用资源" class="headerlink" title="优先考虑依赖注入来引用资源"></a>优先考虑依赖注入来引用资源</h2><h2 id="避免创建不必要的对象"><a href="#避免创建不必要的对象" class="headerlink" title="避免创建不必要的对象"></a>避免创建不必要的对象</h2><p>尽可能的重用单个对象，而不是每次需要的时候创建一个相同功能的新对象，如果对象是不可变的（immutable），那么它就始终可以被重用。如果在循环语句或者频繁调用的方法中创建该对象，对性能或内存有很大的影响。</p>
+        <h1 id><a href="#" class="headerlink" title></a></h1><h1 id="Effective-Java"><a href="#Effective-Java" class="headerlink" title="Effective Java"></a>Effective Java</h1><h1 id="第一章-创建和销毁对象"><a href="#第一章-创建和销毁对象" class="headerlink" title="第一章 创建和销毁对象"></a>第一章 创建和销毁对象</h1><h2 id="用静态工厂方法代替构造器"><a href="#用静态工厂方法代替构造器" class="headerlink" title="用静态工厂方法代替构造器"></a>用静态工厂方法代替构造器</h2><h2 id="遇到多个构造参数时考虑使用构建器"><a href="#遇到多个构造参数时考虑使用构建器" class="headerlink" title="遇到多个构造参数时考虑使用构建器"></a>遇到多个构造参数时考虑使用构建器</h2><h2 id="用私有构造器或枚举类型强化Singleton属性"><a href="#用私有构造器或枚举类型强化Singleton属性" class="headerlink" title="用私有构造器或枚举类型强化Singleton属性"></a>用私有构造器或枚举类型强化Singleton属性</h2><h2 id="通过私有构造器强化不可实例化的能力"><a href="#通过私有构造器强化不可实例化的能力" class="headerlink" title="通过私有构造器强化不可实例化的能力"></a>通过私有构造器强化不可实例化的能力</h2><h2 id="优先考虑依赖注入来引用资源"><a href="#优先考虑依赖注入来引用资源" class="headerlink" title="优先考虑依赖注入来引用资源"></a>优先考虑依赖注入来引用资源</h2><h2 id="避免创建不必要的对象"><a href="#避免创建不必要的对象" class="headerlink" title="避免创建不必要的对象"></a>避免创建不必要的对象</h2><p>尽可能的重用单个对象，而不是每次需要的时候创建一个相同功能的新对象，如果对象是不可变的（immutable），那么它就始终可以被重用。如果在循环语句或者频繁调用的方法中创建该对象，对性能或内存有很大的影响。</p>
 <p>示例一（错误写法）：</p>
 <p>String s &#x3D; new String(“bikini”);</p>
 <p>说明：该语句每次被执行的时候都会创建一个新的String实例，没有必须使用new String()构造器，参数”bikini”本身就是一个String实例，对于相同的字符串常量实例，该实例就会被重用。功能相同的情况下，如果在循环或频繁调用的方法中，就会创建大量不必要的String实例。</p>
@@ -254,8 +282,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/02/28/DataStructuresAndAlgorithms/" rel="prev" title="DataStructuresAndAlgorithms">
-      <i class="fa fa-chevron-left"></i> DataStructuresAndAlgorithms
+    <a href="/2023/02/28/HtmlCSS/" rel="prev" title="Html/Css">
+      <i class="fa fa-chevron-left"></i> Html/Css
     </a></div>
       <div class="post-nav-item">
     <a href="/2023/02/28/Docker/" rel="next" title="Docker">
@@ -333,7 +361,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -404,6 +432,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
