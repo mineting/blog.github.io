@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2023/02/28/Docker/DockerArchitecture.png">
 <meta property="article:published_time" content="2023-02-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-28T12:19:02.515Z">
+<meta property="article:modified_time" content="2023-03-02T07:54:22.642Z">
 <meta property="article:author" content="Fei">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2023/02/28/Docker/DockerArchitecture.png">
@@ -202,10 +202,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-02-28 00:00:00 / Modified: 20:19:02" itemprop="dateCreated datePublished" datetime="2023-02-28T00:00:00+08:00">2023-02-28</time>
+              <time title="Created: 2023-02-28 00:00:00" itemprop="dateCreated datePublished" datetime="2023-02-28T00:00:00+08:00">2023-02-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-03-02 15:54:22" itemprop="dateModified" datetime="2023-03-02T15:54:22+08:00">2023-03-02</time>
+              </span>
 
           
 
@@ -295,6 +301,7 @@
 <blockquote>
 <p>传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程；<br>容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。</p>
 <p>每个容器之间互相隔离，每个容器有自己的文件系统 ，容器之间进程不会相互影响，能区分计算资源。</p>
+<p>(1)docker有着比虚拟机更少的抽象层<br>   由于docker不需要Hypervisor(虚拟机)实现硬件资源虚拟化,运行在docker容器上的程序直接使用的都是实际物理机的硬件资源。因此在CPU、内存利用率上docker将会在效率上有明显优势。<br>(2)docker利用的是宿主机的内核,而不需要加载操作系统OS内核<br>   当新建一个容器时,docker不需要和虚拟机一样重新加载一个操作系统内核。进而避免引寻、加载操作系统内核返回等比较费时费资源的过程,当新建一个虚拟机时,虚拟机软件需要加载OS,返回新建过程是分钟级别的。而docker由于直接利用宿主机的操作系统,则省略了返回过程,因此新建一个docker容器只需要几秒钟。</p>
 </blockquote>
 <h1 id="Docker-安装"><a href="#Docker-安装" class="headerlink" title="Docker 安装"></a>Docker 安装</h1><h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><p>【Refer】<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/centos/">https://docs.docker.com/engine/install/centos/</a></p>
 <p><strong>条件：64位系统、Linux系统内核版本为 3.8以上。</strong></p>
@@ -333,12 +340,256 @@
 
 <h3 id="第五步：启动-Docker"><a href="#第五步：启动-Docker" class="headerlink" title="第五步：启动 Docker"></a>第五步：启动 Docker</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
 
-<h3 id="第六步：测试"><a href="#第六步：测试" class="headerlink" title="第六步：测试"></a>第六步：测试</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure>
+<h3 id="第六步：测试"><a href="#第六步：测试" class="headerlink" title="第六步：测试"></a>第六步：测试</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker --version</span><br><span class="line">Docker version 23.0.1, build a5ee5b1</span><br></pre></td></tr></table></figure>
 
 <p>拉取测试镜像：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run helloworld</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker run hello-world</span><br><span class="line">Unable to find image &#x27;hello-world:latest&#x27; locally</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">2db29710123e: Pull complete</span><br><span class="line">Digest: sha256:2498fce14358aa50ead0cc6c19990fc6ff866ce72aeb5546e1d59caac3d0d60f</span><br><span class="line">Status: Downloaded newer image for hello-world:latest</span><br><span class="line"></span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image which runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, which sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"><span class="meta prompt_"> $ </span><span class="language-bash">docker run -it ubuntu bash</span></span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://hub.docker.com/</span><br><span class="line"></span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https://docs.docker.com/get-started/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="配置镜像加速"><a href="#配置镜像加速" class="headerlink" title="配置镜像加速"></a>配置镜像加速</h2><h1 id="Docker-常用命令"><a href="#Docker-常用命令" class="headerlink" title="Docker 常用命令"></a>Docker 常用命令</h1>
+<h2 id="配置镜像加速"><a href="#配置镜像加速" class="headerlink" title="配置镜像加速"></a>配置镜像加速</h2><ol>
+<li><p>登录阿里云开发者平台：<a target="_blank" rel="noopener" href="https://home.console.aliyun.com/home/dashboard/ProductAndService">https://home.console.aliyun.com/home/dashboard/ProductAndService</a></p>
+</li>
+<li><p>选择容器镜像服务 –&gt; 镜像工具 –&gt; 镜像加速器</p>
+</li>
+<li><p>获取加速器地址：<a target="_blank" rel="noopener" href="https://utix41yg.mirror.aliyuncs.com/">https://utix41yg.mirror.aliyuncs.com</a></p>
+</li>
+<li><p>配置镜像地址</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /etc/docker</span><br><span class="line">vim  /etc/docker/daemon.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [&quot;https://utix41yg.mirror.aliyuncs.com&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启 Docker</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="Docker-常用命令"><a href="#Docker-常用命令" class="headerlink" title="Docker 常用命令"></a>Docker 常用命令</h1><h2 id="启动帮助类"><a href="#启动帮助类" class="headerlink" title="启动帮助类"></a>启动帮助类</h2><ol>
+<li><p>启动、重启、停止、状态等</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">system start/stop/restart/status docker</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>帮助信息（一般多个单词使用两个中划线，单个单词使用一个中划线）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker 命令 --help</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="镜像命令"><a href="#镜像命令" class="headerlink" title="镜像命令"></a>镜像命令</h2><h3 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h3><ul>
+<li>列出本地主机上的镜像</li>
+<li>OPTIONS：<ul>
+<li>-a  列出所有</li>
+<li>-q  只显示镜像ID</li>
+</ul>
+</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker images</span><br><span class="line">REPOSITORY    TAG       IMAGE ID       CREATED         SIZE</span><br><span class="line">ubuntu        latest    ba6acccedd29   16 months ago   72.8MB</span><br><span class="line">hello-world   latest    feb5d9fea6a5   17 months ago   13.3kB</span><br></pre></td></tr></table></figure>
+
+<p>选项说明：</p>
+<table>
+<thead>
+<tr>
+<th>REPOSITORY</th>
+<th>仓库源</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TAG</td>
+<td>镜像标签</td>
+</tr>
+<tr>
+<td>IMAGE ID</td>
+<td>镜像 ID</td>
+</tr>
+<tr>
+<td>CREATED</td>
+<td>镜像创建时间</td>
+</tr>
+<tr>
+<td>SIZE</td>
+<td>镜像大小</td>
+</tr>
+</tbody></table>
+<h3 id="docker-search"><a href="#docker-search" class="headerlink" title="docker search"></a>docker search</h3><ul>
+<li>docker search 是从 <a target="_blank" rel="noopener" href="https://hub.docker.com/">https://hub.docker.com</a> 查询镜像</li>
+<li>OPTIONS：<ul>
+<li>–limit	数量限制，默认 25 个</li>
+</ul>
+</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker search --limit 5 tomcat</span><br><span class="line">NAME                          DESCRIPTION                      STARS     OFFICIAL   AUTOMATED</span><br><span class="line">tomcat                        Apache Tomcat is an open source 3496      [OK]</span><br><span class="line">tomee                         Apache TomEE is an all-Apache Ja103       [OK]</span><br><span class="line">bitnami/tomcat                Bitnami Tomcat Docker Image      48                   [OK]</span><br><span class="line">secoresearch/tomcat-varnish   Tomcat and Varnish 5.0           0                    [OK]</span><br><span class="line">wnprcehr/tomcat                                                0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="docker-pull"><a href="#docker-pull" class="headerlink" title="docker pull"></a>docker pull</h3><ul>
+<li>下载镜像</li>
+<li>docker pull 镜像名称:TAG</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker pull ubuntu</span><br><span class="line">Using default tag: latest</span><br><span class="line">latest: Pulling from library/ubuntu</span><br><span class="line">7b1a6ab2e44d: Pull complete</span><br><span class="line">Digest: sha256:626ffe58f6e7566e00254b638eb7e0f3b11d4da9675088f4781a50ae288f3322</span><br><span class="line">Status: Downloaded newer image for ubuntu:latest</span><br><span class="line">docker.io/library/ubuntu:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="docker-system-df"><a href="#docker-system-df" class="headerlink" title="docker system df"></a>docker system df</h3><ul>
+<li>查看镜像、容器、数据卷所占的空间</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker system df</span><br><span class="line">TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE</span><br><span class="line">Images          2         1         72.79MB   72.78MB (99%)</span><br><span class="line">Containers      1         0         0B        0B</span><br><span class="line">Local Volumes   0         0         0B        0B</span><br><span class="line">Build Cache     0         0         0B        0B</span><br></pre></td></tr></table></figure>
+
+<h3 id="docker-rmi"><a href="#docker-rmi" class="headerlink" title="docker rmi"></a>docker rmi</h3><ul>
+<li>删除镜像</li>
+<li>删除单个：docker  rmi  -f  镜像ID</li>
+<li>删除多个：docker  rmi  -f  镜像名1:TAG  镜像名2:TAG</li>
+<li>删除全部：docker rmi -f $(docker images -qa)</li>
+</ul>
+<h3 id="虚悬镜像"><a href="#虚悬镜像" class="headerlink" title="虚悬镜像"></a>虚悬镜像</h3><ul>
+<li>仓库名、标签都是 <none> 的镜像，俗称虚悬镜像dangling image</none></li>
+</ul>
+<h2 id="容器命令"><a href="#容器命令" class="headerlink" title="容器命令"></a>容器命令</h2><h3 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h3><ul>
+<li><strong>docker 	run 	[OPTIONS] 	IMAGE 	[COMMAND] 	[ARG…]</strong></li>
+</ul>
+<p>OPTIONS 选项说明：</p>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>–name</td>
+<td>容器名称</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>启动守护式容器，后台运行容器</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>以交互模式运行容器，通常与 -t 同时使用</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>为容器重新分配一个伪输入终端，通常与 -i 同时使用</td>
+</tr>
+<tr>
+<td>-P</td>
+<td>随机端口映射</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>指定端口映射</td>
+</tr>
+</tbody></table>
+<p>-p 参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>args</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p hostPort:containerPort</td>
+<td>端口映射               -p 8080:80</td>
+</tr>
+<tr>
+<td>-p ip:hostPort:containerPort</td>
+<td>配置监听地址       -p 192.168.100.100:8080:80</td>
+</tr>
+<tr>
+<td>-p ip::containerPort</td>
+<td>随机分配端口       -p 192.168.100.100::80</td>
+</tr>
+<tr>
+<td>-p hostPort:containerPort:tcp</td>
+<td>指定协议               -p 8080:80:udp</td>
+</tr>
+<tr>
+<td>-p 8080:80  3306:3306</td>
+<td>指定多个映射</td>
+</tr>
+</tbody></table>
+<p><strong>【注意：】</strong></p>
+<p>启动容器有两种方式：后台守护式启动，前台交互式启动</p>
+<p>如果以后台启动，如 docker run -d unubtu，再使用docker ps 查看时，发现容器已经退出（自杀），因为 Docker容器后台启动，就必须有一个前台进程，否则它觉得自己无事可做，便会退出。</p>
+<p><strong>通用的解决方案：将运行的程序以前台进程的形式运行，如使用命令 tail、死循环、命令行模式等。</strong></p>
+<h3 id="列出容器"><a href="#列出容器" class="headerlink" title="列出容器"></a>列出容器</h3><ul>
+<li><strong>docker ps [OPTIONS]</strong></li>
+</ul>
+<p>options 说明：</p>
+<table>
+<thead>
+<tr>
+<th>OPTIONS</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-a</td>
+<td>列出所有正在运行的容器，包含历史上运行的</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>显示最近创建的容器</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>显示最近 n 个创建的容器</td>
+</tr>
+<tr>
+<td>-q</td>
+<td>只显示容器编号</td>
+</tr>
+</tbody></table>
+<h3 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a>退出容器</h3><ul>
+<li>方式一：exit <ul>
+<li>退出容器，容器会停止</li>
+</ul>
+</li>
+<li>方式二：CTRL + P + Q<ul>
+<li>退出容器，容器不会停止</li>
+</ul>
+</li>
+</ul>
+<h3 id="重启容器"><a href="#重启容器" class="headerlink" title="重启容器"></a>重启容器</h3><ul>
+<li><strong>docker restart 容器ID或者容器名称</strong></li>
+</ul>
+<h3 id="停止容器"><a href="#停止容器" class="headerlink" title="停止容器"></a>停止容器</h3><ul>
+<li><p><strong>docker stop 容器ID或者容器名称</strong></p>
+</li>
+<li><p>强制停止容器：<strong>docker kill 容器ID或容器名称</strong></p>
+</li>
+</ul>
+<h3 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h3><ul>
+<li><p>删除单个：<strong>docker rm 容器ID</strong></p>
+</li>
+<li><p>删除多个</p>
+<ul>
+<li>方式一：docker rm -f $(docker ps -qa)</li>
+<li>方式二：docker ps -a -q | xargs docker rm</li>
+</ul>
+</li>
+</ul>
+<h3 id="查看容器日志"><a href="#查看容器日志" class="headerlink" title="查看容器日志"></a>查看容器日志</h3><ul>
+<li>docker logs 容器ID</li>
+</ul>
+<h3 id="查看容器内运行的进程"><a href="#查看容器内运行的进程" class="headerlink" title="查看容器内运行的进程"></a>查看容器内运行的进程</h3><ul>
+<li>docker top 容器ID</li>
+</ul>
+<h3 id="查看容器内部细节"><a href="#查看容器内部细节" class="headerlink" title="查看容器内部细节"></a>查看容器内部细节</h3><ul>
+<li>docker inspect 容器ID</li>
+</ul>
+<h3 id="进入正在运行的容器"><a href="#进入正在运行的容器" class="headerlink" title="进入正在运行的容器"></a>进入正在运行的容器</h3><ul>
+<li><p>方式一：docker exec -it 容器ID bashShell</p>
+<p>exec 是在容器中打开新的终端，并且可以启动新的进程，用 exit 退出，不会导致容器的停止。【推荐使用】</p>
+</li>
+<li><p>方式二：docker attach 容器ID</p>
+<p>attach 直接进入容器启动命令的终端，不会启动新的进程，用 exit 退出，会导致容器的停止。</p>
+</li>
+</ul>
+<h3 id="拷贝文件"><a href="#拷贝文件" class="headerlink" title="拷贝文件"></a>拷贝文件</h3><ul>
+<li>docker cp 容器ID:容器内路径  目的主机路径</li>
+</ul>
+<h3 id="导入和导出容器"><a href="#导入和导出容器" class="headerlink" title="导入和导出容器"></a>导入和导出容器</h3><ul>
+<li>export	导出容器的内容留作为一个 tar 归档文件<ul>
+<li>docker export 容器ID &gt; 文件名.tar</li>
+</ul>
+</li>
+<li>import    从 tar 包中的内容创建一个新的文件系统再导入为镜像<ul>
+<li>cat 文件名.tar | docker import - 镜像用户&#x2F;镜像名:镜像版本号</li>
+</ul>
+</li>
+</ul>
+
     </div>
 
     
@@ -353,12 +604,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/02/28/JavaBasic/" rel="prev" title="JavaBasic">
-      <i class="fa fa-chevron-left"></i> JavaBasic
+    <a href="/2023/02/28/Effective%20Java/" rel="prev" title="EffectiveJava">
+      <i class="fa fa-chevron-left"></i> EffectiveJava
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/02/28/Effective%20Java/" rel="next" title="EffectiveJava">
-      EffectiveJava <i class="fa fa-chevron-right"></i>
+    <a href="/2023/02/28/DesignPattern/" rel="next" title="DesignPattern">
+      DesignPattern <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -418,7 +669,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">Docker 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-can-I-use-Docker-for"><span class="nav-number">1.3.</span> <span class="nav-text">What can I use Docker for?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90"><span class="nav-number">1.4.</span> <span class="nav-text">基本组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-architecture%F0%9F%94%97"><span class="nav-number">1.5.</span> <span class="nav-text">Docker architecture🔗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-number">1.6.</span> <span class="nav-text">容器与虚拟机的对比</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker-%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">Docker 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">前提条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">安装方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation-methods"><span class="nav-number">2.3.</span> <span class="nav-text">Installation methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-using-the-repository"><span class="nav-number">2.3.1.</span> <span class="nav-text">Install using the repository</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.4.</span> <span class="nav-text">安装步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BD%E6%97%A7%E7%89%88%E6%9C%AC"><span class="nav-number">2.4.1.</span> <span class="nav-text">卸载旧版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-gcc"><span class="nav-number">2.4.2.</span> <span class="nav-text">第一步：安装 gcc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E9%85%8D%E7%BD%AE-YUM-%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">2.4.3.</span> <span class="nav-text">第二步：配置 YUM 镜像源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E6%9B%B4%E6%96%B0-YUM-%E7%B4%A2%E5%BC%95"><span class="nav-number">2.4.4.</span> <span class="nav-text">第三步：更新 YUM 索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-Docker-CE"><span class="nav-number">2.4.5.</span> <span class="nav-text">第四步：安装 Docker CE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E5%90%AF%E5%8A%A8-Docker"><span class="nav-number">2.4.6.</span> <span class="nav-text">第五步：启动 Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E6%AD%A5%EF%BC%9A%E6%B5%8B%E8%AF%95"><span class="nav-number">2.4.7.</span> <span class="nav-text">第六步：测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F"><span class="nav-number">2.5.</span> <span class="nav-text">配置镜像加速</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">Docker 常用命令</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">Docker 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-can-I-use-Docker-for"><span class="nav-number">1.3.</span> <span class="nav-text">What can I use Docker for?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90"><span class="nav-number">1.4.</span> <span class="nav-text">基本组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-architecture%F0%9F%94%97"><span class="nav-number">1.5.</span> <span class="nav-text">Docker architecture🔗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-number">1.6.</span> <span class="nav-text">容器与虚拟机的对比</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker-%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">Docker 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">前提条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">安装方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation-methods"><span class="nav-number">2.3.</span> <span class="nav-text">Installation methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-using-the-repository"><span class="nav-number">2.3.1.</span> <span class="nav-text">Install using the repository</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.4.</span> <span class="nav-text">安装步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BD%E6%97%A7%E7%89%88%E6%9C%AC"><span class="nav-number">2.4.1.</span> <span class="nav-text">卸载旧版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-gcc"><span class="nav-number">2.4.2.</span> <span class="nav-text">第一步：安装 gcc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E9%85%8D%E7%BD%AE-YUM-%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">2.4.3.</span> <span class="nav-text">第二步：配置 YUM 镜像源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E6%9B%B4%E6%96%B0-YUM-%E7%B4%A2%E5%BC%95"><span class="nav-number">2.4.4.</span> <span class="nav-text">第三步：更新 YUM 索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-Docker-CE"><span class="nav-number">2.4.5.</span> <span class="nav-text">第四步：安装 Docker CE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E5%90%AF%E5%8A%A8-Docker"><span class="nav-number">2.4.6.</span> <span class="nav-text">第五步：启动 Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E6%AD%A5%EF%BC%9A%E6%B5%8B%E8%AF%95"><span class="nav-number">2.4.7.</span> <span class="nav-text">第六步：测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F"><span class="nav-number">2.5.</span> <span class="nav-text">配置镜像加速</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">Docker 常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%B8%AE%E5%8A%A9%E7%B1%BB"><span class="nav-number">3.1.</span> <span class="nav-text">启动帮助类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4"><span class="nav-number">3.2.</span> <span class="nav-text">镜像命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#docker-images"><span class="nav-number">3.2.1.</span> <span class="nav-text">docker images</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docker-search"><span class="nav-number">3.2.2.</span> <span class="nav-text">docker search</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docker-pull"><span class="nav-number">3.2.3.</span> <span class="nav-text">docker pull</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docker-system-df"><span class="nav-number">3.2.4.</span> <span class="nav-text">docker system df</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docker-rmi"><span class="nav-number">3.2.5.</span> <span class="nav-text">docker rmi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%82%AC%E9%95%9C%E5%83%8F"><span class="nav-number">3.2.6.</span> <span class="nav-text">虚悬镜像</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">3.3.</span> <span class="nav-text">容器命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%AE%B9%E5%99%A8"><span class="nav-number">3.3.1.</span> <span class="nav-text">启动容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E5%87%BA%E5%AE%B9%E5%99%A8"><span class="nav-number">3.3.2.</span> <span class="nav-text">列出容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%80%E5%87%BA%E5%AE%B9%E5%99%A8"><span class="nav-number">3.3.3.</span> <span class="nav-text">退出容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%90%AF%E5%AE%B9%E5%99%A8"><span class="nav-number">3.3.4.</span> <span class="nav-text">重启容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%9C%E6%AD%A2%E5%AE%B9%E5%99%A8"><span class="nav-number">3.3.5.</span> <span class="nav-text">停止容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E5%AE%B9%E5%99%A8"><span class="nav-number">3.3.6.</span> <span class="nav-text">删除容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%B9%E5%99%A8%E6%97%A5%E5%BF%97"><span class="nav-number">3.3.7.</span> <span class="nav-text">查看容器日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%B9%E5%99%A8%E5%86%85%E8%BF%90%E8%A1%8C%E7%9A%84%E8%BF%9B%E7%A8%8B"><span class="nav-number">3.3.8.</span> <span class="nav-text">查看容器内运行的进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%B9%E5%99%A8%E5%86%85%E9%83%A8%E7%BB%86%E8%8A%82"><span class="nav-number">3.3.9.</span> <span class="nav-text">查看容器内部细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E5%AE%B9%E5%99%A8"><span class="nav-number">3.3.10.</span> <span class="nav-text">进入正在运行的容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6"><span class="nav-number">3.3.11.</span> <span class="nav-text">拷贝文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%92%8C%E5%AF%BC%E5%87%BA%E5%AE%B9%E5%99%A8"><span class="nav-number">3.3.12.</span> <span class="nav-text">导入和导出容器</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
