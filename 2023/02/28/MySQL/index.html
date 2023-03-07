@@ -27,7 +27,6 @@
 <meta property="og:site_name" content="MineTing">
 <meta property="og:description" content="MySQL  MySQL 概述MySQL简介  MySQL 是一个关系型数据库管理系统，由瑞典 MySQL AB 公司开发，目前属于 Oracle 公司。  MySQL 是一种关联数据库管理系统，将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。  MySQL 是开源的。  MySQL 支持大型的数据库，可以处理拥有上千万条记录的大型数据库。  MySQL">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2023/02/28/MySQL/Java/Document/MySQL/MySQL.assets/image-20221006162514210.png">
 <meta property="og:image" content="http://example.com/2023/02/28/MySQL/Java/Document/MySQL/MySQL.assets/image-20221006165647546.png">
 <meta property="og:image" content="http://example.com/2023/02/28/MySQL/Java/Document/MySQL/MySQL.assets/image-20221006172123361.png">
 <meta property="og:image" content="http://example.com/2023/02/28/MySQL/Java/Document/MySQL/MySQL.assets/image-20221006182044473.png">
@@ -89,10 +88,10 @@
 <meta property="og:image" content="http://example.com/2023/02/28/MySQL/Java/Document/MySQL/MySQL.assets/image-20221006231402679.png">
 <meta property="og:image" content="http://example.com/2023/02/28/MySQL/Java/Document/MySQL/MySQL.assets/image-20221006231427799.png">
 <meta property="article:published_time" content="2023-02-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-07T03:49:52.297Z">
+<meta property="article:modified_time" content="2023-03-07T21:57:46.521Z">
 <meta property="article:author" content="Fei">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/02/28/MySQL/Java/Document/MySQL/MySQL.assets/image-20221006162514210.png">
+<meta name="twitter:image" content="http://example.com/2023/02/28/MySQL/Java/Document/MySQL/MySQL.assets/image-20221006165647546.png">
 
 <link rel="canonical" href="http://example.com/2023/02/28/MySQL/">
 
@@ -270,7 +269,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-07 11:49:52" itemprop="dateModified" datetime="2023-03-07T11:49:52+08:00">2023-03-07</time>
+                <time title="Modified: 2023-03-08 05:57:46" itemprop="dateModified" datetime="2023-03-08T05:57:46+08:00">2023-03-08</time>
               </span>
 
           
@@ -422,8 +421,7 @@
 <td></td>
 </tr>
 </tbody></table>
-<h3 id="MySQL8-版本安装"><a href="#MySQL8-版本安装" class="headerlink" title="MySQL8 版本安装"></a>MySQL8 版本安装</h3><h2 id="MySQL卸载"><a href="#MySQL卸载" class="headerlink" title="MySQL卸载"></a>MySQL卸载</h2><h3 id="RPM卸载"><a href="#RPM卸载" class="headerlink" title="RPM卸载"></a>RPM卸载</h3><h3 id="二进制源码卸载"><a href="#二进制源码卸载" class="headerlink" title="二进制源码卸载"></a>二进制源码卸载</h3><h1 id="MySQL-逻辑架构与存储引擎"><a href="#MySQL-逻辑架构与存储引擎" class="headerlink" title="MySQL 逻辑架构与存储引擎"></a>MySQL 逻辑架构与存储引擎</h1><h2 id="逻辑架构"><a href="#逻辑架构" class="headerlink" title="逻辑架构"></a>逻辑架构</h2><p><img src="/2023/02/28/MySQL/Java\Document\MySQL\MySQL.assets\image-20221006162514210.png" alt="image-20221006162514210"></p>
-<p>1.连接层</p>
+<h3 id="MySQL8-版本安装"><a href="#MySQL8-版本安装" class="headerlink" title="MySQL8 版本安装"></a>MySQL8 版本安装</h3><h2 id="MySQL卸载"><a href="#MySQL卸载" class="headerlink" title="MySQL卸载"></a>MySQL卸载</h2><h3 id="RPM卸载"><a href="#RPM卸载" class="headerlink" title="RPM卸载"></a>RPM卸载</h3><h3 id="二进制源码卸载"><a href="#二进制源码卸载" class="headerlink" title="二进制源码卸载"></a>二进制源码卸载</h3><h1 id="MySQL-逻辑架构与存储引擎"><a href="#MySQL-逻辑架构与存储引擎" class="headerlink" title="MySQL 逻辑架构与存储引擎"></a>MySQL 逻辑架构与存储引擎</h1><h2 id="逻辑架构"><a href="#逻辑架构" class="headerlink" title="逻辑架构"></a>逻辑架构</h2><p>1.连接层</p>
 <p>​		最上层是一些客户端和连接服务，包含本地socket通信和大多数基于客户端&#x2F;服务端工具类似于 tcp&#x2F;ip 的通信，主要完成一些类似于连接处理、授权认证等相关的安全解决方案，该层引入了线程池的概念，为通过认证安全接入的客户端提供线程，同样该层可以实现基于SSL的安全链接，服务器也会为每个安全接入的客户端验证它所具有的操作权限。</p>
 <p>2.服务层</p>
 <p>​		第二层架构的主要工作完成大多数的核心服务功能，如SQL接口，并完成缓存的查询，SQL分析和优化以及部分内置函数的执行，所有跨存储引擎的功能也在这一层实现，如过程、函数等，在该层，服务器会解析查询，创建相应的解析树，并完成相应的优化如确定查询表的顺序，是否利用索引等，最后生成相应的执行操作，如果是SELECT语句，服务器还会查询内部的缓存，如果缓存的空间足够大，可以解决大量读操作的环境中能够很好的提升系统的性能。</p>
@@ -1125,12 +1123,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/02/28/Mybatis/" rel="prev" title="Mybatis">
-      <i class="fa fa-chevron-left"></i> Mybatis
+    <a href="/2023/02/28/Nginx/" rel="prev" title="Nginx">
+      <i class="fa fa-chevron-left"></i> Nginx
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/02/28/MybatisPlus/" rel="next" title="MybatisPlus">
-      MybatisPlus <i class="fa fa-chevron-right"></i>
+    <a href="/2023/02/28/OperatingSystem/" rel="next" title="操作系统">
+      操作系统 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
