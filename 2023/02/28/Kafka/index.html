@@ -20,17 +20,23 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Kafka第一章 Kafka 入门使用第一章 我具有强烈的局限性，太过于局限自我。 井底之蛙 反思：一直以来，觉得自己具有强烈的认知的局限性，无论你做什么不做什么，都不要伤害朋友，谋生路上的朋友最多称为合作伙伴。">
+  <meta name="description" content="Kafka   【Refer】 【尚硅谷】Kafka3.x教程（从入门到调优，深入全面）_哔哩哔哩_bilibili  kafka 入门Kafka 概述消息队列目前企业中比较常见的消息队列产品主要有 Kafka、ActiveMQ 、RabbitMQ 、 RocketMQ 等。 在大数据场景主要采用 Kafka 作为消息队列。在 JavaEE 开发中主要采用 ActiveMQ、 RabbitMQ、R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kafka">
 <meta property="og:url" content="http://example.com/2023/02/28/Kafka/index.html">
 <meta property="og:site_name" content="MineTing">
-<meta property="og:description" content="Kafka第一章 Kafka 入门使用第一章 我具有强烈的局限性，太过于局限自我。 井底之蛙 反思：一直以来，觉得自己具有强烈的认知的局限性，无论你做什么不做什么，都不要伤害朋友，谋生路上的朋友最多称为合作伙伴。">
+<meta property="og:description" content="Kafka   【Refer】 【尚硅谷】Kafka3.x教程（从入门到调优，深入全面）_哔哩哔哩_bilibili  kafka 入门Kafka 概述消息队列目前企业中比较常见的消息队列产品主要有 Kafka、ActiveMQ 、RabbitMQ 、 RocketMQ 等。 在大数据场景主要采用 Kafka 作为消息队列。在 JavaEE 开发中主要采用 ActiveMQ、 RabbitMQ、R">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/02/28/Kafka/Kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E5%89%8A%E5%B3%B0.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Kafka/Kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E8%A7%A3%E8%80%A6.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Kafka/Kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E5%BC%82%E6%AD%A5.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Kafka/Kakfa%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E7%82%B9%E5%AF%B9%E7%82%B9%E6%A8%A1%E5%BC%8F.png">
+<meta property="og:image" content="http://example.com/2023/02/28/Kafka/Kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F.png">
 <meta property="article:published_time" content="2023-02-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-26T15:24:09.674Z">
+<meta property="article:modified_time" content="2023-03-20T10:44:20.933Z">
 <meta property="article:author" content="Fei">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/02/28/Kafka/Kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E5%89%8A%E5%B3%B0.png">
 
 <link rel="canonical" href="http://example.com/2023/02/28/Kafka/">
 
@@ -208,7 +214,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-02-26 23:24:09" itemprop="dateModified" datetime="2023-02-26T23:24:09+08:00">2023-02-26</time>
+                <time title="Modified: 2023-03-20 18:44:20" itemprop="dateModified" datetime="2023-03-20T18:44:20+08:00">2023-03-20</time>
               </span>
 
           
@@ -222,11 +228,41 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id><a href="#" class="headerlink" title></a></h1><h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><h1 id="第一章-Kafka-入门使用"><a href="#第一章-Kafka-入门使用" class="headerlink" title="第一章 Kafka 入门使用"></a>第一章 Kafka 入门使用</h1><p>第一章</p>
-<p>我具有强烈的局限性，太过于局限自我。</p>
-<p>井底之蛙</p>
-<p>反思：一直以来，觉得自己具有强烈的认知的局限性，无论你做什么不做什么，都不要伤害朋友，谋生路上的朋友最多称为合作伙伴。</p>
+        <div align="center"><font size="70"><b>Kafka</b></font></div>
 
+<blockquote>
+<p>【Refer】</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1vr4y1677k/?spm_id_from=333.337.search-card.all.click">【尚硅谷】Kafka3.x教程（从入门到调优，深入全面）_哔哩哔哩_bilibili</a></p>
+</blockquote>
+<h1 id="kafka-入门"><a href="#kafka-入门" class="headerlink" title="kafka 入门"></a>kafka 入门</h1><h2 id="Kafka-概述"><a href="#Kafka-概述" class="headerlink" title="Kafka 概述"></a>Kafka 概述</h2><h3 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h3><p>目前企业中比较常见的消息队列产品主要有 Kafka、ActiveMQ 、RabbitMQ 、 RocketMQ 等。</p>
+<p>在大数据场景主要采用 Kafka 作为消息队列。在 JavaEE 开发中主要采用 ActiveMQ、 RabbitMQ、RocketMQ</p>
+<h3 id="传统消息队列的应用场景"><a href="#传统消息队列的应用场景" class="headerlink" title="传统消息队列的应用场景"></a>传统消息队列的应用场景</h3><p>主要应用场景包括：缓存&#x2F;消峰、解耦和异步通信</p>
+<ul>
+<li><p>缓冲&#x2F;消峰：有助于控制和优化数据流经过系统的速度，解决生产消息和消费消息的处理速度不一致的情况。</p>
+<p><img src="/2023/02/28/Kafka/Kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E5%89%8A%E5%B3%B0.png" alt="Kafka消息队列-削峰.png"></p>
+</li>
+<li><p>解耦：允许你独立的扩展或修改两边的处理过程，只要确保它们遵守同样的接口约束。</p>
+<p><img src="/2023/02/28/Kafka/Kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E8%A7%A3%E8%80%A6.png" alt="Kafka消息队列-解耦.png"></p>
+</li>
+<li><p>异步通信：允许用户把一个消息放入队列，但并不立即处理它，然后在需要的时候再去处理它们。</p>
+<p><img src="/2023/02/28/Kafka/Kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E5%BC%82%E6%AD%A5.png" alt="Kafka消息队列-异步.png"></p>
+</li>
+</ul>
+<h3 id="消息队列的两种模式"><a href="#消息队列的两种模式" class="headerlink" title="消息队列的两种模式"></a>消息队列的两种模式</h3><h4 id="点对点模式"><a href="#点对点模式" class="headerlink" title="点对点模式"></a>点对点模式</h4><ul>
+<li><p>消费者主动拉取数据，消息收到后清除消息</p>
+<p><img src="/2023/02/28/Kafka/Kakfa%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E7%82%B9%E5%AF%B9%E7%82%B9%E6%A8%A1%E5%BC%8F.png" alt="Kakfa消息队列-点对点模式.png"></p>
+</li>
+</ul>
+<h4 id="发布-x2F-订阅模式"><a href="#发布-x2F-订阅模式" class="headerlink" title="发布 &#x2F; 订阅模式"></a>发布 &#x2F; 订阅模式</h4><ul>
+<li><p>可以有多个topic主题</p>
+</li>
+<li><p>消费者消费数据之后，不删除数据</p>
+</li>
+<li><p>每个消费者相互独立，都可以消费到数据</p>
+<p><img src="/2023/02/28/Kafka/Kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F.png" alt="Kafka消息队列-发布订阅模式.png"></p>
+</li>
+</ul>
+<h2 id="Kafka-入门示例"><a href="#Kafka-入门示例" class="headerlink" title="Kafka 入门示例"></a>Kafka 入门示例</h2><h2 id="kafka-生产者"><a href="#kafka-生产者" class="headerlink" title="kafka 生产者"></a>kafka 生产者</h2><h2 id="Kafka-Broker"><a href="#Kafka-Broker" class="headerlink" title="Kafka Broker"></a>Kafka Broker</h2><h2 id="Kafka-消费者"><a href="#Kafka-消费者" class="headerlink" title="Kafka 消费者"></a>Kafka 消费者</h2><h2 id="Kafka-Eagle-监控"><a href="#Kafka-Eagle-监控" class="headerlink" title="Kafka-Eagle 监控"></a>Kafka-Eagle 监控</h2><h2 id="Kafka-Kraft-模式"><a href="#Kafka-Kraft-模式" class="headerlink" title="Kafka-Kraft 模式"></a>Kafka-Kraft 模式</h2><h1 id="Kafka-集成"><a href="#Kafka-集成" class="headerlink" title="Kafka 集成"></a>Kafka 集成</h1><h2 id="集成-Flume"><a href="#集成-Flume" class="headerlink" title="集成 Flume"></a>集成 Flume</h2><h2 id="集成-Flink"><a href="#集成-Flink" class="headerlink" title="集成 Flink"></a>集成 Flink</h2><h2 id="集成-SpringBoot"><a href="#集成-SpringBoot" class="headerlink" title="集成 SpringBoot"></a>集成 SpringBoot</h2><h2 id="集成-Spark"><a href="#集成-Spark" class="headerlink" title="集成 Spark"></a>集成 Spark</h2><h1 id="源码解析"><a href="#源码解析" class="headerlink" title="源码解析"></a>源码解析</h1><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><h2 id="生产者源码"><a href="#生产者源码" class="headerlink" title="生产者源码"></a>生产者源码</h2><h2 id="消费者源码"><a href="#消费者源码" class="headerlink" title="消费者源码"></a>消费者源码</h2><h2 id="服务器源码"><a href="#服务器源码" class="headerlink" title="服务器源码"></a>服务器源码</h2><h1 id="生产调优"><a href="#生产调优" class="headerlink" title="生产调优"></a>生产调优</h1><h2 id="Kafka-硬件配置选择"><a href="#Kafka-硬件配置选择" class="headerlink" title="Kafka 硬件配置选择"></a>Kafka 硬件配置选择</h2><h2 id="Kafka-生产者"><a href="#Kafka-生产者" class="headerlink" title="Kafka 生产者"></a>Kafka 生产者</h2><h2 id="kafka-Broker"><a href="#kafka-Broker" class="headerlink" title="kafka Broker"></a>kafka Broker</h2><h2 id="Kafka-消费者-1"><a href="#Kafka-消费者-1" class="headerlink" title="Kafka 消费者"></a>Kafka 消费者</h2><h2 id="kafka-总体"><a href="#kafka-总体" class="headerlink" title="kafka 总体"></a>kafka 总体</h2>
     </div>
 
     
@@ -241,12 +277,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/02/28/Linux/" rel="prev" title="Linux">
-      <i class="fa fa-chevron-left"></i> Linux
+    <a href="/2023/02/28/JavaWeb/" rel="prev" title="JavaWeb">
+      <i class="fa fa-chevron-left"></i> JavaWeb
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/02/28/JavaWeb/" rel="next" title="JavaWeb">
-      JavaWeb <i class="fa fa-chevron-right"></i>
+    <a href="/2023/02/28/JavaBasic/" rel="next" title="JavaBasic">
+      JavaBasic <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -306,7 +342,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Kafka"><span class="nav-number">2.</span> <span class="nav-text">Kafka</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-Kafka-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">第一章 Kafka 入门使用</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#kafka-%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">kafka 入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka-%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">Kafka 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97"><span class="nav-number">1.1.1.</span> <span class="nav-text">消息队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E7%BB%9F%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">1.1.2.</span> <span class="nav-text">传统消息队列的应用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.3.</span> <span class="nav-text">消息队列的两种模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%82%B9%E5%AF%B9%E7%82%B9%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">点对点模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%91%E5%B8%83-x2F-%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">发布 &#x2F; 订阅模式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka-%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text">Kafka 入门示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#kafka-%E7%94%9F%E4%BA%A7%E8%80%85"><span class="nav-number">1.3.</span> <span class="nav-text">kafka 生产者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka-Broker"><span class="nav-number">1.4.</span> <span class="nav-text">Kafka Broker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka-%E6%B6%88%E8%B4%B9%E8%80%85"><span class="nav-number">1.5.</span> <span class="nav-text">Kafka 消费者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka-Eagle-%E7%9B%91%E6%8E%A7"><span class="nav-number">1.6.</span> <span class="nav-text">Kafka-Eagle 监控</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka-Kraft-%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.7.</span> <span class="nav-text">Kafka-Kraft 模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Kafka-%E9%9B%86%E6%88%90"><span class="nav-number">2.</span> <span class="nav-text">Kafka 集成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E6%88%90-Flume"><span class="nav-number">2.1.</span> <span class="nav-text">集成 Flume</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E6%88%90-Flink"><span class="nav-number">2.2.</span> <span class="nav-text">集成 Flink</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E6%88%90-SpringBoot"><span class="nav-number">2.3.</span> <span class="nav-text">集成 SpringBoot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E6%88%90-Spark"><span class="nav-number">2.4.</span> <span class="nav-text">集成 Spark</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">源码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">3.1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E4%BA%A7%E8%80%85%E6%BA%90%E7%A0%81"><span class="nav-number">3.2.</span> <span class="nav-text">生产者源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B6%88%E8%B4%B9%E8%80%85%E6%BA%90%E7%A0%81"><span class="nav-number">3.3.</span> <span class="nav-text">消费者源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BA%90%E7%A0%81"><span class="nav-number">3.4.</span> <span class="nav-text">服务器源码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E4%BA%A7%E8%B0%83%E4%BC%98"><span class="nav-number">4.</span> <span class="nav-text">生产调优</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka-%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE%E9%80%89%E6%8B%A9"><span class="nav-number">4.1.</span> <span class="nav-text">Kafka 硬件配置选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka-%E7%94%9F%E4%BA%A7%E8%80%85"><span class="nav-number">4.2.</span> <span class="nav-text">Kafka 生产者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#kafka-Broker"><span class="nav-number">4.3.</span> <span class="nav-text">kafka Broker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka-%E6%B6%88%E8%B4%B9%E8%80%85-1"><span class="nav-number">4.4.</span> <span class="nav-text">Kafka 消费者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#kafka-%E6%80%BB%E4%BD%93"><span class="nav-number">4.5.</span> <span class="nav-text">kafka 总体</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
