@@ -204,7 +204,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-04-19 17:54:27" itemprop="dateModified" datetime="2023-04-19T17:54:27+08:00">2023-04-19</time>
+                <time title="Modified: 2023-04-19 18:44:49" itemprop="dateModified" datetime="2023-04-19T18:44:49+08:00">2023-04-19</time>
               </span>
 
           
@@ -670,7 +670,7 @@
 <p>添加 Close Page</p>
 <p><img src="/2023/04/10/Mendix/%E6%B7%BB%E5%8A%A0%E5%85%B3%E9%97%AD%E9%A1%B5%E9%9D%A2.png" alt="添加关闭页面.png"></p>
 <ul>
-<li><p>添加验证反馈</p>
+<li><p>添加验证反馈，添加终止标记</p>
 <p><img src="/2023/04/10/Mendix/%E6%B7%BB%E5%8A%A0%E9%AA%8C%E8%AF%81%E5%8F%8D%E9%A6%88.png" alt="添加验证反馈.png"></p>
 <p><img src="/2023/04/10/Mendix/%E6%B7%BB%E5%8A%A0%E9%AA%8C%E8%AF%81%E5%8F%8D%E9%A6%882.png" alt="image-20230419175123906"></p>
 </li>
@@ -679,7 +679,17 @@
 <p>原因：对成员的验证应该选择当前校验的属性，而不是其他 Member</p>
 <p><img src="/2023/04/10/Mendix/%E6%B7%BB%E5%8A%A0%E9%AA%8C%E8%AF%81%E8%BF%94%E5%9B%9E%E9%94%99%E8%AF%AF.png" alt="添加验证返回错误.png"></p>
 <h2 id="User-Story-9"><a href="#User-Story-9" class="headerlink" title="User Story 9"></a>User Story 9</h2><p>作为管理员，我希望能够删除没有注册的培训活动，以防我意外删除人们已经付费参加的培训活动。</p>
+<p>修改实体 Entity 的关联属性：</p>
+<p><img src="/2023/04/10/Mendix/%E5%88%A0%E9%99%A4%E6%B2%A1%E6%9C%89%E5%85%B3%E8%81%94%E7%9A%84Training%E7%9A%84Registration.png" alt="删除没有关联的Training的Registration.png"></p>
+<p>测试：</p>
+<p><img src="/2023/04/10/Mendix/%E6%B5%8B%E8%AF%95%E6%97%A0%E5%85%B3%E8%81%94%E5%88%A0%E9%99%A4.png" alt="测试无关联删除.png"></p>
 <h2 id="User-Story-10"><a href="#User-Story-10" class="headerlink" title="User Story 10"></a>User Story 10</h2><p>作为管理员，我希望能够删除学员及其所有注册信息，以便在他们不再希望成为 LearnNow 学生时将其从系统中删除。</p>
+<h3 id="级联删除"><a href="#级联删除" class="headerlink" title="级联删除"></a>级联删除</h3><p>选中 Entity，设置级联删除</p>
+<p>示例：</p>
+<p><img src="/2023/04/10/Mendix/%E7%BA%A7%E8%81%94%E5%88%A0%E9%99%A4.png" alt="级联删除.png"></p>
+<p>删除颜色区分：</p>
+<p><img src="/2023/04/10/Mendix/%E5%88%A0%E9%99%A4%E9%A2%9C%E8%89%B2%E5%8C%BA%E5%88%86.png" alt="删除颜色区分.png"></p>
+<p>测试出现问题（略）</p>
 <h1 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="让应用更安全"><a href="#让应用更安全" class="headerlink" title="让应用更安全"></a>让应用更安全</h3><ul>
 <li><p>保护对象</p>
 <ul>
@@ -689,14 +699,25 @@
 </li>
 <li><p>安全级别</p>
 <ul>
-<li>Off</li>
-<li>Prototype&#x2F;Demo</li>
+<li>Off（默认）</li>
+<li>Prototype&#x2F;Demo（原型&#x2F;示例）</li>
 <li>Production</li>
 </ul>
 </li>
 </ul>
+<p>设置 App Security 为 Prototype&#x2F;Demo ，此时可以看到每个模块多了个 Security</p>
 <h3 id="用户角色与模块角色"><a href="#用户角色与模块角色" class="headerlink" title="用户角色与模块角色"></a>用户角色与模块角色</h3><h2 id="User-Story-11"><a href="#User-Story-11" class="headerlink" title="User Story 11"></a>User Story 11</h2><p>作为管理员，我希望应用程序是安全的，以便我遵守公司数据保护规则</p>
-<h3 id="创建模块角色"><a href="#创建模块角色" class="headerlink" title="创建模块角色"></a>创建模块角色</h3><h3 id="创建用户角色"><a href="#创建用户角色" class="headerlink" title="创建用户角色"></a>创建用户角色</h3><h3 id="为用户角色分配模块角色"><a href="#为用户角色分配模块角色" class="headerlink" title="为用户角色分配模块角色"></a>为用户角色分配模块角色</h3><h2 id="访问权限"><a href="#访问权限" class="headerlink" title="访问权限"></a>访问权限</h2><ul>
+<h3 id="创建模块角色"><a href="#创建模块角色" class="headerlink" title="创建模块角色"></a>创建模块角色</h3><p><img src="/2023/04/10/Mendix/%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9D%97%E8%A7%92%E8%89%B2.png" alt="创建模块角色.png"></p>
+<h3 id="创建用户角色"><a href="#创建用户角色" class="headerlink" title="创建用户角色"></a>创建用户角色</h3><p>在 App_Security 中创建用户角色，默认管理员和普通用户两种角色，用户角色和模块角色是一对多的关系。</p>
+<p><img src="/2023/04/10/Mendix/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E8%A7%92%E8%89%B2.png" alt="创建用户角色.png"></p>
+<p>修改 User 为 Teacher 角色。</p>
+<h3 id="为用户角色分配模块角色"><a href="#为用户角色分配模块角色" class="headerlink" title="为用户角色分配模块角色"></a>为用户角色分配模块角色</h3><p>在 App_Security 中为用户角色分配模块角色</p>
+<ul>
+<li>为用户角色 Administrator 分配模块角色 Admin</li>
+<li>为用户角色 Teacher 分配模块角色 Teacher</li>
+<li>为用户角色 Student 分配模块角色 Student</li>
+</ul>
+<h2 id="访问权限"><a href="#访问权限" class="headerlink" title="访问权限"></a>访问权限</h2><ul>
 <li>页面访问</li>
 <li>微流访问</li>
 <li>实体访问</li>
