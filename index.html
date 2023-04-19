@@ -204,7 +204,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-04-19 13:34:03" itemprop="dateModified" datetime="2023-04-19T13:34:03+08:00">2023-04-19</time>
+                <time title="Modified: 2023-04-19 16:54:43" itemprop="dateModified" datetime="2023-04-19T16:54:43+08:00">2023-04-19</time>
               </span>
 
           
@@ -408,6 +408,7 @@
 <p>双击 List 组件</p>
 <p><img src="/2023/04/10/Mendix/%E7%BB%91%E5%AE%9A%E7%BB%84%E4%BB%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E5%AE%9E%E4%BD%93.png" alt="绑定组件和数据实体.png"></p>
 <p>点击确定，暂时不使用自动内容填充</p>
+<p>注意：从关联中获取是从内存中获取，从 Database 获取是从数据库获取</p>
 </li>
 </ul>
 <h2 id="新增页面"><a href="#新增页面" class="headerlink" title="新增页面"></a>新增页面</h2><p>在 Course 标题右边添加一列，并添加按钮 <code>Create</code> 进行 Course 创建，绑定 Entity</p>
@@ -476,6 +477,8 @@
 <p>示例：<code>ACT_Home_Web_CreateNewTraining</code></p>
 </li>
 <li><p>OnChange： 控件事件触发微流：<code>OCH_TrainingNewEdit_CalculateEndDate</code></p>
+</li>
+<li><p>对象属性触发：如 <code>ACO_Registration_CalculateNumOfRegistration</code></p>
 </li>
 </ul>
 <p><img src="/2023/04/10/Mendix/%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%B5%81.png" alt="创建微流.png"></p>
@@ -573,7 +576,124 @@
 <p><img src="/2023/04/10/Mendix/Mendix%E5%BE%AE%E6%B5%81Debug.png" alt="Mendix微流Debug.png"></p>
 <p>查看变量的值</p>
 <p><img src="/2023/04/10/Mendix/%E6%9F%A5%E7%9C%8B%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC.png" alt="查看变量的值.png"></p>
-<h3 id="修改逻辑"><a href="#修改逻辑" class="headerlink" title="修改逻辑"></a>修改逻辑</h3><h2 id="DEMO-示例"><a href="#DEMO-示例" class="headerlink" title="DEMO 示例"></a>DEMO 示例</h2><ul>
+<h3 id="修改逻辑"><a href="#修改逻辑" class="headerlink" title="修改逻辑"></a>修改逻辑</h3><p> 触发微流之前先进行判断</p>
+<p><img src="/2023/04/10/Mendix/%E4%BF%AE%E6%94%B9%E8%AE%A1%E7%AE%97EndDate%E5%BE%AE%E6%B5%81.png" alt="修改计算EndDate微流.png"></p>
+<h2 id="Excel-导入"><a href="#Excel-导入" class="headerlink" title="Excel 导入"></a>Excel 导入</h2><p>Excel  导入需要引入插件 <code>Excel importer</code>，以及它依赖的插件</p>
+<p>参考文档：<a target="_blank" rel="noopener" href="https://docs.mendix.com/appstore/modules/excel-importer/">https://docs.mendix.com/appstore/modules/excel-importer/</a></p>
+<blockquote>
+<h2 id="2-先决条件"><a href="#2-先决条件" class="headerlink" title="2 先决条件"></a>2 先决条件</h2><ul>
+<li>安装 <a target="_blank" rel="noopener" href="https://docs.mendix.com/appstore/modules/model-reflection/">model-reflection</a>module以配置 Excel 列和 domain model 之间的映射</li>
+<li>安装<a target="_blank" rel="noopener" href="https://docs.mendix.com/appstore/modules/community-commons-function-library/">Community Commons Function Library</a>module 以确保可以导入 BigDecimal 值</li>
+<li>在安装此 module 之前删除旧版本的 replication.jar 文件（在.mpk文件中提供）<ul>
+<li>如果您有旧的 replication.jar 文件并且您使用的是 Excel 导入程序，请同时更新<a target="_blank" rel="noopener" href="https://docs.mendix.com/appstore/modules/database-replication/">数据库复制</a>module，因为使用此 module 时需要 3.0 或更高版本</li>
+<li>更新后不需要删除库</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p> 引入三个模块后添加导航页面：</p>
+<p><img src="/2023/04/10/Mendix/ExcelImporter%E5%AF%BC%E8%88%AA.png" alt="ExcelImporter导航.png"></p>
+<p><img src="/2023/04/10/Mendix/MxReflection%E5%AF%BC%E8%88%AA.png" alt="MxReflection导航.png"></p>
+<p>使用 MxReflection：</p>
+<p><img src="/2023/04/10/Mendix/MxReflection%E5%8F%8D%E5%B0%84%E5%88%B7%E6%96%B0%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF.png" alt="MxReflection反射刷新对象信息.png"></p>
+<p>创建 Excel 模板：</p>
+<p><img src="/2023/04/10/Mendix/Excel%E6%A8%A1%E6%9D%BF.png" alt="Excel模板.png"></p>
+<p>导入数据：</p>
+<p><img src="/2023/04/10/Mendix/%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF.png" alt="导入模板.png"></p>
+<p><img src="/2023/04/10/Mendix/%E5%AF%BC%E5%85%A5Excel%E6%A8%A1%E6%9D%BF2.png" alt="导入Excel模板2.png"></p>
+<p><img src="/2023/04/10/Mendix/%E8%AE%BE%E7%BD%AEExcel%E6%A8%A1%E6%9D%BF.png" alt="image-20230419145207665"></p>
+<p>导入Excel数据：</p>
+<p><img src="/2023/04/10/Mendix/%E5%AF%BC%E5%85%A5Excel%E6%95%B0%E6%8D%AE.png" alt="导入Excel数据.png"></p>
+<p>出现问题：当前显示成功导入，但是没有数据</p>
+<p>原因：设置模板时，未点击属性映射 <code>Connect Match Attributes</code></p>
+<h2 id="User-Story-7"><a href="#User-Story-7" class="headerlink" title="User Story 7"></a>User Story 7</h2><p>作为老师，我希望能够随时看到参加培训活动 的学员人数，以便我知道我需要什么资源。</p>
+<p>为 Training 新增属性 <code>NumberOfRegistration</code>，新增和删除 Registration 时更改该属性</p>
+<h3 id="存储属性和计算属性"><a href="#存储属性和计算属性" class="headerlink" title="存储属性和计算属性"></a>存储属性和计算属性</h3><p>读取次数少于更改次数适合于 Calculated，否则使用 Stored</p>
+<p><img src="/2023/04/10/Mendix/%E5%AD%98%E5%82%A8%E5%B1%9E%E6%80%A7%E5%92%8C%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7.png" alt="存储属性和计算属性.png"></p>
+<h3 id="对象属性触发微流"><a href="#对象属性触发微流" class="headerlink" title="对象属性触发微流"></a>对象属性触发微流</h3><p>设置 Entity 时，可以设置 8 种 <code>Event Handlers</code> ，在对象的前后设置微流等操作</p>
+<p><img src="/2023/04/10/Mendix/8%E7%A7%8D%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E8%A7%A6%E5%8F%91%E6%97%B6%E5%88%BB.png" alt="8种对象属性触发时刻.png"></p>
+<p>为对象属性设置微流后，会在 Entity 上显示 <code>闪电 </code>符号</p>
+<p>8 种 <code>Event Handlers</code> </p>
+<p><img src="/2023/04/10/Mendix/%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E8%A7%A6%E5%8F%91%E5%BE%AE%E6%B5%81.png" alt="对象属性触发微流.png"></p>
+<p>新增和删除 Registration 时更改 Training 的新增属性 <code>NumberOfRegistration</code></p>
+<p>设置 <code>After Commit</code> 时触发微流：<code>ACO_Registration_CalculateNumOfRegistration</code></p>
+<p>该微流的过程：</p>
+<p>先由 Registration 拿到 Training ，再由 Training 拿到 Registration （此过程应该由数据库获取），之后聚合 Sum ，给对象赋值：Change Object，注意该属性需要存在数据库进行持久化，并且需要刷新到页面中（在内存中）</p>
+<p><img src="/2023/04/10/Mendix/ACO_Registration_CalculateNumOfRegistration.png" alt="ACO_Registration_CalculateNumOfRegistration.png"></p>
+<p>注意：删除 Registration 对象时，不能更新 <code>NumberOfRegistration</code> 的值。</p>
+<p>需要修改：</p>
+<p><img src="/2023/04/10/Mendix/%E5%88%A0%E9%99%A4%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E8%A7%A6%E5%8F%91%E5%BE%AE%E6%B5%81.png" alt="删除对象属性触发微流.png"></p>
+<h1 id="数据校验与持久化"><a href="#数据校验与持久化" class="headerlink" title="数据校验与持久化"></a>数据校验与持久化</h1><h2 id="数据校验"><a href="#数据校验" class="headerlink" title="数据校验"></a>数据校验</h2><h3 id="数据校验的重要性"><a href="#数据校验的重要性" class="headerlink" title="数据校验的重要性"></a>数据校验的重要性</h3><p><img src="/2023/04/10/Mendix/%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7.png" alt="数据校验的重要性.png"></p>
+<p>验证是在对象存储在数据库中之前应该满足的条件。</p>
+<p>您可以将验证添加到：</p>
+<ul>
+<li>领域模型</li>
+<li>微流</li>
+<li>页面</li>
+</ul>
+<h3 id="数据验证的类型"><a href="#数据验证的类型" class="headerlink" title="数据验证的类型"></a>数据验证的类型</h3><p><img src="/2023/04/10/Mendix/%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E7%9A%84%E7%B1%BB%E5%9E%8B.png" alt="数据验证的类型.png"></p>
+<p>如何处理错误的数据：</p>
+<table>
+<thead>
+<tr>
+<th>在何处触发校验</th>
+<th>反馈形式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>表单页面 (有输入控件)</td>
+<td>在输入控件下方显示错误信息</td>
+</tr>
+<tr>
+<td>页面 (无输入控件)</td>
+<td>弹出错误信息对话框</td>
+</tr>
+<tr>
+<td>系统</td>
+<td>日志中的错误信息</td>
+</tr>
+</tbody></table>
+<h2 id="User-Story-8"><a href="#User-Story-8" class="headerlink" title="User Story 8"></a>User Story 8</h2><p>作为管理员，我希望数据有效且一致， 所以我的数据库不会变得混乱。</p>
+<p>在保存 Training 时进行数据验证</p>
+<h3 id="域模型中验证"><a href="#域模型中验证" class="headerlink" title="域模型中验证"></a>域模型中验证</h3><ul>
+<li>添加数据验证</li>
+</ul>
+<h3 id="微流中验证（推荐）"><a href="#微流中验证（推荐）" class="headerlink" title="微流中验证（推荐）"></a>微流中验证（推荐）</h3><p>修改 Training_Edit 中的保存按钮，修改 Save Changes 为 Call Microflow，使用微流代替保存按钮。</p>
+<p>调用微流完成验证，新建微流：<code>ACT_TrainingNewEdit_Save</code></p>
+<p><img src="/2023/04/10/Mendix/%E6%96%B0%E5%BB%BA%E5%BE%AE%E6%B5%81%E9%AA%8C%E8%AF%81.png" alt="image-20230419163827353"></p>
+<p>测试发现保存成功但是没有关闭页面</p>
+<p>添加 Close Page</p>
+<p><img src="/2023/04/10/Mendix/%E6%B7%BB%E5%8A%A0%E5%85%B3%E9%97%AD%E9%A1%B5%E9%9D%A2.png" alt="添加关闭页面.png"></p>
+<h2 id="User-Story-9"><a href="#User-Story-9" class="headerlink" title="User Story 9"></a>User Story 9</h2><p>作为管理员，我希望能够删除没有注册 的培训活动，以防我意外删除人们已经 付费参加的培训活动。</p>
+<h2 id="User-Story-10"><a href="#User-Story-10" class="headerlink" title="User Story 10"></a>User Story 10</h2><p>作为管理员，我希望能够删除学员及其 所有注册信息，以便在他们不再希望成 为 LearnNow 学生时将其从系统中删除。</p>
+<h1 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="让应用更安全"><a href="#让应用更安全" class="headerlink" title="让应用更安全"></a>让应用更安全</h3><ul>
+<li><p>保护对象</p>
+<ul>
+<li>App安全</li>
+<li>模块安全</li>
+</ul>
+</li>
+<li><p>安全级别</p>
+<ul>
+<li>Off</li>
+<li>Prototype&#x2F;Demo</li>
+<li>Production</li>
+</ul>
+</li>
+</ul>
+<h3 id="用户角色与模块角色"><a href="#用户角色与模块角色" class="headerlink" title="用户角色与模块角色"></a>用户角色与模块角色</h3><h2 id="User-Story-11"><a href="#User-Story-11" class="headerlink" title="User Story 11"></a>User Story 11</h2><p>作为管理员，我希望应用程序是安全的，以便我遵守公司数据保护规则</p>
+<h3 id="创建模块角色"><a href="#创建模块角色" class="headerlink" title="创建模块角色"></a>创建模块角色</h3><h3 id="创建用户角色"><a href="#创建用户角色" class="headerlink" title="创建用户角色"></a>创建用户角色</h3><h3 id="为用户角色分配模块角色"><a href="#为用户角色分配模块角色" class="headerlink" title="为用户角色分配模块角色"></a>为用户角色分配模块角色</h3><h2 id="访问权限"><a href="#访问权限" class="headerlink" title="访问权限"></a>访问权限</h2><ul>
+<li>页面访问</li>
+<li>微流访问</li>
+<li>实体访问</li>
+</ul>
+<h3 id="设定页面与微流访问权限"><a href="#设定页面与微流访问权限" class="headerlink" title="设定页面与微流访问权限"></a>设定页面与微流访问权限</h3><h3 id="设置demo-用户"><a href="#设置demo-用户" class="headerlink" title="设置demo 用户"></a>设置demo 用户</h3><h3 id="基于不同角色的首页"><a href="#基于不同角色的首页" class="headerlink" title="基于不同角色的首页"></a>基于不同角色的首页</h3><h3 id="设置实-体访问权限"><a href="#设置实-体访问权限" class="headerlink" title="设置实 体访问权限"></a>设置实 体访问权限</h3><h3 id="应用安全性设置"><a href="#应用安全性设置" class="headerlink" title="应用安全性设置"></a>应用安全性设置</h3><ul>
+<li>Administrator 标签页</li>
+<li>Demo Users 标签页</li>
+<li>Anonymous Users 标签页</li>
+<li>Password Policy 标签页</li>
+</ul>
+<h1 id="Mobile"><a href="#Mobile" class="headerlink" title="Mobile"></a>Mobile</h1><h2 id="响应式-原生-与渐进式（PWA）移动应用"><a href="#响应式-原生-与渐进式（PWA）移动应用" class="headerlink" title="响应式, 原生, 与渐进式（PWA）移动应用"></a>响应式, 原生, 与渐进式（PWA）移动应用</h2><h2 id="DEMO-示例"><a href="#DEMO-示例" class="headerlink" title="DEMO 示例"></a>DEMO 示例</h2><ul>
 <li><p>了解 Mx Studio</p>
 </li>
 <li><p>为 LearnNow app 创建首页</p>
