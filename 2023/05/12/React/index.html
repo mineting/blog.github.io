@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="React   【Refer】 英文官网：https:&#x2F;&#x2F;reactjs.org&#x2F; 中文官网：https:&#x2F;&#x2F;react.docschina.org&#x2F;  React 简介是什么 用于动态构建用户界面的 JavaScript 库（只关注于视图） 由 Facebook 开源：Facebook开发，起初由 Facebook 的软件工程师 Jordan Walke 创建，于 2011 年部署于 Faceb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React">
+<meta property="og:url" content="http://example.com/2023/05/12/React/index.html">
+<meta property="og:site_name" content="MineTing">
+<meta property="og:description" content="React   【Refer】 英文官网：https:&#x2F;&#x2F;reactjs.org&#x2F; 中文官网：https:&#x2F;&#x2F;react.docschina.org&#x2F;  React 简介是什么 用于动态构建用户界面的 JavaScript 库（只关注于视图） 由 Facebook 开源：Facebook开发，起初由 Facebook 的软件工程师 Jordan Walke 创建，于 2011 年部署于 Faceb">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-12T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-30T05:59:10.156Z">
+<meta property="article:author" content="Fei">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/05/12/React/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>React | MineTing</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">MineTing</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/12/React/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Fei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MineTing">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          React
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-05-12 08:00:00" itemprop="dateCreated datePublished" datetime="2023-05-12T08:00:00+08:00">2023-05-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-05-30 13:59:10" itemprop="dateModified" datetime="2023-05-30T13:59:10+08:00">2023-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <div align="center"><font size="70"><b>React</b></font></div>
+
+<blockquote>
+<p>【Refer】</p>
+<p>英文官网：<a target="_blank" rel="noopener" href="https://reactjs.org/">https://reactjs.org/</a></p>
+<p>中文官网：<a target="_blank" rel="noopener" href="https://react.docschina.org/">https://react.docschina.org/</a></p>
+</blockquote>
+<h1 id="React-简介"><a href="#React-简介" class="headerlink" title="React 简介"></a>React 简介</h1><h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><ol>
+<li><strong>用于动态构建用户界面的 JavaScript 库（只关注于视图）</strong></li>
+<li>由 Facebook 开源：Facebook开发，起初由 Facebook 的软件工程师 Jordan Walke 创建，于 2011 年部署于 Facebook 的 newsfeed ，随后在 2012 年部署于 Instagram，2013年 5 月宣布开源。</li>
+</ol>
+<p>&#x3D;&#x3D;jsx：解决虚拟 DOM 创建繁琐的问题&#x3D;&#x3D;</p>
+<h2 id="JavaScript-的问题"><a href="#JavaScript-的问题" class="headerlink" title="JavaScript 的问题"></a>JavaScript 的问题</h2><ul>
+<li>原生 JavaScript 操作 DOM 繁琐、效率低（DOM-API 操作 UI ) </li>
+<li>使用 JavaScript 直接操作 DOM，浏览器会进行大量的重绘重排</li>
+<li>原生 JavaScript 没有<strong>组件化</strong>编码方案，代码复用率低</li>
+</ul>
+<h2 id="React-的特点"><a href="#React-的特点" class="headerlink" title="React 的特点"></a>React 的特点</h2><ol>
+<li><p>采用声明式编码、组件化编码提高开发效率以及组件复用率</p>
+</li>
+<li><p>在 React Native 中可以使用 React 语法编写原生应用</p>
+</li>
+<li><p>高效（优秀的 Diffing 算法），使用虚拟DOM + Diffing 算法，尽量减少与真实 DOM 的交互</p>
+</li>
+</ol>
+<p>Download the React DevTools for a better development experience: <a target="_blank" rel="noopener" href="https://fb.me/react-devtools">https://fb.me/react-devtools</a></p>
+<p>Be sure to precompile your scripts for production - <a target="_blank" rel="noopener" href="https://babeljs.io/docs/setup/">https://babeljs.io/docs/setup/</a></p>
+<h1 id="组件编译"><a href="#组件编译" class="headerlink" title="组件编译"></a>组件编译</h1><p>docker exec -it debian bash</p>
+<p>luabitop-1.0.2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">wget http://www.lua.org/ftp/lua-5.2.4.tar.gz</span><br><span class="line">tar zxvf lua-5.2.4.tar.gz</span><br><span class="line">cd lua-5.2.4</span><br><span class="line">make linux test &amp;&amp; make install</span><br><span class="line">cd ../</span><br><span class="line">wget http://bitop.luajit.org/download/LuaBitOp-1.0.2.zip</span><br><span class="line">unzip LuaBitOp-1.0.2.zip</span><br><span class="line">cd LuaBitOp-1.0.2</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">cd ../</span><br><span class="line">mv LuaBitOp-1.0.2 /projects/</span><br></pre></td></tr></table></figure>
+
+
+
+<p>lua-cjson-2.1.0</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/bullseye/lua-cjson">Debian – 在 bullseye 中的 lua-cjson 软件包详细信息</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/openresty/lua-cjson/archive/refs/tags/2.1.0.zip</span><br><span class="line">mv 2.1.0.zip lua-cjson-2.1.0.zip</span><br><span class="line">unzip lua-cjson-2.1.0.zip</span><br><span class="line">cd lua-cjson-2.1.0ls </span><br><span class="line">make</span><br><span class="line">cd ../</span><br><span class="line">mv lua-cjson-2.1.0 /projects</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/openresty/lua-cjson/archive/refs/tags/2.1.0.zip">https://github.com/openresty/lua-cjson/archive/refs/tags/2.1.0.zip</a></p>
+<p>lua-lpeg-1.0.2</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/bullseye/lua-lpeg">Debian – 在 bullseye 中的 lua-lpeg 软件包详细信息</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/Nanonid/lpeg/archive/refs/heads/master.zip</span><br><span class="line">mv master.zip lua-lpeg-1.0.2.zip</span><br><span class="line">unzip lua-lpeg-1.0.2.zip</span><br><span class="line">mv lpeg-master/ lua-lpeg-1.0.2</span><br><span class="line">cd lua-lpeg-1.0.2</span><br><span class="line">make prefix=/projects/lua-lpeg-1.0.2</span><br><span class="line">cd ../</span><br><span class="line">mv lua-lpeg-1.0.2 /projects/lua-lpeg-1.0.2</span><br></pre></td></tr></table></figure>
+
+
+
+<p>lz4-1.9.3</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/lz4/lz4/archive/refs/tags/v1.9.3.zip</span><br><span class="line">unzip v1.9.3.zip</span><br><span class="line">mv v1.9.3 lz4-1.9.3</span><br><span class="line">cd lz4-1.9.3</span><br><span class="line">make prefix=/projects/lz4-1.9.3 install</span><br></pre></td></tr></table></figure>
+
+
+
+<p>【直接在 <a target="_blank" rel="noopener" href="https://packages.debian.org/bullseye/media-types">Debian – 在 bullseye 中的 media-types 软件包详细信息</a> 下载】</p>
+<p>mailcap</p>
+<p><strong>找不到</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>media-types</p>
+<p><strong>Node.js?</strong></p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/search?suite=bullseye&arch=any&searchon=sourcenames&keywords=media-types">Debian – 软件包搜索结果 – media-types</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>mesa-20.3.5</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/search?suite=bullseye&section=all&arch=any&searchon=sourcenames&keywords=mesa">Debian – 软件包搜索结果 – mesa</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://archive.mesa3d.org/mesa-20.3.5.tar.xz</span><br><span class="line">tar xvf mesa-20.3.5.tar.xz</span><br><span class="line">mv mesa-20.3.5 /projects/</span><br></pre></td></tr></table></figure>
+
+
+
+<p>mime-support</p>
+<p>未找到</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/source/bullseye/mime-support">Debian – 在 bullseye 中的 mime-support 源码包详细信息</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>more-itertools</p>
+<p><a target="_blank" rel="noopener" href="https://salsa.debian.org/python-team/packages/more-itertools/-/tree/debian/master/">Debian Python Team &#x2F; packages &#x2F; more-itertools · GitLab</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://pypi.org/project/more-itertools/#files</span><br><span class="line">pip install more-itertools</span><br></pre></td></tr></table></figure>
+
+
+
+<p>mpdecimal-2.5.1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.bytereef.org/software/mpdecimal/releases/mpdecimal-2.5.1.tar.gz</span><br><span class="line">tar -xvzf mpdecimal-2.5.1.tar.gz</span><br><span class="line">cd mpdecimal-2.5.1</span><br><span class="line">./configure --prefix=/projects/mpdecimal-2.5.1</span><br><span class="line">make</span><br><span class="line">make install prefix=/projects/mpdecimal-2.5.1</span><br></pre></td></tr></table></figure>
+
+
+
+<p>nano-5.4</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/source/bullseye/nano">Debian – 在 bullseye 中的 nano 源码包详细信息</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://alpha.gnu.org/gnu/nano/nano-5.4-pre1.tar.gz</span><br><span class="line">tar -zxvf nano-5.4-pre1.tar.gz</span><br><span class="line">cd nano-5.4-pre1</span><br><span class="line">./configure --prefix=/projects/nano-5.4</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+
+
+<p>netbase</p>
+<p>找不到</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/source/sid/netbase">Debian – 在 sid 中的 netbase 源码包详细信息</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>netcat-1.10</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/source/bullseye/netcat">Debian – 在 bullseye 中的 netcat 源码包详细信息</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wget https://sourceforge.net/code-snapshots/git/n/nc/nc110/git.git/nc110-git-607401678236b608280b291ad849a109b8d9a8f2.zip</span><br><span class="line">mv nc110-git-607401678236b608280b291ad849a109b8d9a8f2.zip netcat-1.10.zip</span><br><span class="line">unzip netcat-1.10.zip</span><br><span class="line">mv nc110-git-607401678236b608280b291ad849a109b8d9a8f2 netcat-1.10</span><br><span class="line">cd netcat-1.10</span><br><span class="line">make linux</span><br><span class="line">mv netcat-1.10 /projects/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>netcat-openbsd-1.217-1</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/search?searchon=sourcenames&keywords=netcat-openbsd">Debian – 软件包搜索结果 – netcat-openbsd</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/duncan-roe/netcat-openbsd/archive/refs/tags/1.217-1.zip">https://github.com/duncan-roe/netcat-openbsd/archive/refs/tags/1.217-1.zip</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/duncan-roe/netcat-openbsd/archive/refs/tags/1.217-1.zip</span><br><span class="line">mv 1.217-1.zip netcat-openbsd-1.217-1.zip</span><br><span class="line">unzip netcat-openbsd-1.217-1</span><br><span class="line">cd netcat-openbsd-1.217-1</span><br><span class="line">make</span><br><span class="line">cd ../</span><br><span class="line">mv netcat-openbsd-1.217-1 /projects/</span><br></pre></td></tr></table></figure>
+
+
+
+<p>net-snmp-5.9</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/source/bullseye/net-snmp">Debian – 在 bullseye 中的 net-snmp 源码包详细信息</a></p>
+<p><a target="_blank" rel="noopener" href="https://sourceforge.net/code-snapshots/git/n/ne/net-snmp/code.git/net-snmp-code-8d9af9ad756df5ec727d89424fc6653cc562047e.zip">https://sourceforge.net/code-snapshots/git/n/ne/net-snmp/code.git/net-snmp-code-8d9af9ad756df5ec727d89424fc6653cc562047e.zip</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">apt-get install libperl-dev</span><br><span class="line">apt-get install flex bison</span><br><span class="line">wget https://github.com/net-snmp/net-snmp/archive/refs/tags/v5.9.zip</span><br><span class="line">mv v5.9.zip net-snmp-5.9.zip</span><br><span class="line">unzip net-snmp-5.9.zip</span><br><span class="line">cd net-snmp-5.9</span><br><span class="line">./configure  --prefix=/projects/net-snmp-5.9</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+
+
+<p>net-tools-1.60：报错了？</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/bullseye/net-tools"><u>Debian</u> – 在 bullseye 中的 net-tools 软件包详细信息</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/ecki/net-tools/archive/refs/tags/v1.60.zip</span><br><span class="line">mv v1.60.zip net-tools-1.60.zip</span><br><span class="line">unzip net-tools-1.60.zip</span><br><span class="line">cd net-tools-1.60</span><br><span class="line">make prefix=/projects/net-tools-1.60 install</span><br><span class="line">mv net-tools-1.60 /projects/</span><br></pre></td></tr></table></figure>
+
+
+
+<p>nghttp2-1.43.0</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/bullseye/nghttp2">Debian – 在 bullseye 中的 nghttp2 软件包详细信息</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/nghttp2/nghttp2/archive/refs/tags/v1.43.0.zip</span><br><span class="line">mv v1.43.0.zip nghttp2-1.43.0.zip</span><br><span class="line">unzip nghttp2-1.43.0.zip</span><br><span class="line">cd nghttp2-1.43.0</span><br><span class="line">autoreconf -i</span><br><span class="line">automake</span><br><span class="line">autoconf</span><br><span class="line">./configure</span><br><span class="line">make prefix=/projects/nghttp2-1.43.0 install</span><br></pre></td></tr></table></figure>
+
+
+
+<p>nmap-7.91</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=names&keywords=nmap">Debian – 软件包搜索结果 – nmap</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://nmap.org/dist/nmap-7.91.tar.bz2</span><br><span class="line">tar -jxvf nmap-7.91.tar.bz2</span><br><span class="line">cd nmap-7.91</span><br><span class="line">./configure</span><br><span class="line">make prefix=/projects/nmap-7.91 install</span><br></pre></td></tr></table></figure>
+
+
+
+<p>norm 获取不到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>nspr-4.29</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/search?searchon=sourcenames&keywords=nspr">Debian – 软件包搜索结果 – nspr</a></p>
+<p><strong>clone 后要检出分支 tag</strong></p>
+<p>-I&#x2F;usr&#x2F;local&#x2F;include&#x2F;nspr 需要修改？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://ftp.mozilla.org/pub/nspr/releases/v4.29/src/nspr-4.29.tar.gz</span><br><span class="line">tar zxvf nspr-4.29.tar.gz</span><br><span class="line">cd nspr-4.29</span><br><span class="line">cd nspr/</span><br><span class="line">./configure</span><br><span class="line">make prefix=/projects/nspr-4.29 install</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>nss</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=sourcenames&keywords=nss">Debian – 软件包搜索结果 – nss</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_61_RTM/src/nss-3.61.tar.gz</span><br><span class="line"></span><br><span class="line">make BUILD_OPT=1 NSS_USE_SYSTEM_SQLITE=1 NSPR_INCLUDE_DIR=/usr/include/nspr NSS_NSPR_INCLUDE_DIR=/usr/include/nspr prefix=/projects/nss-3.61</span><br><span class="line"></span><br><span class="line">make NSPR_INCLUDE_DIR=/usr/include/nspr NSS_NSPR_INCLUDE_DIR=/usr/include/nspr prefix=/projects/nss-3.61</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>openjdk11</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=sourcenames&keywords=openjdk-11">Debian – 软件包搜索结果 – openjdk-11</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/openjdk/jdk11u/archive/refs/tags/jdk-11.0.14+9.zip</span><br><span class="line">unzip jdk-11.0.14+9.zip</span><br><span class="line">cd jdk11u-jdk-11.0.14-9/</span><br><span class="line">bash configure</span><br><span class="line">make</span><br><span class="line">cd build/linux-x86_64-normal-server-release</span><br><span class="line">mv jdk openjdk-11.0.14-9</span><br><span class="line">mv openjdk-11.0.14-9 /projects</span><br></pre></td></tr></table></figure>
+
+
+
+<p>openjdk17</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=sourcenames&keywords=openjdk-17">Debian – 软件包搜索结果 – openjdk-17</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 需要jdk15-16引导</span><br><span class="line">wget https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16.0.1%2B9/OpenJDK16U-jdk_x64_linux_hotspot_16.0.1_9.tar.gz</span><br><span class="line">tar zxvf OpenJDK16U-jdk_x64_linux_hotspot_16.0.1_9.tar.gz</span><br><span class="line">bash configure --with-boot-jdk=&lt;JDK16_PATH&gt;</span><br><span class="line"></span><br><span class="line">wget https://github.com/openjdk/jdk17/archive/refs/tags/jdk-17+0.zip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">make ALT_OUTPUTDIR=/projects/openjdk-17</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/openjdk/jdk/archive/refs/tags/jdk-17+0.zip">https://github.com/openjdk/jdk/archive/refs/tags/jdk-17+0.zip</a></p>
+<p>OpenSSH-8.4</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=sourcenames&keywords=openssh">Debian – 软件包搜索结果 – openssh</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">wget https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.4p1.tar.gz</span><br><span class="line">tar -zxvf openssh-8.4p1.tar.gz</span><br><span class="line">cd openssh-8.4p1</span><br><span class="line">./configure</span><br><span class="line">make prefix=/projects/openssh-8.4p1 install</span><br><span class="line"></span><br><span class="line"># 缺少 sshd 用户，添加</span><br><span class="line">ssh -V</span><br><span class="line">useradd sshd -s /sbin/nologin</span><br><span class="line">vi /etc/ssh/sshd_config</span><br><span class="line"># Privilege Separation is turned on for security</span><br><span class="line">UsePrivilegeSeparation yes</span><br><span class="line"># 设置UsePrivilegeSeparation sandbox</span><br><span class="line"># 添加AuthorizedKeysFile      %h/.ssh/authorized_keys</span><br><span class="line"></span><br><span class="line"># 重启</span><br><span class="line">systemctl restart sshd</span><br></pre></td></tr></table></figure>
+
+
+
+<p>openssl-1.1.1n</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=sourcenames&keywords=openssl">Debian – 软件包搜索结果 – openssl</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.openssl.org/source/openssl-1.1.1n.tar.gz</span><br><span class="line">tar zxvf openssl-1.1.1n.tar.gz</span><br><span class="line">cd openssl-1.1.1n</span><br><span class="line">./config --prefix=/projects/openssl-1.1.1n --openssldir=/projects/openssl-1.1.1n shared zlib</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+
+
+<p>pango-1.46.2</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=sourcenames&keywords=pango1.0">Debian – 软件包搜索结果 – pango1.0</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/GNOME/pango/archive/refs/tags/1.46.2.zip</span><br><span class="line">mv 1.46.2.zip pango-1.46.2.zip</span><br><span class="line">./make-release.sh</span><br><span class="line">cp release_build/ /projects/pango-1.46.2</span><br></pre></td></tr></table></figure>
+
+
+
+<p>patch-2.7.6</p>
+<p><a target="_blank" rel="noopener" href="https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=sourcenames&keywords=patch">Debian – 软件包搜索结果 – patch</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://ftp.gnu.org/gnu/patch/patch-2.7.6.tar.bz2</span><br><span class="line">tar -jxvf patch-2.7.6.tar.bz2</span><br><span class="line">cd patch-2.7.6</span><br><span class="line">./configure</span><br><span class="line">make prefix=/projects/patch-2.7.6 install</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<p><strong>其他：</strong></p>
+<p>avahi-0.8</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/lathiat/avahi/archive/refs/tags/v0.8.zip</span><br><span class="line">mv v0.8.zip avahi-0.8.zip</span><br><span class="line">curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py</span><br><span class="line">python2 get-pip.py</span><br><span class="line">pip2 install dbus-python</span><br><span class="line">apt-get install monodoc-base</span><br><span class="line">apt-get install mono-mcs</span><br><span class="line">apt-get install libmono-posix4.0-cil</span><br><span class="line">cd avahi-0.8</span><br><span class="line">./autogen.sh</span><br><span class="line">./configure --prefix=/projects/avahi-0.8</span><br><span class="line">make prefix=/projects/avahi-0.8 install</span><br></pre></td></tr></table></figure>
+
+
+
+<p>cron-3.0</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/</span><br><span class="line">cd cron-3.0pl1 </span><br><span class="line">ls cron</span><br><span class="line">make</span><br><span class="line">cd ../</span><br><span class="line">mv cron-3.0pl1 /projects/cron-3.0pl1</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">meson setup .. -D prefix=/projects/gdk-pixbuf-2.24.2 gdk_pixbuf_query_loaders_path=&quot;/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders&quot;</span><br><span class="line">meson setup --reconfigure</span><br><span class="line">share/xml/docbook/xsl-stylesheets-1.79.2/manpages/</span><br><span class="line">ln -s /usr/lib/*/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders /usr/local/bin/gdk-pixbuf-query-loaders</span><br><span class="line"></span><br><span class="line">meson builddir -Dgdk_pixbuf_query_loaders_path=&quot;/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders&quot;</span><br><span class="line">meson build -D</span><br><span class="line">ninja -C builddir/</span><br><span class="line">sudo ninja -C builddir/ install</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="问题整理"><a href="#问题整理" class="headerlink" title="问题整理"></a>问题整理</h1><p>root@VM-0-17-centos:&#x2F;home&#x2F;lf&#x2F;gdk-pixbuf-2.42.2# apt-get install ninja<br>Reading package lists… Done<br>Building dependency tree… Done<br>Reading state information… Done<br>E: Unable to locate package ninja</p>
+<p>git clone –recurse-submodules -b v1.30.2 –depth 1 –shallow-submodules <a target="_blank" rel="noopener" href="https://github.com/grpc/grpc">https://github.com/grpc/grpc</a></p>
+<p>报错：<br>gcc -fPIC -O2 -fomit-frame-pointer -Wall  -I&#x2F;usr&#x2F;local&#x2F;include  -c -o bit.o bit.c<br>bit.c: In function ‘barg’:<br>bit.c:83:2: error: #error “Unknown number type, check LUA_NUMBER_* in luaconf.h”<br>   83 | #error “Unknown number type, check LUA_NUMBER_* in luaconf.h”<br>      |  ^~~~~<br>make LUAINC&#x3D;&#x2F;usr&#x2F;include&#x2F;lua5.3</p>
+<p>原因：官网要求：lua版文为 5.1 - 5.3，自己安装了5.4</p>
+<p>apt-get install build-essential autoconf libtool</p>
+<p>make: *** No rule to make target ‘install’. Stop.</p>
+<p>没有make 命令造成的</p>
+<p>解决：执行 .&#x2F;config 后，执行 make -j$(nproc) 并行编译</p>
+<p>问题：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/marcosun_sw/article/details/119817835">(15条消息) ubuntu apt-get安装或卸载软件时出现了python-minimal等错误问题的解决方法_偷懒的人的博客-CSDN博客</a></p>
+<p>No Target</p>
+<p>E: Unable to locate package lua-devel</p>
+<p>没有镜像源</p>
+<p>问题：</p>
+<p>root@VM-0-17-centos:&#x2F;home&#x2F;lf# apt-get install build-essential autoconf libtool<br>Reading package lists… Done<br>Building dependency tree… Done<br>Reading state information… Done<br>autoconf is already the newest version (2.69-14).<br>build-essential is already the newest version (12.9).<br>libtool is already the newest version (2.4.6-15).<br>0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.<br>22 not fully installed or removed.<br>After this operation, 0 B of additional disk space will be used.<br>Do you want to continue? [Y&#x2F;n] Y<br>Setting up python3.9 (3.9.2-1) …<br>Traceback (most recent call last):<br>  File “&#x2F;usr&#x2F;lib&#x2F;python3.9&#x2F;py_compile.py”, line 215, in <module><br>    sys.exit(main())<br>  File “&#x2F;usr&#x2F;lib&#x2F;python3.9&#x2F;py_compile.py”, line 207, in main<br>    compile(filename, doraise&#x3D;True)<br>  File “&#x2F;usr&#x2F;lib&#x2F;python3.9&#x2F;py_compile.py”, line 142, in compile<br>    source_bytes &#x3D; loader.get_data(file)<br>  File “<frozen importlib._bootstrap_external>“, line 979, in get_data<br>FileNotFoundError: [Errno 2] No such file or directory: ‘&#x2F;usr&#x2F;lib&#x2F;python3.9&#x2F;<strong>phello</strong>.foo.py’<br>dpkg: error processing package python3.9 (–configure):</frozen></module></p>
+<p> installed python3.9 package post-installation script subprocess returned error exit status 1<br>dpkg: dependency problems prevent configuration of python3:<br> python3 depends on python3.9 (&gt;&#x3D; 3.9.2-0~); however:<br>  Package python3.9 is not configured yet.</p>
+<p>dpkg: error processing package python3 (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of python3-wheel:<br> python3-wheel depends on python3:any; however:<br>  Package python3 is not configured yet.</p>
+<p>dpkg: error processing package python3-wheel (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of python3-pygments:<br> python3-pygments depends on python3:any; however:<br>  Package python3 is not configured yet.</p>
+<p>dpkg: error processing package python3-pygments (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of python3-dev:<br> python3-dev depends on python3 (&#x3D; 3.9.2-3); however:<br>  Package python3 is not configured yet.</p>
+<p>dpkg: error processing package python3-dev (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of python3-pip:<br> python3-pip depends on python3-wheel; however:<br>  Package python3-wheel is not configured yet.<br> python3-pip depends on python3:any; however:<br>  Package python3 is not configured yet.</p>
+<p>dpkg: error processing package python3-pip (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of python3.9-dev:<br> python3.9-dev depends on python3.9 (&#x3D; 3.9.2-1); however:<br>  Package python3.9 is not configured yet.</p>
+<p>dpkg: error processing package python3.9-dev (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of libgtk2.0-dev:amd64:<br> libgtk2.0-dev:amd64 depends on python3:any; however:<br>  Package python3 is not configured yet.</p>
+<p>dpkg: error processing package libgtk2.0-dev:amd64 (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of python3-lib2to3:<br> python3-lib2to3 depends on python3:any (&gt;&#x3D; 3.9.1-0~); however:<br>  Package python3 is not configured yet.<br> python3-lib2to3 depends on python3:any (&lt;&lt; 3.10); however:<br>  Package python3 is not configured yet.</p>
+<p>dpkg: error processing package python3-lib2to3 (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of python3-pkg-resources:<br> python3-pkg-resources depends on python3:any; however:<br>  Package python3 is not configured yet.</p>
+<p>dpkg: error processing package python3-pkg-resources (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of python3-distutils:<br> python3-distutils depends on python3:any (&gt;&#x3D; 3.9.1-0~); however:<br>  Package python3 is not configured yet.<br> python3-distutils depends on python3:any (&lt;&lt; 3.10); however:<br>  Package python3 is not configured yet.<br> python3-distutils depends on python3-lib2to3 (&#x3D; 3.9.2-1); however:<br>  Package python3-lib2to3 is not configured yet.</p>
+<p>dpkg: error processing package python3-distutils (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of libglib2.0-dev-bin:<br> libglib2.0-dev-bin depends on python3-distutils; however:<br>  Package python3-distutils is not configured yet.<br> libglib2.0-dev-bin depends on python3:any; however:<br>  Package python3 is not configured yet.</p>
+<p>dpkg: error processing package libglib2.0-dev-bin (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of python3-setuptools:<br> python3-setuptools depends on python3-pkg-resources (&#x3D; 52.0.0-4); however:<br>  Package python3-pkg-resources is not configured yet.<br> python3-setuptools depends on python3-distutils; however:<br>  Package python3-distutils is not configured yet.<br> python3-setuptools depends on python3:any; however:<br>  Package python3 is not configured yet.</p>
+<p>dpkg: error processing package python3-setuptools (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of llvm-11-tools:<br> llvm-11-tools depends on python3; however:<br>  Package python3 is not configured yet.<br> llvm-11-tools depends on python3-pygments; however:<br>  Package python3-pygments is not configured yet.</p>
+<p>dpkg: error processing package llvm-11-tools (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of python3-yaml:<br> python3-yaml depends on python3 (&lt;&lt; 3.10); however:<br>  Package python3 is not configured yet.<br> python3-yaml depends on python3 (&gt;&#x3D; 3.9~); however:<br>  Package python3 is not configured yet.<br> python3-yaml depends on python3:any; however:<br>  Package python3 is not configured yet.</p>
+<p>dpkg: error processing package python3-yaml (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of libglib2.0-dev:amd64:<br> libglib2.0-dev:amd64 depends on libglib2.0-dev-bin (&#x3D; 2.66.8-1); however:<br>  Package libglib2.0-dev-bin is not configured yet.</p>
+<p>dpkg: error processing package libglib2.0-dev:amd64 (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of libpango1.0-dev:amd64:<br> libpango1.0-dev:amd64 depends on libglib2.0-dev (&gt;&#x3D; 2.60.0); however:<br>  Package libglib2.0-dev:amd64 is not configured yet.</p>
+<p>dpkg: error processing package libpango1.0-dev:amd64 (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of libcairo2-dev:amd64:<br> libcairo2-dev:amd64 depends on libglib2.0-dev; however:<br>  Package libglib2.0-dev:amd64 is not configured yet.</p>
+<p>dpkg: error processing package libcairo2-dev:amd64 (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of libatk1.0-dev:amd64:<br> libatk1.0-dev:amd64 depends on libglib2.0-dev (&gt;&#x3D; 2.31.2); however:<br>  Package libglib2.0-dev:amd64 is not configured yet.</p>
+<p>dpkg: error processing package libatk1.0-dev:amd64 (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of libgdk-pixbuf-2.0-dev:amd64:<br> libgdk-pixbuf-2.0-dev:amd64 depends on libglib2.0-dev (&gt;&#x3D; 2.56.0); however:<br>  Package libglib2.0-dev:amd64 is not configured yet.</p>
+<p>dpkg: error processing package libgdk-pixbuf-2.0-dev:amd64 (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of libharfbuzz-dev:amd64:<br> libharfbuzz-dev:amd64 depends on libglib2.0-dev (&gt;&#x3D; 2.19.1); however:<br>  Package libglib2.0-dev:amd64 is not configured yet.</p>
+<p>dpkg: error processing package libharfbuzz-dev:amd64 (–configure):<br> dependency problems - leaving unconfigured<br>dpkg: dependency problems prevent configuration of llvm-11-dev:<br> llvm-11-dev depends on llvm-11-tools (&#x3D; 1:11.0.1-2); however:<br>  Package llvm-11-tools is not configured yet.</p>
+<p>dpkg: error processing package llvm-11-dev (–configure):<br> dependency problems - leaving unconfigured<br>Errors were encountered while processing:<br> python3.9<br> python3<br> python3-wheel<br> python3-pygments<br> python3-dev<br> python3-pip<br> python3.9-dev<br> libgtk2.0-dev:amd64<br> python3-lib2to3<br> python3-pkg-resources<br> python3-distutils<br> libglib2.0-dev-bin<br> python3-setuptools<br> llvm-11-tools<br> python3-yaml<br> libglib2.0-dev:amd64<br> libpango1.0-dev:amd64<br> libcairo2-dev:amd64<br> libatk1.0-dev:amd64<br> libgdk-pixbuf-2.0-dev:amd64<br> libharfbuzz-dev:amd64<br> llvm-11-dev<br>E: Sub-process &#x2F;usr&#x2F;bin&#x2F;dpkg returned an error code (1)</p>
+<p>解决：</p>
+<p>root@VM-0-17-centos:&#x2F;home&#x2F;lf# which  python3<br>&#x2F;usr&#x2F;local&#x2F;bin&#x2F;python3</p>
+<p>root@VM-0-17-centos:&#x2F;home&#x2F;lf# env<br>HOSTNAME&#x3D;VM-0-17-centos<br>PYTHON_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;python3.9<br>CMAKE_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;cmake3.25.3<br>PWD&#x3D;&#x2F;home&#x2F;lf<br>LS_OPTIONS&#x3D;–color&#x3D;auto<br>HOME&#x3D;&#x2F;root<br>TERM&#x3D;xterm<br>SHLVL&#x3D;1<br>PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;local&#x2F;bin:&#x2F;usr&#x2F;sbin:&#x2F;usr&#x2F;bin:&#x2F;sbin:&#x2F;bin:&#x2F;export&#x2F;server&#x2F;cmake3.25.3&#x2F;bin:&#x2F;export&#x2F;server&#x2F;python3.9&#x2F;bin<br>OLDPWD&#x3D;&#x2F;<br>_&#x3D;&#x2F;usr&#x2F;bin&#x2F;env<br>root@VM-0-17-centos:&#x2F;home&#x2F;lf# whereis</p>
+<p>root@VM-0-17-centos:&#x2F;home&#x2F;lf# whereis python3<br>python3: &#x2F;usr&#x2F;bin&#x2F;python3.9-config &#x2F;usr&#x2F;bin&#x2F;python3 &#x2F;usr&#x2F;bin&#x2F;python3.9 &#x2F;usr&#x2F;lib&#x2F;python3 &#x2F;usr&#x2F;lib&#x2F;python3.9 &#x2F;etc&#x2F;python3 &#x2F;etc&#x2F;pytho                    n3.9 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;python3.9-config &#x2F;usr&#x2F;local&#x2F;bin&#x2F;python3 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;python3.9 &#x2F;usr&#x2F;local&#x2F;lib&#x2F;python3.9 &#x2F;usr&#x2F;include&#x2F;python3                    .9 &#x2F;usr&#x2F;share&#x2F;python3 &#x2F;export&#x2F;server&#x2F;python3.9&#x2F;bin&#x2F;python3.9-config &#x2F;export&#x2F;server&#x2F;python3.9&#x2F;bin&#x2F;python3 &#x2F;export&#x2F;server&#x2F;python3.9&#x2F;                    bin&#x2F;python3.9<br>root@VM-0-17-centos:&#x2F;home&#x2F;lf# env<br>HOSTNAME&#x3D;VM-0-17-centos<br>PYTHON_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;python3.9<br>CMAKE_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;cmake3.25.3<br>PWD&#x3D;&#x2F;home&#x2F;lf<br>LS_OPTIONS&#x3D;–color&#x3D;auto<br>HOME&#x3D;&#x2F;root<br>TERM&#x3D;xterm<br>SHLVL&#x3D;1<br>PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;local&#x2F;bin:&#x2F;usr&#x2F;sbin:&#x2F;usr&#x2F;bin:&#x2F;sbin:&#x2F;bin:&#x2F;export&#x2F;server&#x2F;cmake3.25.3&#x2F;bin:&#x2F;export&#x2F;server&#x2F;python3.9&#x2F;bin<br>OLDPWD&#x3D;&#x2F;<br>_&#x3D;&#x2F;usr&#x2F;bin&#x2F;env<br>root@VM-0-17-centos:&#x2F;home&#x2F;lf# export PYTHONPATH&#x3D;&#x2F;export&#x2F;server&#x2F;python3.9</p>
+<p>移除</p>
+<p>(test) root@VM-0-17-centos:&#x2F;home&#x2F;lf# apt-get remove python3<br>Reading package lists… Done<br>Building dependency tree… Done<br>Reading state information… Done<br>The following packages were automatically installed and are no longer required:<br>  adwaita-icon-theme autopoint binfmt-support debhelper dh-autoreconf dh-strip-nondeterminism dwz fontconfig gir1.2-atk-1.0<br>  gir1.2-freedesktop gir1.2-gdkpixbuf-2.0 gir1.2-glib-2.0 gir1.2-gtk-2.0 gir1.2-harfbuzz-0.0 gir1.2-pango-1.0 groff-base<br>  gtk-update-icon-cache hicolor-icon-theme intltool-debian javascript-common libarchive-cpio-perl libarchive-zip-perl<br>  libatk1.0-0 libatk1.0-data libblkid-dev libcairo-gobject2 libcairo-script-interpreter2 libcairo2 libdatrie-dev libdatrie1<br>  libdebhelper-perl libfile-stripnondeterminism-perl libfribidi-dev libfribidi0 libgail-common libgail18 libgdk-pixbuf-2.0-0<br>  libgdk-pixbuf2.0-bin libgdk-pixbuf2.0-common libgirepository-1.0-1 libglib2.0-bin libgraphite2-3 libgraphite2-dev libgtk2.0-0<br>  libgtk2.0-bin libgtk2.0-common libharfbuzz-gobject0 libharfbuzz-icu0 libharfbuzz0b libjs-jquery libjs-sphinxdoc<br>  libjs-underscore liblzo2-2 libmail-sendmail-perl libmount-dev libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0<br>  libpangoxft-1.0-0 libpcre2-16-0 libpcre2-32-0 libpcre2-dev libpcre2-posix2 libpfm4 libpipeline1 libpython3-dev<br>  libpython3.9-dev librsvg2-2 librsvg2-common libselinux1-dev libsepol1-dev libsub-override-perl libsys-hostname-long-perl<br>  libthai-data libthai-dev libthai0 libuchardet0 libxcb-render0 libxcb-render0-dev libxcb-shm0-dev libxml2-utils libz3-dev<br>  llvm-11 llvm-11-runtime man-db pango1.0-tools po-debconf python-pip-whl python3-minimal python3.9-dev<br>Use ‘apt autoremove’ to remove them.<br>The following packages will be REMOVED:<br>  libatk1.0-dev libcairo2-dev libgdk-pixbuf-2.0-dev libglib2.0-dev libglib2.0-dev-bin libgtk2.0-dev libharfbuzz-dev<br>  libpango1.0-dev llvm-11-dev llvm-11-tools python3 python3-dev python3-distutils python3-lib2to3 python3-pip<br>  python3-pkg-resources python3-pygments python3-setuptools python3-wheel python3-yaml<br>0 upgraded, 0 newly installed, 20 to remove and 0 not upgraded.<br>22 not fully installed or removed.<br>After this operation, 262 MB disk space will be freed.<br>Do you want to continue? [Y&#x2F;n] Y<br>(Reading database … 56178 files and directories currently installed.)<br>Removing libgtk2.0-dev:amd64 (2.24.33-2) …<br>Removing libatk1.0-dev:amd64 (2.36.0-2) …<br>Removing libpango1.0-dev:amd64 (1.46.2-3) …<br>Removing libcairo2-dev:amd64 (1.16.0-5) …<br>Removing libgdk-pixbuf-2.0-dev:amd64 (2.42.2+dfsg-1+deb11u1) …<br>Removing libharfbuzz-dev:amd64 (2.7.4-1) …<br>Removing libglib2.0-dev:amd64 (2.66.8-1) …<br>Removing libglib2.0-dev-bin (2.66.8-1) …<br>Removing llvm-11-dev (1:11.0.1-2) …<br>Removing llvm-11-tools (1:11.0.1-2) …<br>Removing python3-yaml (5.3.1-5) …<br>Removing python3-pip (20.3.4-4+deb11u1) …<br>Removing python3-setuptools (52.0.0-4) …<br>Removing python3-dev (3.9.2-3) …<br>Removing python3-distutils (3.9.2-1) …<br>Removing python3-wheel (0.34.2-1) …<br>Removing python3-lib2to3 (3.9.2-1) …<br>Removing python3-pygments (2.7.1+dfsg-2.1) …<br>Removing python3-pkg-resources (52.0.0-4) …<br>Removing python3 (3.9.2-3) …<br>Setting up python3.9 (3.9.2-1) …<br>Traceback (most recent call last):<br>  File “&#x2F;usr&#x2F;lib&#x2F;python3.9&#x2F;py_compile.py”, line 215, in <module><br>    sys.exit(main())<br>  File “&#x2F;usr&#x2F;lib&#x2F;python3.9&#x2F;py_compile.py”, line 207, in main<br>    compile(filename, doraise&#x3D;True)<br>  File “&#x2F;usr&#x2F;lib&#x2F;python3.9&#x2F;py_compile.py”, line 142, in compile<br>    source_bytes &#x3D; loader.get_data(file)<br>  File “<frozen importlib._bootstrap_external>“, line 979, in get_data<br>FileNotFoundError: [Errno 2] No such file or directory: ‘&#x2F;usr&#x2F;lib&#x2F;python3.9&#x2F;<strong>phello</strong>.foo.py’<br>dpkg: error processing package python3.9 (–configure):<br> installed python3.9 package post-installation script subprocess returned error exit status 1<br>dpkg: dependency problems prevent configuration of python3.9-dev:<br> python3.9-dev depends on python3.9 (&#x3D; 3.9.2-1); however:<br>  Package python3.9 is not configured yet.</frozen></module></p>
+<p>拷贝</p>
+<p><em><em>(test) root@VM-0-17-centos:&#x2F;home&#x2F;lf# cp -r &#x2F;export&#x2F;server&#x2F;python3.9&#x2F;lib&#x2F;python3.9&#x2F;</em> &#x2F;usr&#x2F;lib&#x2F;python3.9&#x2F;</em>*</p>
+<p>&#x2F;export&#x2F;server&#x2F;Python-3.9.16&#x2F;Modules&#x2F;_ctypes<br>&#x2F;export&#x2F;server&#x2F;Python-3.9.16&#x2F;build&#x2F;temp.linux-x86_64-3.9&#x2F;export&#x2F;server&#x2F;Python-3.9.16&#x2F;Modules&#x2F;_ctypes</p>
+<p>&#x2F;usr&#x2F;lib&#x2F;python3.9&#x2F;site-packages<br>&#x2F;usr&#x2F;lib&#x2F;python3.9&#x2F;python3.9&#x2F;site-packages<br>&#x2F;usr&#x2F;local&#x2F;lib&#x2F;python3.9&#x2F;site-packages<br>&#x2F;usr&#x2F;local&#x2F;lib&#x2F;python2.7&#x2F;site-packages<br>&#x2F;usr&#x2F;local&#x2F;libxml2&#x2F;lib&#x2F;python2.7&#x2F;site-packages</p>
+<p>(test) root@VM-0-17-centos:&#x2F;home&#x2F;lf# apt-get install -f<br>Reading package lists… Done<br>Building dependency tree… Done<br>Reading state information… Done<br>The following packages were automatically installed and are no longer required:<br>  adwaita-icon-theme autopoint binfmt-support debhelper dh-autoreconf dh-strip-nondeterminism dwz fontconfig gir1.2-atk-1.0<br>  gir1.2-freedesktop gir1.2-gdkpixbuf-2.0 gir1.2-glib-2.0 gir1.2-gtk-2.0 gir1.2-harfbuzz-0.0 gir1.2-pango-1.0 groff-base<br>  gtk-update-icon-cache hicolor-icon-theme intltool-debian javascript-common libarchive-cpio-perl libarchive-zip-perl<br>  libatk1.0-0 libatk1.0-data libblkid-dev libcairo-gobject2 libcairo-script-interpreter2 libcairo2 libdatrie-dev libdatrie1<br>  libdebhelper-perl libfile-stripnondeterminism-perl libfribidi-dev libfribidi0 libgail-common libgail18 libgdk-pixbuf-2.0-0<br>  libgdk-pixbuf2.0-bin libgdk-pixbuf2.0-common libgirepository-1.0-1 libglib2.0-bin libgraphite2-3 libgraphite2-dev libgtk2.0-0<br>  libgtk2.0-bin libgtk2.0-common libharfbuzz-gobject0 libharfbuzz-icu0 libharfbuzz0b libjs-jquery libjs-sphinxdoc<br>  libjs-underscore liblzo2-2 libmail-sendmail-perl libmount-dev libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0<br>  libpangoxft-1.0-0 libpcre2-16-0 libpcre2-32-0 libpcre2-dev libpcre2-posix2 libpfm4 libpipeline1 libpython3-dev<br>  libpython3.9-dev librsvg2-2 librsvg2-common libselinux1-dev libsepol1-dev libsub-override-perl libsys-hostname-long-perl<br>  libthai-data libthai-dev libthai0 libuchardet0 libxcb-render0 libxcb-render0-dev libxcb-shm0-dev libxml2-utils libz3-dev<br>  llvm-11 llvm-11-runtime man-db pango1.0-tools po-debconf python-pip-whl python3.9-dev<br>Use ‘apt autoremove’ to remove them.<br>0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.<br>3 not fully installed or removed.<br>After this operation, 0 B of additional disk space will be used.<br>Setting up python3.9 (3.9.2-1) …<br>Setting up python3 (3.9.2-3) …<br>running python rtupdate hooks for python3.9…<br>running python post-rtupdate hooks for python3.9…<br>Setting up python3.9-dev (3.9.2-1) …<br>(test) root@VM-0-17-centos:&#x2F;home&#x2F;lf# apt-get install build-essential autoconf libtool<br>Reading package lists… Done<br>Building dependency tree… Done<br>Reading state information… Done<br>autoconf is already the newest version (2.69-14).<br>build-essential is already the newest version (12.9).<br>libtool is already the newest version (2.4.6-15).<br>The following packages were automatically installed and are no longer required:<br>  adwaita-icon-theme autopoint binfmt-support debhelper dh-autoreconf dh-strip-nondeterminism dwz fontconfig gir1.2-atk-1.0<br>  gir1.2-freedesktop gir1.2-gdkpixbuf-2.0 gir1.2-glib-2.0 gir1.2-gtk-2.0 gir1.2-harfbuzz-0.0 gir1.2-pango-1.0 groff-base<br>  gtk-update-icon-cache hicolor-icon-theme intltool-debian javascript-common libarchive-cpio-perl libarchive-zip-perl<br>  libatk1.0-0 libatk1.0-data libblkid-dev libcairo-gobject2 libcairo-script-interpreter2 libcairo2 libdatrie-dev libdatrie1<br>  libdebhelper-perl libfile-stripnondeterminism-perl libfribidi-dev libfribidi0 libgail-common libgail18 libgdk-pixbuf-2.0-0<br>  libgdk-pixbuf2.0-bin libgdk-pixbuf2.0-common libgirepository-1.0-1 libglib2.0-bin libgraphite2-3 libgraphite2-dev libgtk2.0-0<br>  libgtk2.0-bin libgtk2.0-common libharfbuzz-gobject0 libharfbuzz-icu0 libharfbuzz0b libjs-jquery libjs-sphinxdoc<br>  libjs-underscore liblzo2-2 libmail-sendmail-perl libmount-dev libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0<br>  libpangoxft-1.0-0 libpcre2-16-0 libpcre2-32-0 libpcre2-dev libpcre2-posix2 libpfm4 libpipeline1 libpython3-dev<br>  libpython3.9-dev librsvg2-2 librsvg2-common libselinux1-dev libsepol1-dev libsub-override-perl libsys-hostname-long-perl<br>  libthai-data libthai-dev libthai0 libuchardet0 libxcb-render0 libxcb-render0-dev libxcb-shm0-dev libxml2-utils libz3-dev<br>  llvm-11 llvm-11-runtime man-db pango1.0-tools po-debconf python-pip-whl python3.9-dev<br>Use ‘apt autoremove’ to remove them.<br>0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.</p>
+<p>(test) root@VM-0-17-centos:&#x2F;home&#x2F;lf# apt autoremove<br>Reading package lists… Done<br>Building dependency tree… Done<br>Reading state information… Done<br>The following packages will be REMOVED:<br>  adwaita-icon-theme autopoint binfmt-support debhelper dh-autoreconf dh-strip-nondeterminism dwz fontconfig gir1.2-atk-1.0<br>  gir1.2-freedesktop gir1.2-gdkpixbuf-2.0 gir1.2-glib-2.0 gir1.2-gtk-2.0 gir1.2-harfbuzz-0.0 gir1.2-pango-1.0 groff-base<br>  gtk-update-icon-cache hicolor-icon-theme intltool-debian javascript-common libarchive-cpio-perl libarchive-zip-perl<br>  libatk1.0-0 libatk1.0-data libblkid-dev libcairo-gobject2 libcairo-script-interpreter2 libcairo2 libdatrie-dev libdatrie1<br>  libdebhelper-perl libfile-stripnondeterminism-perl libfribidi-dev libfribidi0 libgail-common libgail18 libgdk-pixbuf-2.0-0<br>  libgdk-pixbuf2.0-bin libgdk-pixbuf2.0-common libgirepository-1.0-1 libglib2.0-bin libgraphite2-3 libgraphite2-dev libgtk2.0-0<br>  libgtk2.0-bin libgtk2.0-common libharfbuzz-gobject0 libharfbuzz-icu0 libharfbuzz0b libjs-jquery libjs-sphinxdoc<br>  libjs-underscore liblzo2-2 libmail-sendmail-perl libmount-dev libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0<br>  libpangoxft-1.0-0 libpcre2-16-0 libpcre2-32-0 libpcre2-dev libpcre2-posix2 libpfm4 libpipeline1 libpython3-dev<br>  libpython3.9-dev librsvg2-2 librsvg2-common libselinux1-dev libsepol1-dev libsub-override-perl libsys-hostname-long-perl<br>  libthai-data libthai-dev libthai0 libuchardet0 libxcb-render0 libxcb-render0-dev libxcb-shm0-dev libxml2-utils libz3-dev<br>  llvm-11 llvm-11-runtime man-db pango1.0-tools po-debconf python-pip-whl python3.9-dev<br>0 upgraded, 0 newly installed, 89 to remove and 0 not upgraded.<br>After this operation, 165 MB disk space will be freed.<br>Do you want to continue? [Y&#x2F;n] Y<br>(Reading database … 52193 files and directories currently installed.)<br>Removing libgtk2.0-bin (2.24.33-2) …<br>Removing libgail-common:amd64 (2.24.33-2) …<br>Removing libgail18:amd64 (2.24.33-2) …<br>Removing debhelper (13.3.4) …<br>Removing binfmt-support (2.2.1-1+deb11u1) …<br>invoke-rc.d: could not determine current runlevel<br>invoke-rc.d: policy-rc.d denied execution of stop.<br>Removing dh-strip-nondeterminism (1.12.0-1) …<br>Removing dwz (0.13+20210201-1) …<br>Removing gir1.2-gtk-2.0:amd64 (2.24.33-2) …<br>Removing gir1.2-pango-1.0:amd64 (1.46.2-3) …<br>Removing pango1.0-tools (1.46.2-3) …<br>Removing gir1.2-atk-1.0:amd64 (2.36.0-2) …<br>Removing gir1.2-freedesktop:amd64 (1.66.1-1+b1) …<br>Removing gir1.2-gdkpixbuf-2.0:amd64 (2.42.2+dfsg-1+deb11u1) …<br>Removing gir1.2-harfbuzz-0.0:amd64 (2.7.4-1) …<br>Removing gir1.2-glib-2.0:amd64 (1.66.1-1+b1) …<br>Removing man-db (2.9.4-2) …<br>Removing groff-base (1.22.4-6) …<br>Removing po-debconf (1.0.21+nmu1) …<br>Removing intltool-debian (0.35.0+20060710.5) …<br>Removing javascript-common (11+nmu1) …<br>Removing libarchive-cpio-perl (0.10-1.1) …<br>Removing libfile-stripnondeterminism-perl (1.12.0-1) …<br>Removing libarchive-zip-perl (1.68-1) …<br>Removing libmount-dev:amd64 (2.36.1-8+deb11u1) …<br>Removing libblkid-dev:amd64 (2.36.1-8+deb11u1) …<br>Removing librsvg2-common:amd64 (2.50.3+dfsg-1) …<br>Removing librsvg2-2:amd64 (2.50.3+dfsg-1) …<br>Removing libcairo-gobject2:amd64 (1.16.0-5) …<br>Removing libcairo-script-interpreter2:amd64 (1.16.0-5) …<br>Removing libthai-dev:amd64 (0.1.28-3) …<br>Removing libdatrie-dev:amd64 (0.2.13-1) …<br>Removing libfribidi-dev:amd64 (1.0.8-2+deb11u1) …<br>Removing libgdk-pixbuf2.0-bin (2.42.2+dfsg-1+deb11u1) …<br>Removing libgirepository-1.0-1:amd64 (1.66.1-1+b1) …<br>Removing libglib2.0-bin (2.66.8-1) …<br>Removing libgraphite2-dev:amd64 (1.3.14-1) …<br>Removing libpangoxft-1.0-0:amd64 (1.46.2-3) …<br>Removing libharfbuzz-gobject0:amd64 (2.7.4-1) …<br>Removing libharfbuzz-icu0:amd64 (2.7.4-1) …<br>Removing libjs-sphinxdoc (3.4.3-2) …<br>Removing libjs-jquery (3.5.1+dfsg+<del>3.5.5-7) …<br>Removing libjs-underscore (1.9.1</del>dfsg-3) …<br>Removing liblzo2-2:amd64 (2.10-2) …<br>Removing libmail-sendmail-perl (0.80-1.1) …<br>Removing libselinux1-dev:amd64 (3.1-3) …<br>Removing libpcre2-dev:amd64 (10.36-2+deb11u1) …<br>Removing libpcre2-16-0:amd64 (10.36-2+deb11u1) …<br>Removing libpcre2-32-0:amd64 (10.36-2+deb11u1) …<br>Removing libpcre2-posix2:amd64 (10.36-2+deb11u1) …<br>Removing llvm-11 (1:11.0.1-2) …<br>Removing libpfm4:amd64 (4.11.1+git32-gd0b85fb-1) …<br>Removing libpipeline1:amd64 (1.5.3-1) …<br>Removing libpython3-dev:amd64 (3.9.2-3) …<br>Removing python3.9-dev (3.9.2-1) …<br>Removing libpython3.9-dev:amd64 (3.9.2-1) …<br>Removing libsepol1-dev:amd64 (3.1-1) …<br>Removing libsub-override-perl (0.09-2) …<br>Removing libsys-hostname-long-perl (1.5-2) …<br>Removing libuchardet0:amd64 (0.0.7-1) …<br>Removing libxcb-render0-dev:amd64 (1.14-3) …<br>Removing libxcb-shm0-dev:amd64 (1.14-3) …<br>Removing libxml2-utils (2.9.10+dfsg-6.7+deb11u4) …<br>Removing libz3-dev:amd64 (4.8.10-1) …<br>Removing llvm-11-runtime (1:11.0.1-2) …<br>Removing python-pip-whl (20.3.4-4+deb11u1) …<br>Removing libgtk2.0-0:amd64 (2.24.33-2) …<br>Removing adwaita-icon-theme (3.38.0-1) …<br>Removing dh-autoreconf (20) …<br>Removing autopoint (0.21-4) …<br>Removing gtk-update-icon-cache (3.24.24-4+deb11u3) …<br>Removing hicolor-icon-theme (0.17-2) …<br>Removing libatk1.0-0:amd64 (2.36.0-2) …<br>Removing libatk1.0-data (2.36.0-2) …<br>Removing libpangocairo-1.0-0:amd64 (1.46.2-3) …<br>Removing libcairo2:amd64 (1.16.0-5) …<br>Removing libdebhelper-perl (13.3.4) …<br>Removing libgdk-pixbuf-2.0-0:amd64 (2.42.2+dfsg-1+deb11u1) …<br>Removing libgdk-pixbuf2.0-common (2.42.2+dfsg-1+deb11u1) …<br>Removing libpangoft2-1.0-0:amd64 (1.46.2-3) …<br>Removing libgtk2.0-common (2.24.33-2) …<br>Removing libxcb-render0:amd64 (1.14-3) …<br>Removing libpango-1.0-0:amd64 (1.46.2-3) …<br>Removing fontconfig (2.13.1-4.2) …<br>Removing libthai0:amd64 (0.1.28-3) …<br>Removing libdatrie1:amd64 (0.2.13-1) …<br>Removing libfribidi0:amd64 (1.0.8-2+deb11u1) …<br>Removing libharfbuzz0b:amd64 (2.7.4-1) …<br>Removing libgraphite2-3:amd64 (1.3.14-1) …<br>Removing libthai-data (0.1.28-3) …<br>Processing triggers for mailcap (3.69) …<br>Processing triggers for libc-bin (2.31-13+deb11u6) …<br>(test) root@VM-0-17-centos:&#x2F;home&#x2F;lf# apt-get install build-essential autoconf libtool<br>Reading package lists… Done<br>Building dependency tree… Done<br>Reading state information… Done<br>autoconf is already the newest version (2.69-14).<br>build-essential is already the newest version (12.9).<br>libtool is already the newest version (2.4.6-15).<br>0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.</p>
+<h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><p>curl <a target="_blank" rel="noopener" href="https://bootstrap.pypa.io/pip/2.7/get-pip.py">https://bootstrap.pypa.io/pip/2.7/get-pip.py</a> -o get-pip.py</p>
+<p>&#x2F;usr&#x2F;bin&#x2F;python2.7 get-pip.py</p>
+<p>python2.7 -m pip install dbus-python</p>
+<p>python2.7 -m pip install mcs</p>
+<p>gcutils   mono</p>
+<p><strong>configure: error: *** xmltoman was not found or was disabled</strong></p>
+<p>python2.7 -m pip install cmdln</p>
+<h1 id="Debian-包管理"><a href="#Debian-包管理" class="headerlink" title="Debian 包管理"></a>Debian 包管理</h1><p>avaih</p>
+<p>No module named httplib2</p>
+<h1 id="脚手架"><a href="#脚手架" class="headerlink" title="脚手架"></a>脚手架</h1><p>npm 和 yarn 都是由 Facebook 开发</p>
+<p>yarn start</p>
+<p>yarn build </p>
+<p>yarn test</p>
+<p>yarn eject：暴露 webpack 的相关配置，不能后退</p>
+<p>运行项目也可以采用 npm start</p>
+<h2 id="脚手架文件介绍"><a href="#脚手架文件介绍" class="headerlink" title="脚手架文件介绍"></a>脚手架文件介绍</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/04/15/Python/" rel="prev" title="Nginx">
+      <i class="fa fa-chevron-left"></i> Nginx
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#React-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">React 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.1.</span> <span class="nav-text">是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.2.</span> <span class="nav-text">JavaScript 的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">1.3.</span> <span class="nav-text">React 的特点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E7%BC%96%E8%AF%91"><span class="nav-number">2.</span> <span class="nav-text">组件编译</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">问题整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#python"><span class="nav-number">3.1.</span> <span class="nav-text">python</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Debian-%E5%8C%85%E7%AE%A1%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">Debian 包管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%84%9A%E6%89%8B%E6%9E%B6"><span class="nav-number">5.</span> <span class="nav-text">脚手架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%84%9A%E6%89%8B%E6%9E%B6%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D"><span class="nav-number">5.1.</span> <span class="nav-text">脚手架文件介绍</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Fei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Fei</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

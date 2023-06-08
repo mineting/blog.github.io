@@ -39,7 +39,7 @@
 <meta property="og:image" content="http://example.com/2023/03/16/Zookeeper/Java/Document/Zookeeper/Zookeeper.assets/image-20220928111752756.png">
 <meta property="og:image" content="http://example.com/2023/03/16/Zookeeper/Java/Document/Zookeeper/Zookeeper.assets/image-20221009235930879.png">
 <meta property="article:published_time" content="2023-03-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-22T08:30:53.037Z">
+<meta property="article:modified_time" content="2023-06-05T09:35:37.773Z">
 <meta property="article:author" content="Fei">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2023/03/16/Zookeeper/Java/Document/Zookeeper/Zookeeper.assets/image-20220927215643357.png">
@@ -220,7 +220,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-22 16:30:53" itemprop="dateModified" datetime="2023-03-22T16:30:53+08:00">2023-03-22</time>
+                <time title="Modified: 2023-06-05 17:35:37" itemprop="dateModified" datetime="2023-06-05T17:35:37+08:00">2023-06-05</time>
               </span>
 
           
@@ -274,13 +274,13 @@
 <p>解压 Zookeeper：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@root zookeeper]# ll zookeeper-3.5.7/</span><br><span class="line">总用量 32</span><br><span class="line">drwxr-xr-x. 2  502 games   232 2月  10 2020 bin</span><br><span class="line">drwxr-xr-x. 2  502 games    77 2月   7 2020 conf</span><br><span class="line">drwxr-xr-x. 5  502 games  4096 2月  10 2020 docs</span><br><span class="line">drwxr-xr-x. 2 root root   4096 9月  27 18:40 lib</span><br><span class="line">-rw-r--r--. 1  502 games 11358 9月  13 2018 LICENSE.txt</span><br><span class="line">-rw-r--r--. 1  502 games   432 2月  10 2020 NOTICE.txt</span><br><span class="line">-rw-r--r--. 1  502 games  1560 2月   7 2020 README.md</span><br><span class="line">-rw-r--r--. 1  502 games  1347 2月   7 2020 README_packaging.txt</span><br></pre></td></tr></table></figure>
 
-<p>修改配置：将 conf 路径下 zoo_sample.cfg 修改为 zoo.cfg，并修改文件中 dataDir 的路径，一般设置为安装目录下的 					zkData（mkdir  zkData）</p>
+<p>修改配置：将 conf 路径下 zoo_sample.cfg 修改为 zoo.cfg，并修改文件中 dataDir 的路径，一般设置为安装目录下的 zkData（mkdir  zkData）</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@root conf]# mv zoo_sample.cfg zoo.cfg</span><br><span class="line">[root@root conf]# vim zoo.cfg</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">The number of milliseconds of each tick</span></span><br><span class="line">tickTime=2000</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">The number of ticks that the initial</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">synchronization phase can take</span></span><br><span class="line">initLimit=10</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">The number of ticks that can pass between</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">sending a request and getting an acknowledgement</span></span><br><span class="line">syncLimit=5</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">the directory <span class="built_in">where</span> the snapshot is stored.</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">do</span> not use /tmp <span class="keyword">for</span> storage, /tmp here is just</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">example sakes.</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">dataDir=/tmp/zookeeper</span></span><br><span class="line">dataDir=/opt/zookeeper/zookeeper-3.5.7/zkData</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">the port at <span class="built_in">which</span> the clients will connect</span></span><br><span class="line">clientPort=2181</span><br></pre></td></tr></table></figure>
 
 <p>操作 Zookeeper：</p>
-<p>​		启动Zookeeper：zkServer.sh  start</p>
+<p>​		启动 Zookeeper：zkServer.sh  start</p>
 <p>​		查看进程是否启动：jps </p>
 <p>​		查看状态：zkServer.sh  status</p>
 <p>​		启动客户端：zkCli.sh</p>
@@ -359,21 +359,10 @@
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">如果报错：Error: JAVA_HOME is not <span class="built_in">set</span> and java could not be found <span class="keyword">in</span> PATH.</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">单机启动没有问题，但集群启动报错</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">解决：在 zookeeper/bin/zkEnv.sh 头部手动添加 JAVA_HOME=/opt/java/jdk1.8.0_131</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">修改完成后，重新分发</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    [root@root zookeeper-3.5.7]# zkServer.sh status</span><br><span class="line">    ZooKeeper JMX enabled by default</span><br><span class="line">Using config: /opt/zookeeper/zookeeper-3.5.7/bin/../conf/zoo.cfg</span><br><span class="line">    Client port found: 2181. Client address: localhost.</span><br><span class="line">Error contacting service. It is probably not running.</span><br></pre></td></tr></table></figure>
-
-原因：
-
-  1. Leader 和 Follower 未选出，或无法连接
-
-  2. 只启动不到一半数量的集群，或者防火墙未关闭
-
-     防火墙：
-
-     CentOS7：
-
-     <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld.service</span><br><span class="line">systemctl stop firewalld.service	#关闭</span><br><span class="line">systemctl disabled firewalld.service	# 禁用</span><br></pre></td></tr></table></figure>
-
-     CentOS6：
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@root zookeeper-3.5.7]# zkServer.sh status</span><br><span class="line">ZooKeeper JMX enabled by default</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>Using config: &#x2F;opt&#x2F;zookeeper&#x2F;zookeeper-3.5.7&#x2F;bin&#x2F;..&#x2F;conf&#x2F;zoo.cfg<br>Client port found: 2181. Client address: localhost.<br>Error contacting service. It is probably not running.<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">原因：</span><br><span class="line"></span><br><span class="line">  1. Leader 和 Follower 未选出，或无法连接</span><br><span class="line"></span><br><span class="line">  2. 只启动不到一半数量的集群，或者防火墙未关闭</span><br><span class="line"></span><br><span class="line">     防火墙：</span><br><span class="line"></span><br><span class="line">     CentOS7：</span><br><span class="line"></span><br><span class="line">     ```shell</span><br><span class="line">     systemctl status firewalld.service</span><br><span class="line">     systemctl stop firewalld.service	#关闭</span><br><span class="line">     systemctl disabled firewalld.service	# 禁用</span><br></pre></td></tr></table></figure></p>
+<pre><code>     CentOS6：
 
      <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service iptables status</span><br><span class="line">service iptables stop</span><br><span class="line">chkconfig iptables off</span><br></pre></td></tr></table></figure>
 
@@ -734,7 +723,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
