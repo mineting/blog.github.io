@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="CommonApplicationScenarios  登录与单点登录 包含以下内容：  HTTP &amp; Cookie 单点登录简介 单点登录实现方式 单点登录协议 各个实现方式优缺点 现有的框架   HTTP 协议的无状态性由于 Http  协议是无状态协议（无状态即服务器无法判断多次请求是否来自于同一个客户端，不能判断客户端的状态，服务器不会记录任何信息），一次请求一次响应，因此服务器不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CommonApplicationScenarios">
+<meta property="og:url" content="http://example.com/2023/06/09/CommonApplicationScenarios/index.html">
+<meta property="og:site_name" content="MineTing">
+<meta property="og:description" content="CommonApplicationScenarios  登录与单点登录 包含以下内容：  HTTP &amp; Cookie 单点登录简介 单点登录实现方式 单点登录协议 各个实现方式优缺点 现有的框架   HTTP 协议的无状态性由于 Http  协议是无状态协议（无状态即服务器无法判断多次请求是否来自于同一个客户端，不能判断客户端的状态，服务器不会记录任何信息），一次请求一次响应，因此服务器不">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-06-08T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-06-14T08:03:51.725Z">
+<meta property="article:author" content="Fei">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/06/09/CommonApplicationScenarios/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>CommonApplicationScenarios | MineTing</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">MineTing</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/09/CommonApplicationScenarios/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Fei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MineTing">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CommonApplicationScenarios
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-06-09 00:00:00" itemprop="dateCreated datePublished" datetime="2023-06-09T00:00:00+08:00">2023-06-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-06-14 16:03:51" itemprop="dateModified" datetime="2023-06-14T16:03:51+08:00">2023-06-14</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <div align="center"><font size="70"><b>CommonApplicationScenarios</b></font></div>
+
+<h1 id="登录与单点登录"><a href="#登录与单点登录" class="headerlink" title="登录与单点登录"></a>登录与单点登录</h1><blockquote>
+<p>包含以下内容：</p>
+<ol>
+<li>HTTP &amp; Cookie</li>
+<li>单点登录简介</li>
+<li>单点登录实现方式</li>
+<li>单点登录协议</li>
+<li>各个实现方式优缺点</li>
+<li>现有的框架</li>
+</ol>
+</blockquote>
+<h2 id="HTTP-协议的无状态性"><a href="#HTTP-协议的无状态性" class="headerlink" title="HTTP 协议的无状态性"></a>HTTP 协议的无状态性</h2><p>由于 Http  协议是无状态协议（无状态即服务器无法判断多次请求是否来自于同一个客户端，不能判断客户端的状态，服务器不会记录任何信息），一次请求一次响应，因此服务器不能区分用户，进而限制服务器对浏览器的响应，无法起到保护特定资源的作用。</p>
+<p>对于以上问题，引入了会话机制，会话机制保证了一次临时的、交互式的信息（资源）交换，用户通过客户端与服务器之间的多次请求称为一次会话。</p>
+<p>会话机制的实现有两种：客户端会话（Cookie）和服务端会话（Session），浏览器（客户端）发送请求时，可以携带 Cookie，Cookie 中存放一些信息，由浏览器和服务器共同维护一个相同的状态，判断是否为同一用户，这就使得 HTTP 不同的请求之间产生了关联。</p>
+<p>单点登录（Single Sign On），简称为 SSO，是指在多个应用系统中，用户只需要登录一次就可以访问所有相互信任的应用系统。</p>
+<p>客户端第一次给服务器发送请求，服务器获取不到 Session（HttpSession getSession()），就会创建新的，然后响应给浏览器，之后浏览器再次发送请求，通过 Cookie 将 session_id 附带给服务器，服务器通过对比 session_id 就能区分两次请求的客户端是否为同一个。</p>
+<p>同一个客户端、同一个用户区分</p>
+<h2 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h2><h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><h1 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h1><h1 id="菜单、权限、字典、角色"><a href="#菜单、权限、字典、角色" class="headerlink" title="菜单、权限、字典、角色"></a>菜单、权限、字典、角色</h1><h1 id="BaseController-x2F-Service-x2F-Mapper-x2F-Entity"><a href="#BaseController-x2F-Service-x2F-Mapper-x2F-Entity" class="headerlink" title="BaseController&#x2F;Service&#x2F;Mapper&#x2F;Entity"></a>BaseController&#x2F;Service&#x2F;Mapper&#x2F;Entity</h1><h1 id="VO-x2F-DTO-x2F-POJO-x2F-Entity-x2F-JSON"><a href="#VO-x2F-DTO-x2F-POJO-x2F-Entity-x2F-JSON" class="headerlink" title="VO&#x2F;DTO&#x2F;POJO&#x2F;Entity&#x2F;JSON"></a>VO&#x2F;DTO&#x2F;POJO&#x2F;Entity&#x2F;JSON</h1><h1 id="ThreadPoolExecutor"><a href="#ThreadPoolExecutor" class="headerlink" title="ThreadPoolExecutor"></a>ThreadPoolExecutor</h1><h1 id="OSS"><a href="#OSS" class="headerlink" title="OSS"></a>OSS</h1><h1 id="协议解析"><a href="#协议解析" class="headerlink" title="协议解析"></a>协议解析</h1><h1 id="物联网"><a href="#物联网" class="headerlink" title="物联网"></a>物联网</h1><h1 id="常用表结构设计"><a href="#常用表结构设计" class="headerlink" title="常用表结构设计"></a>常用表结构设计</h1><h1 id="支付"><a href="#支付" class="headerlink" title="支付"></a>支付</h1><h1 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h1><h1 id="HttpClient"><a href="#HttpClient" class="headerlink" title="HttpClient"></a>HttpClient</h1><h1 id="表数据同步"><a href="#表数据同步" class="headerlink" title="表数据同步"></a>表数据同步</h1><h1 id="统一·日志-x2F-异常-x2F-结果"><a href="#统一·日志-x2F-异常-x2F-结果" class="headerlink" title="统一·日志&#x2F;异常&#x2F;结果"></a>统一·日志&#x2F;异常&#x2F;结果</h1><h1 id="GIS"><a href="#GIS" class="headerlink" title="GIS"></a>GIS</h1><h1 id="批处理"><a href="#批处理" class="headerlink" title="批处理"></a>批处理</h1><h1 id="PDF"><a href="#PDF" class="headerlink" title="PDF"></a>PDF</h1><h1 id="开源框架-RuoYi"><a href="#开源框架-RuoYi" class="headerlink" title="开源框架 RuoYi"></a>开源框架 RuoYi</h1>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/05/12/React/" rel="prev" title="React">
+      <i class="fa fa-chevron-left"></i> React
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/06/11/PracticeProjectCollection/" rel="next" title="PracticeProjectCollection">
+      PracticeProjectCollection <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E4%B8%8E%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">登录与单点登录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-%E5%8D%8F%E8%AE%AE%E7%9A%84%E6%97%A0%E7%8A%B6%E6%80%81%E6%80%A7"><span class="nav-number">1.1.</span> <span class="nav-text">HTTP 协议的无状态性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.2.</span> <span class="nav-text">协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">实现方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.4.</span> <span class="nav-text">代码实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B7%A8%E5%9F%9F"><span class="nav-number">2.</span> <span class="nav-text">跨域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8F%9C%E5%8D%95%E3%80%81%E6%9D%83%E9%99%90%E3%80%81%E5%AD%97%E5%85%B8%E3%80%81%E8%A7%92%E8%89%B2"><span class="nav-number">3.</span> <span class="nav-text">菜单、权限、字典、角色</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BaseController-x2F-Service-x2F-Mapper-x2F-Entity"><span class="nav-number">4.</span> <span class="nav-text">BaseController&#x2F;Service&#x2F;Mapper&#x2F;Entity</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VO-x2F-DTO-x2F-POJO-x2F-Entity-x2F-JSON"><span class="nav-number">5.</span> <span class="nav-text">VO&#x2F;DTO&#x2F;POJO&#x2F;Entity&#x2F;JSON</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ThreadPoolExecutor"><span class="nav-number">6.</span> <span class="nav-text">ThreadPoolExecutor</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OSS"><span class="nav-number">7.</span> <span class="nav-text">OSS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%8F%E8%AE%AE%E8%A7%A3%E6%9E%90"><span class="nav-number">8.</span> <span class="nav-text">协议解析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E8%81%94%E7%BD%91"><span class="nav-number">9.</span> <span class="nav-text">物联网</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E8%A1%A8%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">10.</span> <span class="nav-text">常用表结构设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%94%AF%E4%BB%98"><span class="nav-number">11.</span> <span class="nav-text">支付</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span class="nav-number">12.</span> <span class="nav-text">微信小程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HttpClient"><span class="nav-number">13.</span> <span class="nav-text">HttpClient</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A8%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5"><span class="nav-number">14.</span> <span class="nav-text">表数据同步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%9F%E4%B8%80%C2%B7%E6%97%A5%E5%BF%97-x2F-%E5%BC%82%E5%B8%B8-x2F-%E7%BB%93%E6%9E%9C"><span class="nav-number">15.</span> <span class="nav-text">统一·日志&#x2F;异常&#x2F;结果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GIS"><span class="nav-number">16.</span> <span class="nav-text">GIS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%B9%E5%A4%84%E7%90%86"><span class="nav-number">17.</span> <span class="nav-text">批处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PDF"><span class="nav-number">18.</span> <span class="nav-text">PDF</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6-RuoYi"><span class="nav-number">19.</span> <span class="nav-text">开源框架 RuoYi</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Fei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">47</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Fei</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
